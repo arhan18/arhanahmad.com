@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Block pages.dev from search engines (use arhanahmad.com instead)
 Sitemap: https://arhanahmad.com/sitemap-index.xml
