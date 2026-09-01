@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="404 — Page Not Found | Arhan Ahmad" description="This page doesn't exist. Check the sitemap or visit the homepage.">
+  <main class="min-h-screen bg-base-200 flex items-center justify-center p-6">
+    <div class="max-w-lg text-center space-y-6">
+      <h1 class="text-6xl font-extrabold text-base-content/20">404</h1>
+      <p class="text-xl text-base-content/70">This page doesn't exist.</p>
+
+      <div class="divider">or</div>
+
+      <div class="text-left bg-base-100 rounded-2xl p-6 shadow-sm space-y-3">
+        <p class="text-sm text-base-content/50 uppercase tracking-wide font-semibold">For agents & crawlers</p>
+        <ul class="text-sm text-base-content/70 space-y-1">
+          <li><a href="/sitemap-index.xml" class="link link-primary">/sitemap-index.xml</a> — all pages</li>
+          <li><a href="/llms.txt" class="link link-primary">/llms.txt</a> — site description</li>
+          <li><a href="/" class="link link-primary">/</a> — homepage</li>
+        </ul>
+      </div>
+
+      <a href="/" class="btn btn-primary">Go Home</a>
+    </div>
+  </main>
+</BaseLayout>

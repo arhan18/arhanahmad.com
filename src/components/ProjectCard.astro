@@ -27,7 +27,7 @@ const { name, revenue, description, url, logo, tag, locked = false } = Astro.pro
     </div>
     <div class="flex-1 min-w-0">
       <div class="flex items-center gap-2">
-        <h3 class="font-bold text-base-content/40">{name}</h3>
+        <h2 class="font-bold text-base-content/40">{name}</h2>
       </div>
       <p class="text-sm text-base-content/30 truncate">{description}</p>
     </div>
@@ -47,7 +47,7 @@ const { name, revenue, description, url, logo, tag, locked = false } = Astro.pro
     </div>
     <div class="flex-1 min-w-0">
       <div class="flex items-center gap-2">
-        <h3 class="font-bold group-hover:underline">{name}</h3>
+        <h2 class="font-bold group-hover:underline">{name}</h2>
         {tag && (
           <span class="badge badge-sm badge-success">{tag}</span>
         )}

@@ -1,0 +1,28 @@
+# Arhan Ahmad
+
+> Developer based in Lucknow, India. I build small web products — weird ideas, real revenue.
+
+## Projects
+
+- [NameAPlanet](https://arhanahmad.com/nameaplanet): Name a planet after someone you love ($2.99–$9.99)
+- [BuyAMoon](https://arhanahmad.com/buyamoon): Claim a fictional moon crater ($4.99–$14.99)
+- [StartupGraveyard](https://arhanahmad.com/startupgraveyard): Tombstones for dead startups (Free + $29 premium)
+- [FlipAFate](https://arhanahmad.com/flipafate): Stop overthinking, let fate decide (Free + $1.99)
+- [ChaosGarden](https://arhanahmad.com/chaosgarden): Track bad habits, celebrate failures (Free + $2.99)
+- [TimeWasted](https://arhanahmad.com/timewasted): Calculate time wasted on the internet (Free)
+- [LaunchPad](https://arhanahmad.com/launchpad): Pre-launch waitlist + discovery (Free/$9/$29)
+- [MakeAbsurd](https://arhanahmad.com/makeabsurd): AI landing pages for ridiculous products ($4.99)
+- [WeirdPage](https://arhanahmad.com/weirdpage): Portfolio for people who build weird things ($9.99)
+
+## About
+
+- Built with Astro + Tailwind CSS + daisyUI
+- Hosted on Cloudflare Pages
+- Payments via DodoPayments (UPI, RuPay supported)
+- Contact: email@arhanahmad.com
+
+## Social
+
+- X: [@ahmadarhankhan](https://x.com/ahmadarhankhan)
+- GitHub: [arhan18](https://github.com/arhan18)
+- LinkedIn: [arhan-ahmad-khan](https://www.linkedin.com/in/arhan-ahmad-khan-539557312/)

@@ -47,6 +47,49 @@ const canonicalUrl = canonical || url;
     <meta name="theme-color" content="#fefce8" />
 
     <title>{title}</title>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://arhanahmad.com/#person",
+          "name": "Arhan Ahmad",
+          "url": "https://arhanahmad.com",
+          "image": "https://arhanahmad.com/avatar.jpg",
+          "jobTitle": "Developer",
+          "description": "I build weird websites. One ridiculous idea at a time.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lucknow",
+            "addressCountry": "IN"
+          },
+          "sameAs": [
+            "https://x.com/ahmadarhankhan",
+            "https://github.com/arhan18",
+            "https://www.linkedin.com/in/arhan-ahmad-khan-539557312/"
+          ],
+          "knowsAbout": [
+            "Web Development",
+            "Astro",
+            "Tailwind CSS",
+            "Cloudflare",
+            "Indie Hacking"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://arhanahmad.com/#website",
+          "url": "https://arhanahmad.com",
+          "name": "Arhan Ahmad",
+          "description": "I build weird websites. One ridiculous idea at a time.",
+          "publisher": {
+            "@id": "https://arhanahmad.com/#person"
+          }
+        }
+      ]
+    })} />
   </head>
   <body>
     <slot />
