@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="FlipAFate | Stop overthinking. Let fate decide."
+  description="Flip a coin, roll a dice, shake the magic 8-ball. Make life decisions fun instead of stressful."
+  image="/og-flipafate.png"
+>
+  <main class="min-h-screen bg-base-200">
+    <div class="mx-auto max-w-2xl px-6 py-16">
+      <a href="/" class="btn btn-ghost btn-sm mb-8">← Back to all projects</a>
+
+      <div class="text-center">
+        <span class="text-6xl">🎲</span>
+        <h1 class="mt-4 text-4xl font-extrabold">FlipAFate</h1>
+        <p class="mt-2 text-lg text-base-content/60">
+          Stop overthinking. Let fate decide.
+        </p>
+      </div>
+
+      <div class="mt-12 card bg-base-100 shadow-md">
+        <div class="card-body items-center text-center">
+          <div id="result" class="text-8xl my-8">🪙</div>
+
+          <div class="flex gap-4">
+            <button id="flip-btn" class="btn btn-primary btn-lg">
+              Flip a Coin
+            </button>
+            <button id="roll-btn" class="btn btn-secondary btn-lg">
+              Roll a Dice
+            </button>
+            <button id="magic-btn" class="btn btn-accent btn-lg">
+              Magic 8-Ball
+            </button>
+          </div>
+
+          <p id="result-text" class="mt-6 text-2xl font-bold min-h-[3rem]"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const result = document.getElementById('result');
+    const resultText = document.getElementById('result-text');
+    const flipBtn = document.getElementById('flip-btn');
+    const rollBtn = document.getElementById('roll-btn');
+    const magicBtn = document.getElementById('magic-btn');
+
+    const magicAnswers = [
+      'It is certain.', 'It is decidedly so.', 'Without a doubt.',
+      'Yes, definitely.', 'You may rely on it.', 'As I see it, yes.',
+      'Most likely.', 'Outlook good.', 'Yes.',
+      'Signs point to yes.', 'Reply hazy, try again.', 'Ask again later.',
+      'Better not tell you now.', 'Cannot predict now.', 'Don\'t count on it.',
+      'My reply is no.', 'My sources say no.', 'Outlook not so good.',
+      'Very doubtful.', 'Concentrate and ask again.'
+    ];
+
+    flipBtn?.addEventListener('click', () => {
+      const isHeads = Math.random() > 0.5;
+      result!.textContent = isHeads ? '🪙' : '🪙';
+      resultText!.textContent = isHeads ? 'HEADS!' : 'TAILS!';
+      resultText!.className = 'mt-6 text-2xl font-bold min-h-[3rem] ' + (isHeads ? 'text-success' : 'text-error');
+    });
+
+    rollBtn?.addEventListener('click', () => {
+      const roll = Math.floor(Math.random() * 6) + 1;
+      const dice = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+      result!.textContent = dice[roll - 1];
+      resultText!.textContent = `You rolled a ${roll}!`;
+      resultText!.className = 'mt-6 text-2xl font-bold min-h-[3rem] text-primary';
+    });
+
+    magicBtn?.addEventListener('click', () => {
+      const answer = magicAnswers[Math.floor(Math.random() * magicAnswers.length)];
+      result!.textContent = '🎱';
+      resultText!.textContent = answer;
+      resultText!.className = 'mt-6 text-2xl font-bold min-h-[3rem] text-accent';
+    });
+  </script>
+</BaseLayout>

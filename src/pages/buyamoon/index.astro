@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="BuyAMoon | Claim a fictional moon crater for someone"
+  description="Give someone their own crater on the moon. Choose a crater, add a name and message, get a beautiful certificate. The most unique gift ever."
+  image="/og-buyamoon.png"
+>
+  <main class="min-h-screen bg-base-200">
+    <div class="mx-auto max-w-2xl px-6 py-16">
+      <a href="/" class="btn btn-ghost btn-sm mb-8">← Back to all projects</a>
+
+      <div class="text-center">
+        <span class="text-6xl">🌙</span>
+        <h1 class="mt-4 text-4xl font-extrabold">BuyAMoon</h1>
+        <p class="mt-2 text-lg text-base-content/60">
+          Claim a fictional moon crater for someone special.
+        </p>
+      </div>
+
+      <div class="mt-12 card bg-base-100 shadow-md">
+        <div class="card-body">
+          <h2 class="card-title">Choose your crater</h2>
+          <div class="grid grid-cols-3 gap-4 mt-4">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <button class="btn btn-outline aspect-square text-4xl">
+                {i}
+              </button>
+            ))}
+          </div>
+
+          <div class="mt-6">
+            <label class="label">
+              <span class="label-text">Name this crater</span>
+            </label>
+            <input type="text" placeholder="e.g., Her Smile" class="input input-bordered w-full" />
+          </div>
+
+          <div class="mt-4">
+            <label class="label">
+              <span class="label-text">Your message (optional)</span>
+            </label>
+            <textarea class="textarea textarea-bordered w-full" placeholder="For the girl who lights up the darkest nights..."></textarea>
+          </div>
+
+          <div class="mt-6">
+            <button class="btn btn-primary w-full">Claim this crater — $4.99</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

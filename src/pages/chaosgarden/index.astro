@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="ChaosGarden | Track your bad habits. Celebrate your failures."
+  description="The anti-habit tracker. Log your failures, watch your garden of chaos grow. Because sometimes failing is the point."
+  image="/og-chaosgarden.png"
+>
+  <main class="min-h-screen bg-base-200">
+    <div class="mx-auto max-w-2xl px-6 py-16">
+      <a href="/" class="btn btn-ghost btn-sm mb-8">← Back to all projects</a>
+
+      <div class="text-center">
+        <span class="text-6xl">🌱</span>
+        <h1 class="mt-4 text-4xl font-extrabold">ChaosGarden</h1>
+        <p class="mt-2 text-lg text-base-content/60">
+          Track your bad habits. Celebrate your failures.
+        </p>
+      </div>
+
+      <div class="mt-12 card bg-base-100 shadow-md">
+        <div class="card-body">
+          <h2 class="card-title">Today's Failures</h2>
+
+          <div class="space-y-3 mt-4">
+            <div class="flex items-center justify-between p-3 bg-base-200 rounded-xl">
+              <span>📱 Scrolled TikTok for 2 hours</span>
+              <span class="badge badge-error">-50 XP</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-base-200 rounded-xl">
+              <span>🍕 Ate junk food instead of cooking</span>
+              <span class="badge badge-error">-30 XP</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-base-200 rounded-xl">
+              <span>💤 Stayed up until 3 AM</span>
+              <span class="badge badge-error">-40 XP</span>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <button class="btn btn-primary w-full">Log a Failure</button>
+          </div>
+
+          <div class="mt-4 text-center">
+            <p class="text-sm text-base-content/60">Your failure streak: <span class="font-bold text-error">7 days</span></p>
+            <p class="text-sm text-base-content/60">Total failures logged: <span class="font-bold">42</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

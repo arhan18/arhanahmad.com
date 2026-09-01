@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arhanahmad.com/sitemap-index.xml

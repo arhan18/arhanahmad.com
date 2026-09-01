@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Sidebar from '../components/Sidebar.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import NewsletterCTA from '../components/NewsletterCTA.astro';
+
+const projects = [
+  {
+    name: 'NameAPlanet',
+    revenue: '$0/mo',
+    description: 'Name a planet after someone you love.',
+    url: '/nameaplanet',
+    logo: '🪐',
+    locked: true,
+  },
+  {
+    name: 'BuyAMoon',
+    revenue: '$0/mo',
+    description: 'Claim a fictional moon crater for someone.',
+    url: '/buyamoon',
+    logo: '🌙',
+    locked: true,
+  },
+  {
+    name: 'StartupGraveyard',
+    revenue: '$0/mo',
+    description: 'Tombstones for dead startups.',
+    url: '/startupgraveyard',
+    logo: '💀',
+    locked: true,
+  },
+  {
+    name: 'FlipAFate',
+    revenue: '$0/mo',
+    description: 'Stop overthinking. Let fate decide.',
+    url: '/flipafate',
+    logo: '🎲',
+    locked: true,
+  },
+  {
+    name: 'ChaosGarden',
+    revenue: '$0/mo',
+    description: 'Track your bad habits. Celebrate your failures.',
+    url: '/chaosgarden',
+    logo: '🌱',
+    locked: true,
+  },
+  {
+    name: 'TimeWasted',
+    revenue: '$0/mo',
+    description: 'Calculate how much time you wasted on YouTube/TikTok.',
+    url: '/timewasted',
+    logo: '⏰',
+    locked: true,
+  },
+  {
+    name: 'LaunchPad',
+    revenue: '$0/mo',
+    description: 'Get attention before you launch.',
+    url: '/launchpad',
+    logo: '🚀',
+    locked: true,
+  },
+  {
+    name: 'MakeAbsurd',
+    revenue: '$0/mo',
+    description: 'AI landing pages for ridiculous products.',
+    url: '/makeabsurd',
+    logo: '🎨',
+    locked: true,
+  },
+  {
+    name: 'WeirdPage',
+    revenue: '$0/mo',
+    description: 'Portfolio for people who build ridiculous things.',
+    url: '/weirdpage',
+    logo: '🖼️',
+    locked: true,
+  },
+];
+---
+
+<BaseLayout title="Arhan Ahmad | I build weird websites">
+  <main class="min-h-screen">
+    <div class="relative min-h-screen bg-base-200">
+      <div class="noscrollbar mx-auto flex min-h-screen max-w-[1800px] flex-col max-lg:pb-16 lg:h-screen lg:flex-row lg:overflow-y-auto">
+
+        <!-- Sidebar -->
+        <section class="noscrollbar shrink-0 space-y-6 p-6 lg:sticky lg:top-0 lg:h-screen lg:w-[350px] lg:space-y-8 lg:overflow-y-auto lg:p-16 lg:pr-0 lg:pb-24 xl:w-[500px] xl:pr-16">
+          <Sidebar />
+          <NewsletterCTA />
+        </section>
+
+        <!-- Project Grid -->
+        <section class="flex-1 p-6 lg:p-16 lg:pl-0">
+          <div class="grid gap-4 sm:grid-cols-2">
+            {projects.map((project) => (
+              <ProjectCard
+                name={project.name}
+                revenue={project.revenue}
+                description={project.description}
+                url={project.url}
+                logo={project.logo}
+                locked={project.locked}
+              />
+            ))}
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+</BaseLayout>

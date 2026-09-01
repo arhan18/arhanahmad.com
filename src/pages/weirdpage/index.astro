@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="WeirdPage | Portfolio for people who build ridiculous things"
+  description="Showcase your absurd projects. One page. All your weirdness. $9.99 one-time."
+  image="/og-weirdpage.png"
+>
+  <main class="min-h-screen bg-base-200">
+    <div class="mx-auto max-w-2xl px-6 py-16">
+      <a href="/" class="btn btn-ghost btn-sm mb-8">← Back to all projects</a>
+
+      <div class="text-center">
+        <span class="text-6xl">🖼️</span>
+        <h1 class="mt-4 text-4xl font-extrabold">WeirdPage</h1>
+        <p class="mt-2 text-lg text-base-content/60">
+          Portfolio for people who build ridiculous things.
+        </p>
+      </div>
+
+      <div class="mt-12 card bg-base-100 shadow-md">
+        <div class="card-body">
+          <h2 class="card-title">Create your weird portfolio</h2>
+          <p class="text-sm text-base-content/60">Showcase your absurd projects. One page. All your weirdness.</p>
+
+          <div class="mt-4">
+            <label class="label">
+              <span class="label-text">Your name</span>
+            </label>
+            <input type="text" class="input input-bordered w-full" placeholder="e.g., The Guy Who Built a Website to Name Planets" />
+          </div>
+
+          <div class="mt-4">
+            <button class="btn btn-primary w-full">Create Your Page — $9.99</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

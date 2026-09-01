@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="MakeAbsurd | AI landing pages for ridiculous products"
+  description="Describe your ridiculous product. Get a landing page. Share it. Laugh. $4.99."
+  image="/og-makeabsurd.png"
+>
+  <main class="min-h-screen bg-base-200">
+    <div class="mx-auto max-w-2xl px-6 py-16">
+      <a href="/" class="btn btn-ghost btn-sm mb-8">← Back to all projects</a>
+
+      <div class="text-center">
+        <span class="text-6xl">🎨</span>
+        <h1 class="mt-4 text-4xl font-extrabold">MakeAbsurd</h1>
+        <p class="mt-2 text-lg text-base-content/60">
+          AI landing pages for ridiculous products.
+        </p>
+      </div>
+
+      <div class="mt-12 card bg-base-100 shadow-md">
+        <div class="card-body">
+          <h2 class="card-title">Describe your ridiculous product</h2>
+          <textarea class="textarea textarea-bordered w-full h-32" placeholder="e.g., A SaaS that sends your enemies passive-aggressive emails on your behalf"></textarea>
+
+          <div class="mt-4">
+            <button class="btn btn-primary w-full">Generate Landing Page — $4.99</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

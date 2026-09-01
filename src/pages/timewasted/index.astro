@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="TimeWasted | Calculate how much time you wasted on the internet"
+  description="How many hours have you wasted scrolling TikTok, YouTube, and Instagram? Calculate your lifetime waste and share the shame."
+  image="/og-timewasted.png"
+>
+  <main class="min-h-screen bg-base-200">
+    <div class="mx-auto max-w-2xl px-6 py-16">
+      <a href="/" class="btn btn-ghost btn-sm mb-8">← Back to all projects</a>
+
+      <div class="text-center">
+        <span class="text-6xl">⏰</span>
+        <h1 class="mt-4 text-4xl font-extrabold">TimeWasted</h1>
+        <p class="mt-2 text-lg text-base-content/60">
+          Calculate how much time you've wasted on the internet.
+        </p>
+      </div>
+
+      <div class="mt-12 card bg-base-100 shadow-md">
+        <div class="card-body">
+          <h2 class="card-title">How much time do you waste daily?</h2>
+
+          <div class="space-y-4 mt-4">
+            <div>
+              <label class="label">
+                <span class="label-text">YouTube (hours/day)</span>
+              </label>
+              <input type="number" class="input input-bordered w-full" placeholder="3" min="0" max="24" />
+            </div>
+            <div>
+              <label class="label">
+                <span class="label-text">TikTok (hours/day)</span>
+              </label>
+              <input type="number" class="input input-bordered w-full" placeholder="2" min="0" max="24" />
+            </div>
+            <div>
+              <label class="label">
+                <span class="label-text">Instagram (hours/day)</span>
+              </label>
+              <input type="number" class="input input-bordered w-full" placeholder="1" min="0" max="24" />
+            </div>
+            <div>
+              <label class="label">
+                <span class="label-text">Twitter/X (hours/day)</span>
+              </label>
+              <input type="number" class="input input-bordered w-full" placeholder="1" min="0" max="24" />
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <button class="btn btn-primary w-full">Calculate My Waste</button>
+          </div>
+
+          <div id="results" class="mt-8 hidden">
+            <div class="alert alert-error">
+              <span class="text-2xl">😱</span>
+              <div>
+                <p class="font-bold">You've wasted 1.2 YEARS of your life</p>
+                <p class="text-sm">That's 438 days, or 10,512 hours, scrolling through content you'll forget in 5 minutes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

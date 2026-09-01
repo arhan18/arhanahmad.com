@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="NameAPlanet | Name a planet after someone you love"
+  description="Give someone a planet. Choose from 8 planets, add a name and message, get a beautiful certificate. The perfect gift for someone special."
+  image="/og-nameaplanet.png"
+>
+  <main class="min-h-screen bg-base-200">
+    <div class="mx-auto max-w-2xl px-6 py-16">
+      <a href="/" class="btn btn-ghost btn-sm mb-8">← Back to all projects</a>
+
+      <div class="text-center">
+        <span class="text-6xl">🪐</span>
+        <h1 class="mt-4 text-4xl font-extrabold">NameAPlanet</h1>
+        <p class="mt-2 text-lg text-base-content/60">
+          Name a planet after someone you love.
+        </p>
+      </div>
+
+      <div class="mt-12 card bg-base-100 shadow-md">
+        <div class="card-body">
+          <h2 class="card-title">Choose a planet</h2>
+          <div class="grid grid-cols-4 gap-4 mt-4">
+            {['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'].map((planet) => (
+              <button class="btn btn-outline btn-lg text-2xl">
+                {planet === 'Mercury' && '☿️'}
+                {planet === 'Venus' && '♀️'}
+                {planet === 'Earth' && '🌍'}
+                {planet === 'Mars' && '♂️'}
+                {planet === 'Jupiter' && '♃️'}
+                {planet === 'Saturn' && '♄️'}
+                {planet === 'Uranus' && '⛢'}
+                {planet === 'Neptune' && '♆'}
+              </button>
+            ))}
+          </div>
+
+          <div class="mt-6">
+            <label class="label">
+              <span class="label-text">Name this planet</span>
+            </label>
+            <input type="text" placeholder="e.g., Planet Ayesha" class="input input-bordered w-full" />
+          </div>
+
+          <div class="mt-4">
+            <label class="label">
+              <span class="label-text">Your message (optional)</span>
+            </label>
+            <textarea class="textarea textarea-bordered w-full" placeholder="For the girl who makes ordinary days feel cosmic..."></textarea>
+          </div>
+
+          <div class="mt-6">
+            <button class="btn btn-primary w-full">Name this planet — $2.99</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

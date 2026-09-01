@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: bumblebee;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v28/iWdBCgK6aeE_k1XU8YU2.woff2) format('woff2');
+}
+
+html {
+  font-family: 'Rubik', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--b1, #fefce8);
+}
+
+/* Marc Lou style background */
+.bg-base-200 {
+  background-color: var(--b2, #fef9c3) !important;
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(234, 179, 8, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(234, 179, 8, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(234, 179, 8, 0.05) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(234, 179, 8, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(234, 179, 8, 0.05) 0px, transparent 50%);
+}
+
+.noscrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.noscrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
