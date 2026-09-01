@@ -1,0 +1,10 @@
+name = "newsletter-subscriber"
+main = "index.js"
+compatibility_date = "2024-09-23"
+
+[[kv_namespaces]]
+binding = "SUBSCRIBERS"
+id = "1e440da3030042cc837187c037db611d"
+
+[vars]
+ALLOWED_ORIGINS = "https://arhanahmad.com,https://www.arhanahmad.com"

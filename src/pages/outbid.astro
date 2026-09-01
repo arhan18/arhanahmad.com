@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+---
+
+<BaseLayout title="OutbidCopy — Backlink Bidding System" description="Get backlinks by outbidding competitors. Inspired by outbid.lol.">
+  <div class="retro-grid"></div>
+
+  <main class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Nav -->
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="back-link">← Home</a>
+        <a href="/sell-slot" class="back-link">Sell Your Slot →</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Backlink bidding system</p>
+      <h1 class="text-5xl md:text-6xl font-bold tracking-tighter mb-4">
+        OutbidCopy<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg max-w-2xl">
+        Get backlinks by outbidding competitors. Inspired by 
+        <a href="https://outbid.lol" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">outbid.lol</a>.
+        This is a product idea — not yet live.
+      </p>
+    </header>
+
+    <!-- Status -->
+    <section class="mb-12">
+      <div class="bento-tile p-6 md:p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded">Building</span>
+          <h2 class="text-2xl font-semibold tracking-tight">Coming Soon</h2>
+        </div>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+          OutbidCopy is a backlink bidding system where people bid against each other 
+          for backlinks. Start at $1, pay $1 more to rank higher.
+        </p>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          This is different from <a href="/sell-slot" class="text-cyan-400 hover:underline">selling slots</a> on my portfolio 
+          (which is live now for $1).
+        </p>
+      </div>
+    </section>
+
+    <!-- How It Will Work -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6">How It Will Work</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bento-tile p-6">
+          <div class="text-3xl mb-4">1️⃣</div>
+          <h3 class="text-lg font-semibold mb-2">Choose a Slot</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">Pick an available position on a website. Higher positions = more visibility.</p>
+        </div>
+        <div class="bento-tile p-6">
+          <div class="text-3xl mb-4">2️⃣</div>
+          <h3 class="text-lg font-semibold mb-2">Place Your Bid</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">Start at $1. To rank higher, pay $1 more than the current bidder.</p>
+        </div>
+        <div class="bento-tile p-6">
+          <div class="text-3xl mb-4">3️⃣</div>
+          <h3 class="text-lg font-semibold mb-2">Win the Backlink</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">Highest bidder wins. Backlink stays until someone outbids you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="mb-12">
+      <div class="bento-tile p-6 md:p-8">
+        <h2 class="text-2xl font-semibold tracking-tight mb-4">Pricing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-lg font-semibold mb-2">How Bidding Works</h3>
+            <ul class="space-y-2 text-sm text-neutral-500 dark:text-neutral-400">
+              <li>• Starting bid: $1</li>
+              <li>• To rank higher, pay $1 more than current bidder</li>
+              <li>• Winner pays their bid amount</li>
+              <li>• Backlink is permanent until outbid</li>
+              <li>• Payment via Gumroad or direct</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-2">What You Get</h3>
+            <ul class="space-y-2 text-sm text-neutral-500 dark:text-neutral-400">
+              <li>• Permanent backlink on website</li>
+              <li>• Your site name + description</li>
+              <li>• Position in the backlinks section</li>
+              <li>• DoFollow link for SEO</li>
+              <li>• Real visitor exposure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">ARHAN<span class="text-cyan-400">.</span></a>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">Building this product soon.</p>
+      </div>
+    </footer>
+  </main>
+</BaseLayout>
+
+<style>
+  .back-link {
+    font-family: var(--font-mono), monospace; text-transform: uppercase; letter-spacing: 0.1em;
+    color: rgb(156 163 175); font-size: 11px; text-decoration: none; transition: color 0.2s;
+  }
+  .back-link:hover { color: #67e8f9; }
+  .bento-tile { transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1); }
+  .bento-tile:hover { transform: translateY(-2px); }
+</style>

@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+---
+
+<BaseLayout title="Analytics — Arhan Ahmad" description="Real-time analytics for arhanahmad.com">
+  <div class="retro-grid"></div>
+
+  <main class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Nav -->
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="back-link">← Home</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Real-time data</p>
+      <h1 class="text-5xl md:text-6xl font-bold tracking-tighter mb-4">
+        Analytics<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg max-w-2xl">
+        Live metrics. No fake numbers, no vanity metrics.
+      </p>
+    </header>
+
+    <!-- Live Stats -->
+    <section class="mb-12">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="stat-card">
+          <p class="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Total Visitors</p>
+          <p id="totalVisits" class="text-4xl font-bold mt-2 text-cyan-400">···</p>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-2">unique devices</p>
+        </div>
+        <div class="stat-card">
+          <p class="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Products Launched</p>
+          <p class="text-4xl font-bold mt-2 text-orange-400">2</p>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-2">ToolboxImage + Subtitly</p>
+        </div>
+        <div class="stat-card">
+          <p class="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">Ad Slots</p>
+          <p class="text-4xl font-bold mt-2 text-green-400">8</p>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-2">remaining</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Products -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6">Live Products</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="https://toolboximage.com" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono text-green-400 bg-green-400/10 px-2 py-0.5 rounded">Live</span>
+            <span class="text-xs font-mono text-neutral-500">Sep 2026</span>
+          </div>
+          <h3 class="text-lg font-semibold hover:text-cyan-400 transition-colors">ToolboxImage</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">AI image toolbox</p>
+          <span class="mt-3 inline-block text-xs font-mono text-cyan-400">Visit toolboximage.com →</span>
+        </a>
+        <a href="https://subtitly.pages.dev" target="_blank" rel="noopener noreferrer" class="project-card">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono text-green-400 bg-green-400/10 px-2 py-0.5 rounded">Live</span>
+            <span class="text-xs font-mono text-neutral-500">Sep 2026</span>
+          </div>
+          <h3 class="text-lg font-semibold hover:text-cyan-400 transition-colors">Subtitly</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Auto-generate subtitles</p>
+          <span class="mt-3 inline-block text-xs font-mono text-cyan-400">Visit subtitly.pages.dev →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Building Projects -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6">Building</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="project-card">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded">Building</span>
+            <span class="text-xs font-mono text-neutral-500">Sep 2026</span>
+          </div>
+          <h3 class="text-lg font-semibold">OutbidCopy</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Backlink bidding system</p>
+        </div>
+        <div class="project-card">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded">Building</span>
+          </div>
+          <h3 class="text-lg font-semibold">NameAPlanet</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Name a planet after someone</p>
+        </div>
+        <div class="project-card">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded">Building</span>
+          </div>
+          <h3 class="text-lg font-semibold">BuyAMoon</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Claim a moon crater</p>
+        </div>
+        <div class="project-card">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded">Building</span>
+          </div>
+          <h3 class="text-lg font-semibold">StartupGraveyard</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Tombstones for dead startups</p>
+        </div>
+        <div class="project-card">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded">Building</span>
+          </div>
+          <h3 class="text-lg font-semibold">FlipAFate</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Let fate decide</p>
+        </div>
+        <div class="project-card">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded">Building</span>
+          </div>
+          <h3 class="text-lg font-semibold">ChaosGarden</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">Track bad habits</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Slots -->
+    <section class="mb-12">
+      <div class="bento-tile p-6 md:p-8">
+        <h2 class="text-2xl font-semibold tracking-tight mb-4">Ad Slots</h2>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+          Sell slots on your portfolio. Start at $1. Price increases as slots fill.
+        </p>
+        <a href="/sell-slot" class="text-sm font-mono text-cyan-400 hover:text-cyan-300 transition-colors">
+          Manage slots →
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">ARHAN<span class="text-cyan-400">.</span></a>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">Real data only.</p>
+      </div>
+    </footer>
+  </main>
+</BaseLayout>
+
+<style>
+  .back-link {
+    font-family: var(--font-mono), monospace; text-transform: uppercase; letter-spacing: 0.1em;
+    color: rgb(156 163 175); font-size: 11px; text-decoration: none; transition: color 0.2s;
+  }
+  .back-link:hover { color: #67e8f9; }
+  .stat-card {
+    padding: 20px;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+  .stat-card:hover {
+    transform: translateY(-3px);
+    border-color: rgb(6 182 212 / 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+  .project-card {
+    padding: 16px;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+  .project-card:hover {
+    transform: translateY(-2px);
+    border-color: rgb(6 182 212 / 0.3);
+  }
+  .bento-tile { transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1); }
+  .bento-tile:hover { transform: translateY(-2px); }
+</style>
+
+<script>
+  const COUNTER_API = 'https://visit-counter.aqeelbrh65.workers.dev';
+  
+  async function loadAnalytics() {
+    try {
+      const res = await fetch(`${COUNTER_API}/count`);
+      const data = await res.json();
+      
+      const totalEl = document.getElementById('totalVisits');
+      if (totalEl) totalEl.textContent = data.count?.toString() || '0';
+    } catch {
+      console.error('Failed to load analytics');
+    }
+  }
+  
+  loadAnalytics();
+  setInterval(loadAnalytics, 30000);
+</script>

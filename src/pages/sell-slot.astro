@@ -1,0 +1,251 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+const occupiedSlots = [
+  { name: 'ToolboxImage', url: 'https://toolboximage.com', description: 'AI image toolbox', position: 1 },
+  { name: 'Subtitly', url: 'https://subtitly.pages.dev', description: 'Auto-generate subtitles', position: 2 },
+];
+
+const availableSlots = [
+  { position: 3, currentBid: 1 },
+  { position: 4, currentBid: 1 },
+  { position: 5, currentBid: 1 },
+  { position: 6, currentBid: 1 },
+  { position: 7, currentBid: 1 },
+  { position: 8, currentBid: 1 },
+  { position: 9, currentBid: 1 },
+  { position: 10, currentBid: 1 },
+];
+---
+
+<BaseLayout title="Sell Your Slot — Arhan Ahmad" description="Get a backlink from arhanahmad.com. Start at $1.">
+  <div class="retro-grid"></div>
+
+  <main class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Nav -->
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="back-link">← Home</a>
+        <a href="/outbid" class="back-link">OutbidCopy →</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Sell your slot</p>
+      <h1 class="text-5xl md:text-6xl font-bold tracking-tighter mb-4">
+        Buy Your Slot<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg max-w-2xl">
+        Get your site listed on arhanahmad.com. Start at just $1. 
+        Price increases as slots fill. Only 8 slots remaining.
+      </p>
+      <div class="mt-6 flex items-center gap-4">
+        <span class="text-sm font-mono text-cyan-400">Starting at $1</span>
+        <span class="text-sm font-mono text-neutral-500">|</span>
+        <span class="text-sm font-mono text-neutral-500">First come, first served</span>
+      </div>
+    </header>
+
+    <!-- How It Works -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6">How It Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bento-tile p-6">
+          <div class="text-3xl mb-4">1️⃣</div>
+          <h3 class="text-lg font-semibold mb-2">Choose a Slot</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">Pick an available position. Higher positions = more visibility.</p>
+        </div>
+        <div class="bento-tile p-6">
+          <div class="text-3xl mb-4">2️⃣</div>
+          <h3 class="text-lg font-semibold mb-2">Pay $1</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">First come, first served. Price increases as slots fill.</p>
+        </div>
+        <div class="bento-tile p-6">
+          <div class="text-3xl mb-4">3️⃣</div>
+          <h3 class="text-lg font-semibold mb-2">Get Listed</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">Your site gets a permanent backlink on the homepage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Occupied Slots -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6">Occupied Slots</h2>
+      <div class="space-y-3">
+        {occupiedSlots.map(slot => (
+          <div class="backlink-card">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <span class="position-badge">#{slot.position}</span>
+                <div>
+                  <a href={slot.url} target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-cyan-400 transition-colors">
+                    {slot.name}
+                  </a>
+                  <p class="text-xs text-neutral-500 dark:text-neutral-400">{slot.description}</p>
+                </div>
+              </div>
+              <span class="text-xs font-mono text-green-400 bg-green-400/10 px-2 py-0.5 rounded">Occupied</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Available Slots -->
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-semibold tracking-tight">Available Slots</h2>
+        <span class="text-sm font-mono text-cyan-400">{availableSlots.length} slots remaining</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {availableSlots.map(slot => (
+          <div class="bid-slot">
+            <div class="flex items-center justify-between mb-3">
+              <span class="position-badge">#{slot.position}</span>
+              <span class="text-lg font-bold text-cyan-400">${slot.currentBid}</span>
+            </div>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+              Starting price
+            </p>
+            <a href={`mailto:email@arhanahmad.com?subject=Buy Slot ${slot.position} for $1&body=I want to buy slot ${slot.position} on arhanahmad.com for $1.%0A%0AMy website URL: %0AMy site description: `} 
+               class="bid-button">
+              Buy Now →
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="mb-12">
+      <div class="bento-tile p-6 md:p-8">
+        <h2 class="text-2xl font-semibold tracking-tight mb-4">Pricing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-lg font-semibold mb-2">How It Works</h3>
+            <ul class="space-y-2 text-sm text-neutral-500 dark:text-neutral-400">
+              <li>• Starting price: $1 per slot</li>
+              <li>• First come, first served</li>
+              <li>• Price increases as slots fill</li>
+              <li>• Your backlink stays forever</li>
+              <li>• Payment via email</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-2">What You Get</h3>
+            <ul class="space-y-2 text-sm text-neutral-500 dark:text-neutral-400">
+              <li>• Backlink on homepage</li>
+              <li>• Your site name + description</li>
+              <li>• Position in the backlinks section</li>
+              <li>• DoFollow link for SEO</li>
+              <li>• Real visitor exposure</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mb-12">
+      <div class="sell-slot-banner text-center">
+        <h2 class="text-3xl font-bold mb-4">Only 8 Slots Left</h2>
+        <p class="text-neutral-400 mb-6">Get your site listed before they're gone.</p>
+        <a href="mailto:email@arhanahmad.com?subject=Buy a Slot&body=I want to buy a slot on arhanahmad.com.%0A%0AMy website URL: %0AMy site description: " class="sell-slot-btn">
+          Buy Your Slot Now →
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">ARHAN<span class="text-cyan-400">.</span></a>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">Only 8 slots remaining. Starting at $1.</p>
+      </div>
+    </footer>
+  </main>
+</BaseLayout>
+
+<style>
+  .back-link {
+    font-family: var(--font-mono), monospace; text-transform: uppercase; letter-spacing: 0.1em;
+    color: rgb(156 163 175); font-size: 11px; text-decoration: none; transition: color 0.2s;
+  }
+  .back-link:hover { color: #67e8f9; }
+  .backlink-card {
+    padding: 16px;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+  .backlink-card:hover {
+    transform: translateY(-2px);
+    border-color: rgb(6 182 212 / 0.3);
+  }
+  .position-badge {
+    font-family: var(--font-mono), monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #06b6d4;
+    background: rgba(6, 182, 212, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  .bid-slot {
+    padding: 20px;
+    background: hsl(var(--card));
+    border: 1px dashed hsl(var(--border));
+    border-radius: 0;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+  .bid-slot:hover {
+    border-color: #06b6d4;
+    transform: translateY(-2px);
+  }
+  .bid-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+    color: white;
+    font-family: var(--font-mono), monospace;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: center;
+  }
+  .bid-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+  }
+  .sell-slot-banner {
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    border-radius: 0;
+  }
+  .sell-slot-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+    color: white;
+    font-family: var(--font-mono), monospace;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .sell-slot-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+  }
+  .bento-tile { transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1); }
+  .bento-tile:hover { transform: translateY(-2px); }
+</style>

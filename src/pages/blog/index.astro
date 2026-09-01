@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ThemeToggle from '../../components/ThemeToggle.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout title="Blog | Arhan Ahmad">
+  <main class="min-h-screen" style="background-color: var(--bg-primary);">
+    <div class="mx-auto max-w-4xl px-6 py-12">
+      <!-- Header -->
+      <div class="flex items-center justify-between">
+        <a href="/" class="text-sm font-medium" style="color: var(--text-secondary);">
+          ← Back to home
+        </a>
+        <ThemeToggle />
+      </div>
+
+      <!-- Blog Header -->
+      <div class="mt-12">
+        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl" style="color: var(--text-primary);">
+          Blog
+        </h1>
+        <p class="mt-3 text-base" style="color: var(--text-secondary);">
+          Thoughts on building, shipping, and learning in public.
+        </p>
+      </div>
+
+      <!-- Posts -->
+      <div class="mt-10 space-y-6">
+        {posts.length === 0 ? (
+          <div class="card-dark p-8 text-center">
+            <p style="color: var(--text-secondary);">No posts yet. Check back soon.</p>
+          </div>
+        ) : (
+          posts.map((post) => (
+            <a href={`/blog/${post.id}`} class="blog-card">
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex-1">
+                  <h2 class="font-semibold" style="color: var(--text-primary);">
+                    {post.data.title}
+                  </h2>
+                  <p class="mt-2 text-sm leading-relaxed" style="color: var(--text-secondary);">
+                    {post.data.description}
+                  </p>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    {post.data.tags.map((tag) => (
+                      <span class="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                <time
+                  class="shrink-0 text-xs"
+                  style="color: var(--text-secondary); font-family: 'JetBrains Mono', monospace;"
+                  datetime={post.data.date.toISOString()}
+                >
+                  {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                </time>
+              </div>
+            </a>
+          ))
+        )}
+      </div>
+    </div>
+  </main>
+</BaseLayout>

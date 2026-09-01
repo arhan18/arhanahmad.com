@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+  .filter(post => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5); // Fetch a few more to make a good marquee
+---
+
+{posts.length > 0 && (
+  <section class="section-spacing" id="blog">
+    <div class="flex items-end justify-between">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl" style="color: var(--text-primary);">
+          Blog
+        </h2>
+        <p class="mt-2 text-sm" style="color: var(--text-secondary);">
+          Thoughts on building, shipping, and learning in public.
+        </p>
+      </div>
+      <a
+        href="/blog"
+        class="text-sm font-medium transition-all hover:underline"
+        style="color: var(--accent);"
+      >
+        View all posts →
+      </a>
+    </div>
+
+    <div class="mt-8 group flex p-2 overflow-x-auto overflow-y-hidden overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden flex-row w-full [--duration:50s] [mask-image:linear-gradient(to_right,transparent_0%,#000_10%,#000_90%,transparent_100%)] relative">
+      <div class="flex shrink-0 justify-around gap-4 animate-marquee flex-row group-hover:[animation-play-state:paused] pr-4">
+        {posts.map((post) => (
+          <a href={`/blog/${post.id}`} class="group/exp relative w-[350px] overflow-hidden rounded-xl border px-5 py-4 transform-gpu transition-all duration-300 ease-out no-underline block">
+            <time
+              class="text-[11px] font-medium tracking-widest uppercase text-neutral-500 dark:text-neutral-400"
+              datetime={post.data.date.toISOString()}
+            >
+              {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+            </time>
+            <h3 class="mt-2 font-bold text-neutral-800 dark:text-white leading-tight">
+              {post.data.title}
+            </h3>
+            <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2">
+              {post.data.description}
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {post.data.tags.slice(0, 2).map((tag) => (
+                <span class="badge">{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="flex shrink-0 justify-around gap-4 animate-marquee flex-row group-hover:[animation-play-state:paused] pr-4" aria-hidden="true">
+        {posts.map((post) => (
+          <a href={`/blog/${post.id}`} class="group/exp relative w-[350px] overflow-hidden rounded-xl border px-5 py-4 transform-gpu transition-all duration-300 ease-out no-underline block">
+            <time
+              class="text-[11px] font-medium tracking-widest uppercase text-neutral-500 dark:text-neutral-400"
+              datetime={post.data.date.toISOString()}
+            >
+              {post.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+            </time>
+            <h3 class="mt-2 font-bold text-neutral-800 dark:text-white leading-tight">
+              {post.data.title}
+            </h3>
+            <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400 line-clamp-2">
+              {post.data.description}
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {post.data.tags.slice(0, 2).map((tag) => (
+                <span class="badge">{tag}</span>
+              ))}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

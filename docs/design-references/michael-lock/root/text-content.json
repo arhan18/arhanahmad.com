@@ -1,0 +1,3811 @@
+[
+  {
+    "text": "!function(){try{var d=document.documentElement,c=d.classList;c.remove('light','dark');var e=localStorage.getItem('theme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);if(m.media!==t||m.matches){d.style.colorScheme = 'dark';c.add('dark')}else{d.style.colorScheme = 'light';c.add('light')}}else if(e){c.add(e|| '')}if(e==='light'||e==='dark')d.style.colorScheme=e}catch(e){}}()",
+    "tag": "script",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Let's",
+    "tag": "span",
+    "classes": "",
+    "fontSize": "72px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "cook.",
+    "tag": "span",
+    "classes": "",
+    "fontSize": "72px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Storytelling, positioning & 0-to-1 launches",
+    "tag": "span",
+    "classes": "inline-flex cursor-default items-center gap-1 rounded-full",
+    "fontSize": "11px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "AI-native operator",
+    "tag": "span",
+    "classes": "inline-flex cursor-default items-center gap-1 rounded-full",
+    "fontSize": "11px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "San Diego, California",
+    "tag": "span",
+    "classes": "inline-flex cursor-default items-center gap-1 rounded-full",
+    "fontSize": "11px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Email",
+    "tag": "span",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "600",
+    "color": "rgb(250, 250, 250)"
+  },
+  {
+    "text": "Résumé",
+    "tag": "span",
+    "classes": "",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Toggle theme",
+    "tag": "span",
+    "classes": "sr-only",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(23, 23, 23)"
+  },
+  {
+    "text": "Michael Lock",
+    "tag": "div",
+    "classes": "text-3xl font-semibold leading-tight text-neutral-700 dark:text-neutral-200",
+    "fontSize": "30px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Health-tech product marketing leader",
+    "tag": "p",
+    "classes": "text-sm text-neutral-500 dark:text-neutral-400",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Connect on LinkedIn",
+    "tag": "a",
+    "classes": "inline-flex items-center justify-center whitespace-nowrap text-sm",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)",
+    "href": "https://www.linkedin.com/in/michael--lock/"
+  },
+  {
+    "text": "Ask me anything",
+    "tag": "h2",
+    "classes": "text-3xl font-semibold text-neutral-700 dark:text-neutral-300",
+    "fontSize": "30px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Curious how I work or what I've shipped? Type a question.",
+    "tag": "p",
+    "classes": "text-neutral-500 dark:text-neutral-400",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "What have you shipped 0-to-1?",
+    "tag": "button",
+    "classes": "rounded-full px-3 py-1.5 text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "How do you get up to speed in a new domain?",
+    "tag": "button",
+    "classes": "rounded-full px-3 py-1.5 text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "How do you use AI?",
+    "tag": "button",
+    "classes": "rounded-full px-3 py-1.5 text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "How do you stay organized?",
+    "tag": "button",
+    "classes": "rounded-full px-3 py-1.5 text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Ask me anything…",
+    "tag": "label",
+    "classes": "sr-only",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Clarity RCM",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://clarityrcm.com/"
+  },
+  {
+    "text": "Head of Marketing (Founding Marketer)",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Founding marketer",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$20M ARR",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Built the marketing function on top of founder-led sales: 300% more qualified inbound, $7M closed-won ARR (up 35% YoY).",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Elation Health",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.elationhealth.com/"
+  },
+  {
+    "text": "Principal Product Marketing Manager",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Series D",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$50M ARR",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Led 0-to-1 GTM for a clinical AI scribe ($3M ARR yr 1) and a new billing product ($5M ARR).",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "360training",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.360training.com/"
+  },
+  {
+    "text": "Product Marketing Lead, Healthcare",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "PE-backed",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$36M→$72M",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Built PMM 0-to-4; took an acquired HIPAA product line to $10M ARR; helped 2x the business $36M to $72M.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "EX",
+    "tag": "span",
+    "classes": "flex h-[22px] w-[22px] shrink-0 items-center",
+    "fontSize": "9px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "ExSite",
+    "tag": "span",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)"
+  },
+  {
+    "text": "Founder, Fractional PMM",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Founder",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$2M raised",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Fractional PMM for 30+ clients; reusable launch frameworks adopted as their internal standards.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Meta",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://about.meta.com/"
+  },
+  {
+    "text": "Product Ops, Platform",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "NASDAQ: META",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "0→500K MAU",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Scaled Facebook Gaming 0 to 500K MAU.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Accenture",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.accenture.com/"
+  },
+  {
+    "text": "Financial Operations Analyst",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Consulting",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Financial operations on the Meta finance BPO; converted into a full-time role at Meta.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity RCM",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://clarityrcm.com/"
+  },
+  {
+    "text": "Head of Marketing (Founding Marketer)",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Founding marketer",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$20M ARR",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Built the marketing function on top of founder-led sales: 300% more qualified inbound, $7M closed-won ARR (up 35% YoY).",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Elation Health",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.elationhealth.com/"
+  },
+  {
+    "text": "Principal Product Marketing Manager",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Series D",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$50M ARR",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Led 0-to-1 GTM for a clinical AI scribe ($3M ARR yr 1) and a new billing product ($5M ARR).",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "360training",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.360training.com/"
+  },
+  {
+    "text": "Product Marketing Lead, Healthcare",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "PE-backed",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$36M→$72M",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Built PMM 0-to-4; took an acquired HIPAA product line to $10M ARR; helped 2x the business $36M to $72M.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "EX",
+    "tag": "span",
+    "classes": "flex h-[22px] w-[22px] shrink-0 items-center",
+    "fontSize": "9px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "ExSite",
+    "tag": "span",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)"
+  },
+  {
+    "text": "Founder, Fractional PMM",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Founder",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$2M raised",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Fractional PMM for 30+ clients; reusable launch frameworks adopted as their internal standards.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Meta",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://about.meta.com/"
+  },
+  {
+    "text": "Product Ops, Platform",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "NASDAQ: META",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "0→500K MAU",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Scaled Facebook Gaming 0 to 500K MAU.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Accenture",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.accenture.com/"
+  },
+  {
+    "text": "Financial Operations Analyst",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Consulting",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Financial operations on the Meta finance BPO; converted into a full-time role at Meta.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity RCM",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://clarityrcm.com/"
+  },
+  {
+    "text": "Head of Marketing (Founding Marketer)",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Founding marketer",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$20M ARR",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Built the marketing function on top of founder-led sales: 300% more qualified inbound, $7M closed-won ARR (up 35% YoY).",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Elation Health",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.elationhealth.com/"
+  },
+  {
+    "text": "Principal Product Marketing Manager",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Series D",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$50M ARR",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Led 0-to-1 GTM for a clinical AI scribe ($3M ARR yr 1) and a new billing product ($5M ARR).",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "360training",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.360training.com/"
+  },
+  {
+    "text": "Product Marketing Lead, Healthcare",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "PE-backed",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$36M→$72M",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Built PMM 0-to-4; took an acquired HIPAA product line to $10M ARR; helped 2x the business $36M to $72M.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "EX",
+    "tag": "span",
+    "classes": "flex h-[22px] w-[22px] shrink-0 items-center",
+    "fontSize": "9px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "ExSite",
+    "tag": "span",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)"
+  },
+  {
+    "text": "Founder, Fractional PMM",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Founder",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$2M raised",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Fractional PMM for 30+ clients; reusable launch frameworks adopted as their internal standards.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Meta",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://about.meta.com/"
+  },
+  {
+    "text": "Product Ops, Platform",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "NASDAQ: META",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "0→500K MAU",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Scaled Facebook Gaming 0 to 500K MAU.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Accenture",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.accenture.com/"
+  },
+  {
+    "text": "Financial Operations Analyst",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Consulting",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Financial operations on the Meta finance BPO; converted into a full-time role at Meta.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity RCM",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://clarityrcm.com/"
+  },
+  {
+    "text": "Head of Marketing (Founding Marketer)",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Founding marketer",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$20M ARR",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Built the marketing function on top of founder-led sales: 300% more qualified inbound, $7M closed-won ARR (up 35% YoY).",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Elation Health",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.elationhealth.com/"
+  },
+  {
+    "text": "Principal Product Marketing Manager",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Series D",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$50M ARR",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Led 0-to-1 GTM for a clinical AI scribe ($3M ARR yr 1) and a new billing product ($5M ARR).",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "360training",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.360training.com/"
+  },
+  {
+    "text": "Product Marketing Lead, Healthcare",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "PE-backed",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$36M→$72M",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Built PMM 0-to-4; took an acquired HIPAA product line to $10M ARR; helped 2x the business $36M to $72M.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "EX",
+    "tag": "span",
+    "classes": "flex h-[22px] w-[22px] shrink-0 items-center",
+    "fontSize": "9px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "ExSite",
+    "tag": "span",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)"
+  },
+  {
+    "text": "Founder, Fractional PMM",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Founder",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "$2M raised",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Fractional PMM for 30+ clients; reusable launch frameworks adopted as their internal standards.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Meta",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://about.meta.com/"
+  },
+  {
+    "text": "Product Ops, Platform",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "NASDAQ: META",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "0→500K MAU",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Scaled Facebook Gaming 0 to 500K MAU.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Accenture",
+    "tag": "a",
+    "classes": "min-w-0 flex-1 truncate text-sm font-bold",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.accenture.com/"
+  },
+  {
+    "text": "Financial Operations Analyst",
+    "tag": "div",
+    "classes": "mt-1 truncate whitespace-nowrap text-xs font-medium",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Consulting",
+    "tag": "span",
+    "classes": "inline-flex shrink-0 items-center rounded-full px-2",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Financial operations on the Meta finance BPO; converted into a full-time role at Meta.",
+    "tag": "p",
+    "classes": "text-[11px] leading-snug text-neutral-500 dark:text-neutral-400",
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Experience",
+    "tag": "div",
+    "classes": "text-3xl font-semibold text-neutral-700 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_14px_hsl(var(--background))] dark:text-neutral-300",
+    "fontSize": "30px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Where I've built and what it returned.",
+    "tag": "p",
+    "classes": "w-full text-neutral-500 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_12px_hsl(var(--background))] dark:text-neutral-400",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Full history on LinkedIn",
+    "tag": "a",
+    "classes": "inline-flex items-center justify-center whitespace-nowrap text-sm",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)",
+    "href": "https://www.linkedin.com/in/michael--lock/"
+  },
+  {
+    "text": "Claude",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Op",
+    "tag": "span",
+    "classes": "flex h-6 w-6 shrink-0 items-center",
+    "fontSize": "10px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "OpenAI",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Cursor",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Python",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Next.js",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "React",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Tailwind",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Vercel",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "n8n",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Zapier",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Hugging Face",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Perplexity",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Notion",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Linear",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Figma",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Sl",
+    "tag": "span",
+    "classes": "flex h-6 w-6 shrink-0 items-center",
+    "fontSize": "10px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Slack",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "HubSpot",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Sa",
+    "tag": "span",
+    "classes": "flex h-6 w-6 shrink-0 items-center",
+    "fontSize": "10px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Salesforce",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Ap",
+    "tag": "span",
+    "classes": "flex h-6 w-6 shrink-0 items-center",
+    "fontSize": "10px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Apollo",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Go",
+    "tag": "span",
+    "classes": "flex h-6 w-6 shrink-0 items-center",
+    "fontSize": "10px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Gong",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Na",
+    "tag": "span",
+    "classes": "flex h-6 w-6 shrink-0 items-center",
+    "fontSize": "10px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Navattic",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Semrush",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "GA4",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Google Ads",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Webflow",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "be",
+    "tag": "span",
+    "classes": "flex h-6 w-6 shrink-0 items-center",
+    "fontSize": "10px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "beehiiv",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Intercom",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Se",
+    "tag": "span",
+    "classes": "flex h-6 w-6 shrink-0 items-center",
+    "fontSize": "10px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Segment",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Ca",
+    "tag": "span",
+    "classes": "flex h-6 w-6 shrink-0 items-center",
+    "fontSize": "10px",
+    "fontWeight": "600",
+    "color": "rgb(82, 82, 82)"
+  },
+  {
+    "text": "Canva",
+    "tag": "span",
+    "classes": "whitespace-nowrap",
+    "fontSize": "12px",
+    "fontWeight": "500",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Stack",
+    "tag": "div",
+    "classes": "text-3xl font-semibold text-neutral-700 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_14px_hsl(var(--background))] dark:text-neutral-300",
+    "fontSize": "30px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "The AI-native and go-to-market tools I build the function on.",
+    "tag": "p",
+    "classes": "w-full text-neutral-500 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_12px_hsl(var(--background))] dark:text-neutral-400",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "See the open-source tools",
+    "tag": "a",
+    "classes": "inline-flex items-center justify-center whitespace-nowrap text-sm",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)",
+    "href": "https://github.com/milock"
+  },
+  {
+    "text": "Clarity Website Refresh",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarity-website"
+  },
+  {
+    "text": "Messaging & Brand",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "Figma",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://www.figma.com/design/SYgmqCRoefFFdwums5367F/Michael-s-Portfolio?t=KmZ5JjplH7FqLfwL-1"
+  },
+  {
+    "text": "Rebuilt Clarity's marketing site positioning-first, 13 to 25 pages, solo.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "ClarityOS Teaser Video",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarityos-teaser"
+  },
+  {
+    "text": "Product Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "4-act product teaser for the ClarityOS launch. I wrote and directed it.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Personal Memory System",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/memory-system"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "Long-term memory for my AI assistant: sync pipeline in, MCP server out.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Elation AI Scribe Launch",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/elation-scribe"
+  },
+  {
+    "text": "Product Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "0-to-1 GTM for the first AI scribe built inside the EMR. $3M ARR year one.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Thriftly",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/thriftly"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/thriftly"
+  },
+  {
+    "text": "Ranks every US Goodwill 0-100 on donation quality, from Census data.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Client Proposal",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/client-proposal"
+  },
+  {
+    "text": "Web",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "The proposal built as the bilingual, interactive site it was pitching.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Polysearch",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/polysearch"
+  },
+  {
+    "text": "Python",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/polysearch"
+  },
+  {
+    "text": "Pip-installable multi-source research pipeline that verifies its own citations.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "AAD 2026 Sizzle Reel",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/sizzle-reel"
+  },
+  {
+    "text": "Event Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "Figma",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://www.figma.com/design/SYgmqCRoefFFdwums5367F/Michael-s-Portfolio?t=KmZ5JjplH7FqLfwL-1"
+  },
+  {
+    "text": "Silent, stats-led brand reel for the AAD booth. I wrote and directed it.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Lock",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/lock"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/lock"
+  },
+  {
+    "text": "This site: range as proof, not pitch. Designed, written, and shipped solo.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity Ad Landing Pages",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarity-landing-pages"
+  },
+  {
+    "text": "Web / Growth",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "The Next.js ad-landing platform our paid search runs on. 52 to 90 on mobile.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Humanizer",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/humanizer"
+  },
+  {
+    "text": "Markdown",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/humanizer"
+  },
+  {
+    "text": "A rules-based scrub that protects your voice and facts while clearing AI tells. OSS.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity Website Refresh",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarity-website"
+  },
+  {
+    "text": "Messaging & Brand",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "Figma",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://www.figma.com/design/SYgmqCRoefFFdwums5367F/Michael-s-Portfolio?t=KmZ5JjplH7FqLfwL-1"
+  },
+  {
+    "text": "Rebuilt Clarity's marketing site positioning-first, 13 to 25 pages, solo.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "ClarityOS Teaser Video",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarityos-teaser"
+  },
+  {
+    "text": "Product Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "4-act product teaser for the ClarityOS launch. I wrote and directed it.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Personal Memory System",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/memory-system"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "Long-term memory for my AI assistant: sync pipeline in, MCP server out.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Elation AI Scribe Launch",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/elation-scribe"
+  },
+  {
+    "text": "Product Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "0-to-1 GTM for the first AI scribe built inside the EMR. $3M ARR year one.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Thriftly",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/thriftly"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/thriftly"
+  },
+  {
+    "text": "Ranks every US Goodwill 0-100 on donation quality, from Census data.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Client Proposal",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/client-proposal"
+  },
+  {
+    "text": "Web",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "The proposal built as the bilingual, interactive site it was pitching.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Polysearch",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/polysearch"
+  },
+  {
+    "text": "Python",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/polysearch"
+  },
+  {
+    "text": "Pip-installable multi-source research pipeline that verifies its own citations.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "AAD 2026 Sizzle Reel",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/sizzle-reel"
+  },
+  {
+    "text": "Event Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "Figma",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://www.figma.com/design/SYgmqCRoefFFdwums5367F/Michael-s-Portfolio?t=KmZ5JjplH7FqLfwL-1"
+  },
+  {
+    "text": "Silent, stats-led brand reel for the AAD booth. I wrote and directed it.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Lock",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/lock"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/lock"
+  },
+  {
+    "text": "This site: range as proof, not pitch. Designed, written, and shipped solo.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity Ad Landing Pages",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarity-landing-pages"
+  },
+  {
+    "text": "Web / Growth",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "The Next.js ad-landing platform our paid search runs on. 52 to 90 on mobile.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Humanizer",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/humanizer"
+  },
+  {
+    "text": "Markdown",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/humanizer"
+  },
+  {
+    "text": "A rules-based scrub that protects your voice and facts while clearing AI tells. OSS.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity Website Refresh",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarity-website"
+  },
+  {
+    "text": "Messaging & Brand",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "Figma",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://www.figma.com/design/SYgmqCRoefFFdwums5367F/Michael-s-Portfolio?t=KmZ5JjplH7FqLfwL-1"
+  },
+  {
+    "text": "Rebuilt Clarity's marketing site positioning-first, 13 to 25 pages, solo.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "ClarityOS Teaser Video",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarityos-teaser"
+  },
+  {
+    "text": "Product Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "4-act product teaser for the ClarityOS launch. I wrote and directed it.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Personal Memory System",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/memory-system"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "Long-term memory for my AI assistant: sync pipeline in, MCP server out.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Elation AI Scribe Launch",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/elation-scribe"
+  },
+  {
+    "text": "Product Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "0-to-1 GTM for the first AI scribe built inside the EMR. $3M ARR year one.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Thriftly",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/thriftly"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/thriftly"
+  },
+  {
+    "text": "Ranks every US Goodwill 0-100 on donation quality, from Census data.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Client Proposal",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/client-proposal"
+  },
+  {
+    "text": "Web",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "The proposal built as the bilingual, interactive site it was pitching.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Polysearch",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/polysearch"
+  },
+  {
+    "text": "Python",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/polysearch"
+  },
+  {
+    "text": "Pip-installable multi-source research pipeline that verifies its own citations.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "AAD 2026 Sizzle Reel",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/sizzle-reel"
+  },
+  {
+    "text": "Event Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "Figma",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://www.figma.com/design/SYgmqCRoefFFdwums5367F/Michael-s-Portfolio?t=KmZ5JjplH7FqLfwL-1"
+  },
+  {
+    "text": "Silent, stats-led brand reel for the AAD booth. I wrote and directed it.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Lock",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/lock"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/lock"
+  },
+  {
+    "text": "This site: range as proof, not pitch. Designed, written, and shipped solo.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity Ad Landing Pages",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarity-landing-pages"
+  },
+  {
+    "text": "Web / Growth",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "The Next.js ad-landing platform our paid search runs on. 52 to 90 on mobile.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Humanizer",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/humanizer"
+  },
+  {
+    "text": "Markdown",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/humanizer"
+  },
+  {
+    "text": "A rules-based scrub that protects your voice and facts while clearing AI tells. OSS.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity Website Refresh",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarity-website"
+  },
+  {
+    "text": "Messaging & Brand",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "Figma",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://www.figma.com/design/SYgmqCRoefFFdwums5367F/Michael-s-Portfolio?t=KmZ5JjplH7FqLfwL-1"
+  },
+  {
+    "text": "Rebuilt Clarity's marketing site positioning-first, 13 to 25 pages, solo.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "ClarityOS Teaser Video",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarityos-teaser"
+  },
+  {
+    "text": "Product Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "4-act product teaser for the ClarityOS launch. I wrote and directed it.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Personal Memory System",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/memory-system"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "Long-term memory for my AI assistant: sync pipeline in, MCP server out.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Elation AI Scribe Launch",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/elation-scribe"
+  },
+  {
+    "text": "Product Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "0-to-1 GTM for the first AI scribe built inside the EMR. $3M ARR year one.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Thriftly",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/thriftly"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/thriftly"
+  },
+  {
+    "text": "Ranks every US Goodwill 0-100 on donation quality, from Census data.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Client Proposal",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/client-proposal"
+  },
+  {
+    "text": "Web",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "The proposal built as the bilingual, interactive site it was pitching.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Polysearch",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/polysearch"
+  },
+  {
+    "text": "Python",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/polysearch"
+  },
+  {
+    "text": "Pip-installable multi-source research pipeline that verifies its own citations.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "AAD 2026 Sizzle Reel",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/sizzle-reel"
+  },
+  {
+    "text": "Event Marketing",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Marketing",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(124, 58, 237)"
+  },
+  {
+    "text": "Figma",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://www.figma.com/design/SYgmqCRoefFFdwums5367F/Michael-s-Portfolio?t=KmZ5JjplH7FqLfwL-1"
+  },
+  {
+    "text": "Silent, stats-led brand reel for the AAD booth. I wrote and directed it.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Lock",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/lock"
+  },
+  {
+    "text": "TypeScript",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/lock"
+  },
+  {
+    "text": "This site: range as proof, not pitch. Designed, written, and shipped solo.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Clarity Ad Landing Pages",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/clarity-landing-pages"
+  },
+  {
+    "text": "Web / Growth",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "The Next.js ad-landing platform our paid search runs on. 52 to 90 on mobile.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Humanizer",
+    "tag": "a",
+    "classes": "text-sm font-bold text-neutral-800 after:absolute after:inset-0",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "color": "rgb(38, 38, 38)",
+    "href": "https://www.michael-lock.com/projects/humanizer"
+  },
+  {
+    "text": "Markdown",
+    "tag": "span",
+    "classes": "shrink-0 text-[10px] text-neutral-500 dark:text-neutral-400",
+    "fontSize": "10px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Vibe-coded",
+    "tag": "span",
+    "classes": "inline-flex items-center rounded-full px-2 py-[3px]",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(5, 150, 105)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "relative z-10 inline-flex items-center gap-1",
+    "fontSize": "10px",
+    "fontWeight": "500",
+    "color": "rgb(82, 82, 82)",
+    "href": "https://github.com/milock/humanizer"
+  },
+  {
+    "text": "A rules-based scrub that protects your voice and facts while clearing AI tells. OSS.",
+    "tag": "blockquote",
+    "classes": "mt-2.5 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Projects",
+    "tag": "div",
+    "classes": "text-3xl font-semibold text-neutral-700 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_14px_hsl(var(--background))] dark:text-neutral-300",
+    "fontSize": "30px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Work I've shipped, from go-to-market to vibe-coded tools.",
+    "tag": "p",
+    "classes": "w-full text-neutral-500 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_12px_hsl(var(--background))] dark:text-neutral-400",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "GitHub",
+    "tag": "a",
+    "classes": "inline-flex items-center justify-center whitespace-nowrap text-sm",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)",
+    "href": "https://github.com/milock"
+  },
+  {
+    "text": "Figma portfolio",
+    "tag": "a",
+    "classes": "inline-flex items-center justify-center whitespace-nowrap text-sm",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)",
+    "href": "https://www.figma.com/design/SYgmqCRoefFFdwums5367F/Michael-s-Portfolio?t=KmZ5JjplH7FqLfwL-1"
+  },
+  {
+    "text": "GitHub Stars",
+    "tag": "div",
+    "classes": "text-3xl font-semibold text-neutral-700 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_14px_hsl(var(--background))] dark:text-neutral-300",
+    "fontSize": "30px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Not a lot, but I'm proud of every single one.",
+    "tag": "p",
+    "classes": "w-full text-neutral-500 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_12px_hsl(var(--background))] dark:text-neutral-400",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "View my GitHub",
+    "tag": "a",
+    "classes": "inline-flex items-center justify-center whitespace-nowrap text-sm",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)",
+    "href": "https://github.com/milock"
+  },
+  {
+    "text": "Go-to-Market",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "0-to-1 launches, positioning, and category strategy.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Pricing & Packaging",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Good-better-best architecture; attach-rate and ARPA lift.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Competitive Intel",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Teardowns, battlecards, and win/loss that move win rates.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "AI-Native Ops",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Multi-agent workflows that deliver a team's output, solo.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Demand & Content",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "A weekly newsletter grown from zero to 5,000+ subscribers.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Product",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "A self-built prototype that became a funded roadmap product.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Go-to-Market",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "0-to-1 launches, positioning, and category strategy.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Pricing & Packaging",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Good-better-best architecture; attach-rate and ARPA lift.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Competitive Intel",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Teardowns, battlecards, and win/loss that move win rates.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "AI-Native Ops",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Multi-agent workflows that deliver a team's output, solo.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Demand & Content",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "A weekly newsletter grown from zero to 5,000+ subscribers.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Product",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "A self-built prototype that became a funded roadmap product.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Go-to-Market",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "0-to-1 launches, positioning, and category strategy.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Pricing & Packaging",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Good-better-best architecture; attach-rate and ARPA lift.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Competitive Intel",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Teardowns, battlecards, and win/loss that move win rates.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "AI-Native Ops",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Multi-agent workflows that deliver a team's output, solo.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Demand & Content",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "A weekly newsletter grown from zero to 5,000+ subscribers.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Product",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "A self-built prototype that became a funded roadmap product.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Go-to-Market",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "0-to-1 launches, positioning, and category strategy.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Pricing & Packaging",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Good-better-best architecture; attach-rate and ARPA lift.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Competitive Intel",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Teardowns, battlecards, and win/loss that move win rates.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "AI-Native Ops",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "Multi-agent workflows that deliver a team's output, solo.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Demand & Content",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "A weekly newsletter grown from zero to 5,000+ subscribers.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Product",
+    "tag": "span",
+    "classes": "block",
+    "fontSize": "18px",
+    "fontWeight": "700",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "A self-built prototype that became a funded roadmap product.",
+    "tag": "blockquote",
+    "classes": "mt-2 text-xs text-neutral-500 dark:text-neutral-400",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "Focus areas",
+    "tag": "div",
+    "classes": "text-3xl font-semibold text-neutral-700 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_14px_hsl(var(--background))] dark:text-neutral-300",
+    "fontSize": "30px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Where I spend my time.",
+    "tag": "p",
+    "classes": "w-full text-neutral-500 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_12px_hsl(var(--background))] dark:text-neutral-400",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "More on LinkedIn",
+    "tag": "a",
+    "classes": "inline-flex items-center justify-center whitespace-nowrap text-sm",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)",
+    "href": "https://www.linkedin.com/in/michael--lock/"
+  },
+  {
+    "text": "AI-Native Ops",
+    "tag": "div",
+    "classes": "text-3xl font-semibold text-neutral-700 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_14px_hsl(var(--background))] dark:text-neutral-300",
+    "fontSize": "30px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "A self-built multi-agent system that delivers a team's output, solo.",
+    "tag": "p",
+    "classes": "w-full text-neutral-500 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_12px_hsl(var(--background))] dark:text-neutral-400",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "See some of the tools",
+    "tag": "a",
+    "classes": "inline-flex items-center justify-center whitespace-nowrap text-sm",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)",
+    "href": "https://github.com/milock"
+  },
+  {
+    "text": "✔ Next.js + TypeScript + Tailwind",
+    "tag": "div",
+    "classes": "grid text-sm font-normal tracking-tight",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "✔ Designed, built and shipped solo",
+    "tag": "div",
+    "classes": "grid text-sm font-normal tracking-tight",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "✔ AI as the pair, me on the wheel",
+    "tag": "div",
+    "classes": "grid text-sm font-normal tracking-tight",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "✓ Vibe-coded. Live.",
+    "tag": "div",
+    "classes": "text-sm font-normal tracking-tight flex items-center",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "color": "rgb(34, 197, 94)"
+  },
+  {
+    "text": "Vibe-coded by me",
+    "tag": "div",
+    "classes": "text-3xl font-semibold text-neutral-700 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_14px_hsl(var(--background))] dark:text-neutral-300",
+    "fontSize": "30px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Like it? It's open source.",
+    "tag": "p",
+    "classes": "w-full text-neutral-500 [text-shadow:0_1px_2px_hsl(var(--background)),0_0_12px_hsl(var(--background))] dark:text-neutral-400",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "How I built it",
+    "tag": "a",
+    "classes": "inline-flex items-center justify-center whitespace-nowrap text-sm",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)",
+    "href": "https://www.michael-lock.com/projects/lock"
+  },
+  {
+    "text": "Get in touch.",
+    "tag": "h1",
+    "classes": "",
+    "fontSize": "48px",
+    "fontWeight": "600",
+    "color": "rgb(64, 64, 64)"
+  },
+  {
+    "text": "Email",
+    "tag": "span",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "600",
+    "color": "rgb(250, 250, 250)"
+  },
+  {
+    "text": "Résumé",
+    "tag": "span",
+    "classes": "",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "You made it to the bottom. Click the strip and hit space. 🦖",
+    "tag": "p",
+    "classes": "mt-2 text-center text-xs text-muted-foreground",
+    "fontSize": "12px",
+    "fontWeight": "400",
+    "color": "rgb(115, 115, 115)"
+  },
+  {
+    "text": "(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])",
+    "tag": "script",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "self.__next_f.push([1,\"1:HL[\\\"/_next/static/media/e4af272ccee01ff0-s.p.woff2\\\",\\\"font\\\",{\\\"crossOrigin\\\":\\\"\\\",\\\"type\\\":\\\"font/woff2\\\"}]\\n2:HL[\\\"/_next/static/css/7cca8e2c5137bd71.css?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"style\\\"]\\n3:HL[\\\"/_next/static/css/273d46a83051a28a.css?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"style\\\"]\\n\"])",
+    "tag": "script",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "self.__next_f.push([1,\"4:I[3128,[],\\\"\\\"]\\n6:I[1435,[\\\"792\\\",\\\"static/chunks/84fbfe7f-55cfff598bab7e86.js?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"861\\\",\\\"static/chunks/c1fbdae3-d3aa76d5122d1f02.js?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"594\\\",\\\"static/chunks/594-439ee601c8c60fe7.js?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"41\\\",\\\"static/chunks/41-d6f5f81e0ffe7d92.js?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"790\\\",\\\"static/chunks/790-9936126bc0bcd12a.js?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"936",
+    "tag": "script",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "self.__next_f.push([1,\"8d90cfb6.js?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"185\\\",\\\"static/chunks/app/layout-237a308860ccb3c1.js?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\"],\\\"Analytics\\\"]\\ne:I[7551,[],\\\"\\\"]\\nf:[]\\n\"])",
+    "tag": "script",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "self.__next_f.push([1,\"0:[[[\\\"$\\\",\\\"link\\\",\\\"0\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/css/7cca8e2c5137bd71.css?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\"}],[\\\"$\\\",\\\"link\\\",\\\"1\\\",{\\\"rel\\\":\\\"stylesheet\\\",\\\"href\\\":\\\"/_next/static/css/273d46a83051a28a.css?dpl=dpl_GA6Q8XvCxQp1S3GWXnZzux3MeYiy\\\",\\\"precedence\\\":\\\"next\\\",\\\"crossOrigin\\\":\\\"$undefined\\\"}]],[\\\"$\\\",\\\"$L4\\\",null,{\\\"buildId\\\":\\\"PRRCvNoAyDKnRG7FXwflI\\\",\\\"assetPrefix\\\":\\\"\\\",\\\"initia",
+    "tag": "script",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "self.__next_f.push([1,\"d:[[\\\"$\\\",\\\"meta\\\",\\\"0\\\",{\\\"name\\\":\\\"viewport\\\",\\\"content\\\":\\\"width=device-width, initial-scale=1\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"1\\\",{\\\"charSet\\\":\\\"utf-8\\\"}],[\\\"$\\\",\\\"title\\\",\\\"2\\\",{\\\"children\\\":\\\"Michael Lock — Product Marketing \\u0026 Marketing Leader\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"3\\\",{\\\"name\\\":\\\"description\\\",\\\"content\\\":\\\"I build the function, the launch, and the AI system that runs both.\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"4\\\",{\\\"name\\\":\\\"author\\\",\\\"content\\\":\\\"Michael Lock\\\"}],[\\\"$\\\",\\\"meta\\\",\\\"5\\",
+    "tag": "script",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  },
+  {
+    "text": "self.__next_f.push([1,\"5:null\\n\"])",
+    "tag": "script",
+    "classes": "",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "color": "rgb(10, 10, 10)"
+  }
+]

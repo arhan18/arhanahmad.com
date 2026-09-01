@@ -1,0 +1,64 @@
+---
+const stack = [
+  { name: 'Astro', icon: 'As', url: 'https://astro.build' },
+  { name: 'Cloudflare', icon: 'CF', url: 'https://cloudflare.com' },
+  { name: 'Tailwind CSS', icon: 'Tw', url: 'https://tailwindcss.com' },
+  { name: 'JavaScript', icon: 'JS', url: 'https://javascript.com' },
+  { name: 'TypeScript', icon: 'TS', url: 'https://typescriptlang.org' },
+  { name: 'Python', icon: 'Py', url: 'https://python.org' },
+  { name: 'Java', icon: 'Jv', url: 'https://java.com' },
+  { name: 'Git', icon: 'Gi', url: 'https://git-scm.com' },
+  { name: 'GitHub', icon: 'GH', url: 'https://github.com' },
+  { name: 'AI Tools', icon: 'AI', url: 'https://openai.com' },
+];
+---
+
+<section class="section-spacing reveal" id="stack">
+  <div>
+    <h2 class="text-2xl font-bold tracking-tight sm:text-3xl" style="color: hsl(var(--foreground));">
+      Stack
+    </h2>
+    <p class="mt-2 text-sm" style="color: hsl(var(--muted-foreground));">
+      The tools I build with.
+    </p>
+  </div>
+
+  <div class="mt-8 group flex p-2 overflow-x-auto overflow-y-hidden overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden flex-row w-full [--duration:30s] [mask-image:linear-gradient(to_right,transparent_0%,#000_10%,#000_90%,transparent_100%)] relative">
+    <div class="flex shrink-0 justify-around gap-4 animate-marquee flex-row group-hover:[animation-play-state:paused] pr-4">
+      {stack.map((item) => (
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group/exp relative w-[160px] cursor-default overflow-hidden rounded-xl border px-3 py-3 transform-gpu transition-all duration-300 ease-out flex-row items-center gap-3 no-underline"
+          title={item.name}
+        >
+          <span class="company-monogram text-[11px]">
+            {item.icon}
+          </span>
+          <span class="text-sm font-bold text-neutral-800 dark:text-white">
+            {item.name}
+          </span>
+        </a>
+      ))}
+    </div>
+    <div class="flex shrink-0 justify-around gap-4 animate-marquee flex-row group-hover:[animation-play-state:paused] pr-4" aria-hidden="true">
+      {stack.map((item) => (
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group/exp relative w-[160px] cursor-default overflow-hidden rounded-xl border px-3 py-3 transform-gpu transition-all duration-300 ease-out flex-row items-center gap-3 no-underline"
+          title={item.name}
+        >
+          <span class="company-monogram text-[11px]">
+            {item.icon}
+          </span>
+          <span class="text-sm font-bold text-neutral-800 dark:text-white">
+            {item.name}
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

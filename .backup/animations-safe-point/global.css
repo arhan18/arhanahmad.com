@@ -156,8 +156,7 @@ body {
 
 /* CTA Primary */
 .cta-primary {
-  @apply inline-flex items-center justify-center whitespace-nowrap text-base font-semibold transition-colors;
-  border-radius: 0px;
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-semibold transition-colors;
   background-color: rgb(23, 23, 23);
   color: rgb(250, 250, 250);
   height: 48px;
@@ -173,8 +172,7 @@ body {
 
 /* CTA Secondary */
 .cta-secondary {
-  @apply inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors;
-  border-radius: 0px;
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors;
   border: 1px solid hsl(var(--input));
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
@@ -189,8 +187,7 @@ body {
 
 /* Icon Button */
 .icon-button {
-  @apply inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-transform duration-200;
-  border-radius: 0px;
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-transform duration-200;
   border: 1px solid hsl(var(--input));
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
@@ -237,8 +234,8 @@ body {
 
 /* Experience Card (inside marquee) */
 .experience-card {
-  @apply flex shrink-0 flex-col gap-2 border p-3;
-  border-radius: 0px;
+  @apply flex shrink-0 flex-col gap-2 rounded-xl border p-3;
+  width: 300px;
   border-color: hsl(var(--border));
   background-color: hsl(var(--background));
 }
@@ -286,8 +283,7 @@ body {
 
 /* Badge */
 .badge {
-  @apply inline-flex items-center whitespace-nowrap px-2 py-0.5 text-[10px] font-medium leading-none;
-  border-radius: 9999px;
+  @apply inline-flex items-center whitespace-nowrap rounded-full px-2 py-0.5 text-[10px] font-medium leading-none;
   border: 1px solid rgba(0, 0, 0, 0.07);
   background-color: rgba(0, 0, 0, 0.025);
   color: rgb(64, 64, 64);

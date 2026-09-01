@@ -1,0 +1,372 @@
+{
+  "keyframes": [
+    {
+      "name": "grid",
+      "steps": [
+        {
+          "keyText": "0%",
+          "cssText": "0% { transform: translateY(-50%); }"
+        },
+        {
+          "keyText": "100%",
+          "cssText": "100% { transform: translateY(0px); }"
+        }
+      ]
+    },
+    {
+      "name": "marquee",
+      "steps": [
+        {
+          "keyText": "0%",
+          "cssText": "0% { transform: translateX(0px); }"
+        },
+        {
+          "keyText": "100%",
+          "cssText": "100% { transform: translateX(calc(-100% - var(--gap))); }"
+        }
+      ]
+    },
+    {
+      "name": "marquee-vertical",
+      "steps": [
+        {
+          "keyText": "0%",
+          "cssText": "0% { transform: translateY(0px); }"
+        },
+        {
+          "keyText": "100%",
+          "cssText": "100% { transform: translateY(calc(-100% - var(--gap))); }"
+        }
+      ]
+    },
+    {
+      "name": "meteor",
+      "steps": [
+        {
+          "keyText": "0%",
+          "cssText": "0% { transform: rotate(215deg) translateX(0px); opacity: 1; }"
+        },
+        {
+          "keyText": "70%",
+          "cssText": "70% { opacity: 1; }"
+        },
+        {
+          "keyText": "100%",
+          "cssText": "100% { transform: rotate(215deg) translateX(-500px); opacity: 0; }"
+        }
+      ]
+    },
+    {
+      "name": "ripple",
+      "steps": [
+        {
+          "keyText": "0%, 100%",
+          "cssText": "0%, 100% { transform: translate(-50%, -50%) scale(1); }"
+        },
+        {
+          "keyText": "50%",
+          "cssText": "50% { transform: translate(-50%, -50%) scale(0.9); }"
+        }
+      ]
+    },
+    {
+      "name": "slide",
+      "steps": [
+        {
+          "keyText": "100%",
+          "cssText": "100% { transform: translate(calc(-100% + 100cqw)); }"
+        }
+      ]
+    },
+    {
+      "name": "spin",
+      "steps": [
+        {
+          "keyText": "100%",
+          "cssText": "100% { transform: rotate(1turn); }"
+        }
+      ]
+    },
+    {
+      "name": "spin-around",
+      "steps": [
+        {
+          "keyText": "0%",
+          "cssText": "0% { transform: translateZ(0px) rotate(0deg); }"
+        },
+        {
+          "keyText": "15%, 35%",
+          "cssText": "15%, 35% { transform: translateZ(0px) rotate(90deg); }"
+        },
+        {
+          "keyText": "65%, 85%",
+          "cssText": "65%, 85% { transform: translateZ(0px) rotate(270deg); }"
+        },
+        {
+          "keyText": "100%",
+          "cssText": "100% { transform: translateZ(0px) rotate(1turn); }"
+        }
+      ]
+    },
+    {
+      "name": "enter",
+      "steps": [
+        {
+          "keyText": "0%",
+          "cssText": "0% { opacity: var(--tw-enter-opacity,1); transform: translate3d(var(--tw-enter-translate-x,0),var(--tw-enter-translate-y,0),0) scale3d(var(--tw-enter-scale,1),var(--tw-enter-scale,1),var(--tw-enter-scale,1)) rotate(var(--tw-enter-rotate,0)); }"
+        }
+      ]
+    },
+    {
+      "name": "exit",
+      "steps": [
+        {
+          "keyText": "100%",
+          "cssText": "100% { opacity: var(--tw-exit-opacity,1); transform: translate3d(var(--tw-exit-translate-x,0),var(--tw-exit-translate-y,0),0) scale3d(var(--tw-exit-scale,1),var(--tw-exit-scale,1),var(--tw-exit-scale,1)) rotate(var(--tw-exit-rotate,0)); }"
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "element": "DIV.absolute",
+      "animation": "0.3s cubic-bezier(0, 0, 0.2, 1)",
+      "animationName": "none",
+      "animationDuration": "0.3s",
+      "animationTimingFunction": "cubic-bezier(0, 0, 0.2, 1)",
+      "animationIterationCount": "1"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "8s linear 0.257628s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "8s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "2s linear 0.58069s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "2s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "7s linear 0.463749s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "7s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "8s linear 0.397002s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "8s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "5s linear 0.626972s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "5s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "8s linear 0.334453s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "8s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "6s linear 0.780627s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "6s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "4s linear 0.670625s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "4s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "8s linear 1.07719s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "8s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "3s linear 1.00893s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "3s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "2s linear 1.113s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "2s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "9s linear 0.897694s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "9s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "6s linear 0.508143s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "6s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "9s linear 0.957948s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "9s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "9s linear 0.741443s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "9s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "2s linear 0.925615s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "2s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "9s linear 0.572583s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "9s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "2s linear 0.599916s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "2s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "7s linear 0.447054s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "7s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "8s linear 0.832674s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "8s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "8s linear 0.696497s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "8s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "3s linear 1.13477s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "3s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "7s linear 0.936768s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "7s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "9s linear 0.802059s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "9s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "7s linear 0.995593s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "7s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "9s linear 0.604908s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "9s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "4s linear 0.580895s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "4s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "8s linear 0.762806s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "8s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    },
+    {
+      "element": "SPAN.pointer-events-none",
+      "animation": "3s linear 0.961862s infinite meteor",
+      "animationName": "meteor",
+      "animationDuration": "3s",
+      "animationTimingFunction": "linear",
+      "animationIterationCount": "infinite"
+    }
+  ]
+}

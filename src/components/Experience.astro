@@ -1,0 +1,100 @@
+---
+const experiences = [
+  {
+    title: 'Builder',
+    company: '9 Products',
+    description: 'Designed and built 9 experimental internet products. From naming planets to flipping fate.',
+    badges: ['Shipping', 'Indie Hacking'],
+  },
+  {
+    title: 'Learner',
+    company: 'AI Agents',
+    description: 'Exploring how AI can build, automate, and scale personal projects.',
+    badges: ['AI', 'Automation'],
+  },
+  {
+    title: 'Creator',
+    company: 'Building in Public',
+    description: 'Sharing the journey — experiments, failures, and lessons — on X and newsletter.',
+    badges: ['X', 'Newsletter'],
+  },
+  {
+    title: 'Student',
+    company: 'Computer Science',
+    description: 'Learning the foundations while building the future.',
+    badges: ['CSE', '2024 — 2028'],
+  },
+];
+---
+
+<section class="section-spacing reveal" id="experience">
+  <div>
+    <h2 class="text-2xl font-bold tracking-tight sm:text-3xl" style="color: hsl(var(--foreground));">
+      Experience
+    </h2>
+    <p class="mt-2 text-sm" style="color: hsl(var(--muted-foreground));">
+      What I've built and what it returned.
+    </p>
+  </div>
+
+  <div class="mt-8 group flex p-2 overflow-y-auto overflow-x-hidden overscroll-y-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden flex-col h-[400px] [--duration:30s] [mask-image:linear-gradient(to_bottom,transparent_0%,#000_10%,#000_90%,transparent_100%)] w-full relative">
+    <div class="flex shrink-0 justify-around gap-3 animate-marquee-vertical flex-col group-hover:[animation-play-state:paused]">
+      {experiences.map((exp) => (
+        <div class="group/exp relative w-full cursor-default overflow-hidden rounded-xl border px-3.5 py-3 transform-gpu transition-all duration-300 ease-out">
+          <div class="flex items-center gap-2">
+            <span class="company-monogram">
+              {exp.company.slice(0, 2).toUpperCase()}
+            </span>
+            <span class="min-w-0 flex-1 truncate text-sm font-bold leading-tight text-neutral-800 dark:text-white">
+              {exp.company}
+            </span>
+          </div>
+          <div class="mt-1 truncate whitespace-nowrap text-xs font-medium text-neutral-500 dark:text-neutral-400">
+            {exp.title}
+          </div>
+          <div class="mt-2.5 flex items-center gap-1.5 overflow-hidden">
+            {exp.badges.map((badge) => (
+              <span class="badge">
+                {badge}
+              </span>
+            ))}
+          </div>
+          <div class="mt-2.5 border-t border-gray-950/[.06] pt-2 dark:border-gray-50/[.08]">
+            <p class="text-[11px] leading-snug text-neutral-500 dark:text-neutral-400">
+              {exp.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="flex shrink-0 justify-around gap-3 animate-marquee-vertical flex-col group-hover:[animation-play-state:paused]" aria-hidden="true" style="margin-top: 12px;">
+      {experiences.map((exp) => (
+        <div class="group/exp relative w-full cursor-default overflow-hidden rounded-xl border px-3.5 py-3 transform-gpu transition-all duration-300 ease-out">
+          <div class="flex items-center gap-2">
+            <span class="company-monogram">
+              {exp.company.slice(0, 2).toUpperCase()}
+            </span>
+            <span class="min-w-0 flex-1 truncate text-sm font-bold leading-tight text-neutral-800 dark:text-white">
+              {exp.company}
+            </span>
+          </div>
+          <div class="mt-1 truncate whitespace-nowrap text-xs font-medium text-neutral-500 dark:text-neutral-400">
+            {exp.title}
+          </div>
+          <div class="mt-2.5 flex items-center gap-1.5 overflow-hidden">
+            {exp.badges.map((badge) => (
+              <span class="badge">
+                {badge}
+              </span>
+            ))}
+          </div>
+          <div class="mt-2.5 border-t border-gray-950/[.06] pt-2 dark:border-gray-50/[.08]">
+            <p class="text-[11px] leading-snug text-neutral-500 dark:text-neutral-400">
+              {exp.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

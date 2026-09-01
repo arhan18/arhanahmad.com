@@ -1,0 +1,83 @@
+---
+const projects = [
+  { name: 'NameAPlanet', description: 'Name a planet after someone you love.', logo: '🪐' },
+  { name: 'BuyAMoon', description: 'Claim a fictional moon crater for someone.', logo: '🌙' },
+  { name: 'StartupGraveyard', description: 'Tombstones for dead startups.', logo: '💀' },
+  { name: 'FlipAFate', description: 'Stop overthinking. Let fate decide.', logo: '🎲' },
+  { name: 'ChaosGarden', description: 'Track your bad habits. Celebrate your failures.', logo: '🌱' },
+  { name: 'TimeWasted', description: 'Calculate how much time you wasted.', logo: '⏰' },
+  { name: 'LaunchPad', description: 'Get attention before you launch.', logo: '🚀' },
+  { name: 'MakeAbsurd', description: 'AI landing pages for ridiculous products.', logo: '🎨' },
+  { name: 'WeirdPage', description: 'Portfolio for people who build ridiculous things.', logo: '🖼️' },
+];
+---
+
+<section class="section-spacing reveal" id="projects">
+  <div>
+    <h2 class="text-2xl font-bold tracking-tight sm:text-3xl" style="color: hsl(var(--foreground));">
+      Products
+    </h2>
+    <p class="mt-2 text-sm" style="color: hsl(var(--muted-foreground));">
+      9 products — launching soon.
+    </p>
+  </div>
+
+  <div class="mt-8 group flex p-2 overflow-x-auto overflow-y-hidden overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden flex-row w-full [--duration:45s] [mask-image:linear-gradient(to_right,transparent_0%,#000_10%,#000_90%,transparent_100%)] relative">
+    <div class="flex shrink-0 justify-around gap-4 animate-marquee flex-row group-hover:[animation-play-state:paused] pr-4">
+      {projects.map((project) => (
+        <div class="group/exp relative w-[320px] cursor-default overflow-hidden rounded-xl border px-4 py-4 transform-gpu transition-all duration-300 ease-out">
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-xl bg-black/[0.03] dark:bg-white/[0.05] ring-1 ring-inset ring-black/[0.06] dark:ring-white/10">
+              {project.logo}
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="font-bold truncate text-neutral-800 dark:text-white">
+                {project.name}
+              </h3>
+              <p class="text-xs truncate text-neutral-500 dark:text-neutral-400">
+                {project.description}
+              </p>
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              Coming Soon
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="flex shrink-0 justify-around gap-4 animate-marquee flex-row group-hover:[animation-play-state:paused] pr-4" aria-hidden="true">
+      {projects.map((project) => (
+        <div class="group/exp relative w-[320px] cursor-default overflow-hidden rounded-xl border px-4 py-4 transform-gpu transition-all duration-300 ease-out">
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-xl bg-black/[0.03] dark:bg-white/[0.05] ring-1 ring-inset ring-black/[0.06] dark:ring-white/10">
+              {project.logo}
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="font-bold truncate text-neutral-800 dark:text-white">
+                {project.name}
+              </h3>
+              <p class="text-xs truncate text-neutral-500 dark:text-neutral-400">
+                {project.description}
+              </p>
+            </div>
+          </div>
+          <div class="mt-4">
+            <span class="badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1">
+                <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              Coming Soon
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

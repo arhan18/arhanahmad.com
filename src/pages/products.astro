@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+const liveProducts = [
+  {
+    name: 'ToolboxImage',
+    url: 'https://toolboximage.com',
+    description: 'AI-powered image toolbox. Resize, compress, convert — all in your browser. No uploads, no signups.',
+    icon: '🧰',
+    status: 'live',
+  },
+  {
+    name: 'Subtitly',
+    url: 'https://subtitly.pages.dev',
+    description: 'Auto-generate subtitles for any video. AI-powered transcription that works offline.',
+    icon: '🎬',
+    status: 'live',
+  },
+];
+
+const digitalProducts = [
+  {
+    name: 'Astro Portfolio Template',
+    description: 'My exact portfolio template. Copy and customize for your own use.',
+    price: '$9.99',
+    type: 'template',
+    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+    featured: true,
+  },
+  {
+    name: 'AI Workflow Guide',
+    description: 'My complete AI coding workflow. How I build products from idea to launch.',
+    price: 'Free',
+    type: 'guide',
+    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+  },
+  {
+    name: 'Prompt Templates',
+    description: '50+ prompts for vibe coding. Copy-paste prompts that actually work.',
+    price: '$4.99',
+    type: 'template',
+    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+  },
+  {
+    name: 'Productivity PDF',
+    description: 'How I ship 12 products solo. My exact process and timeline.',
+    price: 'Free',
+    type: 'pdf',
+    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+  },
+  {
+    name: 'Indie Hacker Toolkit',
+    description: 'Tools and resources I use daily. Curated list of everything I recommend.',
+    price: '$9.99',
+    type: 'toolkit',
+    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+  },
+  {
+    name: 'X Growth Playbook',
+    description: 'How to grow on X from 0. My exact strategy and content calendar.',
+    price: '$4.99',
+    type: 'guide',
+    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+  },
+];
+
+const weirdProjects = [
+  { name: 'NameAPlanet', description: 'Name a planet after someone you love.', url: '#' },
+  { name: 'BuyAMoon', description: 'Claim a fictional moon crater for someone.', url: '#' },
+  { name: 'StartupGraveyard', description: 'Tombstones for dead startups.', url: '#' },
+  { name: 'FlipAFate', description: 'Stop overthinking. Let fate decide.', url: '#' },
+  { name: 'ChaosGarden', description: 'Track your bad habits. Celebrate your failures.', url: '#' },
+  { name: 'TimeWasted', description: 'Calculate how much time you wasted on the internet.', url: '#' },
+  { name: 'LaunchPad', description: 'Get attention before you launch.', url: '#' },
+  { name: 'MakeAbsurd', description: 'AI landing pages for ridiculous products.', url: '#' },
+  { name: 'WeirdPage', description: 'Portfolio for people who build weird things.', url: '#' },
+  { name: 'OutbidCopy', description: 'Get backlinks by outbidding competitors.', url: '/outbid' },
+];
+---
+
+<BaseLayout title="Products — Arhan Ahmad" description="All my products, tools, and experiments.">
+  <div class="retro-grid"></div>
+  <div class="meteor-shower">
+    {Array.from({ length: 15 }).map((_, i) => (
+      <span class="meteor" style={`top: ${Math.random() * 100}%; left: ${Math.random() * 100}%; animation: meteor ${2 + Math.random() * 8}s linear ${Math.random() * 2}s infinite;`} />
+    ))}
+  </div>
+
+  <main class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Nav -->
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="back-link">← Home</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">All the things I've built</p>
+      <h1 class="text-5xl md:text-6xl font-bold tracking-tighter mb-4">
+        Products<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg max-w-2xl">
+        Live apps, digital products, and weird experiments. Some are useful. Some are absurd. All are built with love.
+      </p>
+    </header>
+
+    <!-- Live Products -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6 flex items-center gap-2">
+        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+        Live Products
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {liveProducts.map(product => (
+          <a href={product.url} target="_blank" rel="noopener noreferrer" class="group bento-tile block p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-3xl">{product.icon}</span>
+              <div>
+                <h3 class="text-xl font-semibold group-hover:text-cyan-400 transition-colors">{product.name}</h3>
+                <span class="text-xs font-mono text-green-400 bg-green-400/10 px-2 py-0.5 rounded uppercase">Live</span>
+              </div>
+            </div>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">{product.description}</p>
+            <span class="text-xs font-mono text-cyan-400 group-hover:translate-x-1 transition-transform inline-block">Visit {product.name.toLowerCase()}.com →</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Digital Products (Gumroad) -->
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-semibold tracking-tight">Digital Products</h2>
+        <a href="https://aqeelbrh.gumroad.com/l/astro-portfolio-template" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors">
+          Gumroad Store ↗
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {digitalProducts.map(product => (
+          <a href={product.link} target="_blank" rel="noopener noreferrer" class={`group experience-card p-5 ${product.featured ? 'featured-product' : ''}`}>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">{product.type}</span>
+              <span class="text-sm font-bold text-cyan-400">{product.price}</span>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 group-hover:text-cyan-400 transition-colors">{product.name}</h3>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400">{product.description}</p>
+            {product.featured && (
+              <span class="mt-3 inline-block text-xs font-mono text-purple-400 bg-purple-400/10 px-2 py-0.5 rounded">Featured</span>
+            )}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Weird Projects -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6">Weird Projects</h2>
+      <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-6">Ridiculous, unnecessary, and built just because.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {weirdProjects.map(project => (
+          <a href={project.url} class="group experience-card p-4">
+            <h3 class="text-base font-semibold mb-1 group-hover:text-cyan-400 transition-colors">{project.name}</h3>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400">{project.description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Backlink Slots -->
+    <section class="mb-12">
+      <div class="bento-tile p-6 md:p-8">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-2xl font-semibold tracking-tight">Ad Slots</h2>
+          <a href="/outbid" class="text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors">
+            Bid for a slot →
+          </a>
+        </div>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+          Want to advertise here? Bid for a slot on the homepage. 
+          <a href="/outbid" class="text-cyan-400 hover:underline">Learn more →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">ARHAN<span class="text-cyan-400">.</span></a>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">Building weird websites, one experiment at a time.</p>
+      </div>
+    </footer>
+  </main>
+</BaseLayout>
+
+<style>
+  .back-link {
+    font-family: var(--font-mono), monospace; text-transform: uppercase; letter-spacing: 0.1em;
+    color: rgb(156 163 175); font-size: 11px; text-decoration: none; transition: color 0.2s;
+  }
+  .back-link:hover { color: #67e8f9; }
+  .bento-tile { transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1); }
+  .bento-tile:hover { transform: translateY(-2px); }
+  .experience-card { position: relative; transition: all 0.3s cubic-bezier(0, 0, 0.2, 1); }
+  .experience-card:hover { transform: translateY(-3px); }
+  .featured-product {
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.05), transparent);
+  }
+</style>

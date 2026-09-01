@@ -1,0 +1,34 @@
+---
+const socials = [
+  { name: 'X', url: 'https://x.com/ahmadarhankhan' },
+  { name: 'GitHub', url: 'https://github.com/arhan18' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/arhan-ahmad-khan-539557312/' },
+];
+---
+
+<footer class="section-spacing" style="border-top: 1px solid hsl(var(--border));">
+  <div class="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+    <div>
+      <p class="text-sm" style="color: hsl(var(--muted-foreground));">
+        © 2026 Arhan Ahmad
+      </p>
+      <p class="mt-1 text-xs" style="color: hsl(var(--muted-foreground));">
+        Inspired by <a href="https://michael-lock.com" target="_blank" rel="noopener noreferrer" style="color: hsl(var(--foreground)); text-decoration: underline; text-underline-offset: 2px;">michael-lock.com</a>
+      </p>
+    </div>
+
+    <div class="flex gap-4">
+      {socials.map((social) => (
+        <a
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm transition-all hover:underline"
+          style="color: hsl(var(--muted-foreground));"
+        >
+          {social.name}
+        </a>
+      ))}
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,69 @@
+---
+const focusAreas = [
+  {
+    title: 'Building Weird Websites',
+    description: 'Experimental internet products that nobody asked for.',
+    icon: '🌐',
+  },
+  {
+    title: 'AI Agents',
+    description: 'Exploring how AI can build, automate, and scale.',
+    icon: '🤖',
+  },
+  {
+    title: 'Indie Hacking',
+    description: 'Building products solo. Shipping fast. Learning publicly.',
+    icon: '🚀',
+  },
+  {
+    title: 'Newsletter',
+    description: 'Direct connection with readers. Deeper stories.',
+    icon: '📧',
+  },
+  {
+    title: 'X (Twitter)',
+    description: 'Building in public. Sharing the journey.',
+    icon: '𝕏',
+  },
+  {
+    title: 'LinkedIn',
+    description: 'Professional network. Career growth.',
+    icon: '💼',
+  },
+  {
+    title: 'GitHub',
+    description: 'Open source. Code as proof of work.',
+    icon: '📦',
+  },
+  {
+    title: 'Coding',
+    description: 'The craft. The tool. The language.',
+    icon: '⌨️',
+  },
+];
+---
+
+<section class="section-spacing reveal" id="focus">
+  <div>
+    <h2 class="text-2xl font-bold tracking-tight sm:text-3xl" style="color: hsl(var(--foreground));">
+      Focus Areas
+    </h2>
+    <p class="mt-2 text-sm" style="color: hsl(var(--muted-foreground));">
+      Where I spend my time.
+    </p>
+  </div>
+
+  <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 stagger">
+    {focusAreas.map((area) => (
+      <div class="focus-card">
+        <div class="text-lg">{area.icon}</div>
+        <h3 class="mt-2 font-bold text-sm" style="color: hsl(var(--foreground));">
+          {area.title}
+        </h3>
+        <p class="mt-1 text-xs leading-relaxed" style="color: hsl(var(--muted-foreground));">
+          {area.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>

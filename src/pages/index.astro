@@ -1,113 +1,754 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Sidebar from '../components/Sidebar.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import NewsletterCTA from '../components/NewsletterCTA.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import SidebarAds from '../components/SidebarAds.astro';
+
+const experiences = [
+  { company: 'Building in Public', title: 'Creator', badges: ['X', 'Newsletter'], metric: 'Sharing the journey on X and newsletter.' },
+  { company: 'AI Agents', title: 'Learner', badges: ['AI', 'Automation'], metric: 'Exploring how AI can build, automate, and scale.' },
+  { company: 'Computer Science', title: 'Student', badges: ['CSE', '2024 — 2028'], metric: 'Learning the foundations while building the future.' },
+];
+
+const stack = [
+  { name: 'Astro', slug: 'astro' },
+  { name: 'Cloudflare', slug: 'cloudflare' },
+  { name: 'Tailwind', slug: 'tailwindcss' },
+  { name: 'JavaScript', slug: 'javascript' },
+  { name: 'TypeScript', slug: 'typescript' },
+  { name: 'Python', slug: 'python' },
+  { name: 'Java', slug: 'openjdk' },
+  { name: 'Git', slug: 'git' },
+  { name: 'GitHub', slug: 'github' },
+  { name: 'AI Tools', slug: null },
+  { name: 'Next.js', slug: 'nextdotjs' },
+  { name: 'Supabase', slug: 'supabase' },
+];
+
+const focusAreas = [
+  { name: 'Building Weird Websites', body: 'One ridiculous idea at a time.' },
+  { name: 'AI Agents', body: 'Exploring how AI can build and automate.' },
+  { name: 'Indie Hacking', body: 'Shipping products solo, learning in public.' },
+  { name: 'Newsletter', body: 'Weekly insights on building and shipping.' },
+  { name: 'X (Twitter)', body: 'Sharing the journey, one tweet at a time.' },
+  { name: 'Open Source', body: 'Giving back to the community.' },
+];
 
 const projects = [
-  {
-    name: 'NameAPlanet',
-    revenue: '$0/mo',
-    description: 'Name a planet after someone you love.',
-    url: '/nameaplanet',
-    logo: '🪐',
-    locked: true,
-  },
-  {
-    name: 'BuyAMoon',
-    revenue: '$0/mo',
-    description: 'Claim a fictional moon crater for someone.',
-    url: '/buyamoon',
-    logo: '🌙',
-    locked: true,
-  },
-  {
-    name: 'StartupGraveyard',
-    revenue: '$0/mo',
-    description: 'Tombstones for dead startups.',
-    url: '/startupgraveyard',
-    logo: '💀',
-    locked: true,
-  },
-  {
-    name: 'FlipAFate',
-    revenue: '$0/mo',
-    description: 'Stop overthinking. Let fate decide.',
-    url: '/flipafate',
-    logo: '🎲',
-    locked: true,
-  },
-  {
-    name: 'ChaosGarden',
-    revenue: '$0/mo',
-    description: 'Track your bad habits. Celebrate your failures.',
-    url: '/chaosgarden',
-    logo: '🌱',
-    locked: true,
-  },
-  {
-    name: 'TimeWasted',
-    revenue: '$0/mo',
-    description: 'Calculate how much time you wasted on YouTube/TikTok.',
-    url: '/timewasted',
-    logo: '⏰',
-    locked: true,
-  },
-  {
-    name: 'LaunchPad',
-    revenue: '$0/mo',
-    description: 'Get attention before you launch.',
-    url: '/launchpad',
-    logo: '🚀',
-    locked: true,
-  },
-  {
-    name: 'MakeAbsurd',
-    revenue: '$0/mo',
-    description: 'AI landing pages for ridiculous products.',
-    url: '/makeabsurd',
-    logo: '🎨',
-    locked: true,
-  },
-  {
-    name: 'WeirdPage',
-    revenue: '$0/mo',
-    description: 'Portfolio for people who build ridiculous things.',
-    url: '/weirdpage',
-    logo: '🖼️',
-    locked: true,
-  },
+  { name: 'NameAPlanet', description: 'Name a planet after someone you love.', language: 'Web', type: 'building', url: '#' },
+  { name: 'BuyAMoon', description: 'Claim a fictional moon crater for someone.', language: 'Web', type: 'building', url: '#' },
+  { name: 'StartupGraveyard', description: 'Tombstones for dead startups.', language: 'Web', type: 'building', url: '#' },
+  { name: 'FlipAFate', description: 'Stop overthinking. Let fate decide.', language: 'Web', type: 'building', url: '#' },
+  { name: 'ChaosGarden', description: 'Track your bad habits. Celebrate your failures.', language: 'Web', type: 'building', url: '#' },
+  { name: 'TimeWasted', description: 'Calculate how much time you wasted on the internet.', language: 'Web', type: 'building', url: '#' },
+  { name: 'LaunchPad', description: 'Get attention before you launch.', language: 'Web', type: 'building', url: '#' },
+  { name: 'MakeAbsurd', description: 'AI landing pages for ridiculous products.', language: 'Web', type: 'building', url: '#' },
+  { name: 'WeirdPage', description: 'Portfolio for people who build weird things.', language: 'Web', type: 'building', url: '#' },
+  { name: 'Subtitly', description: 'Auto-generate subtitles for any video. AI-powered.', language: 'Web', type: 'live', url: 'https://subtitly.pages.dev' },
+  { name: 'ToolboxImage', description: 'AI image toolbox. Resize, compress, convert.', language: 'Web', type: 'live', url: 'https://toolboximage.com' },
+  { name: 'OutbidCopy', description: 'Get backlinks by outbidding competitors.', language: 'Web', type: 'building', url: '/outbid' },
+];
+
+const liveProducts = [
+  { name: 'ToolboxImage', url: 'https://toolboximage.com', description: 'AI-powered image toolbox.', icon: '🧰' },
+  { name: 'Subtitly', url: 'https://subtitly.pages.dev', description: 'Auto-generate subtitles for any video.', icon: '🎬' },
+];
+
+const blogs = [
+  { title: 'Why I Build Weird Websites', date: 'Sep 2026', excerpt: 'The story behind my obsession with ridiculous web products.' },
+  { title: 'Vibe Coding 101', date: 'Aug 2026', excerpt: 'How to ship products using AI-assisted development.' },
 ];
 ---
 
-<BaseLayout title="Arhan Ahmad | I build weird websites">
-  <main class="min-h-screen">
-    <div class="relative min-h-screen bg-base-200">
-      <div class="noscrollbar mx-auto flex min-h-screen max-w-[1800px] flex-col max-lg:pb-16 lg:h-screen lg:flex-row lg:overflow-y-auto">
+<BaseLayout title="Arhan Ahmad — Builder & Indie Hacker">
+  <SidebarAds />
+  <!-- RETRO GRID + METEORS -->
+  <div class="retro-grid"></div>
+  <div class="meteor-shower">
+    {Array.from({ length: 30 }).map((_, i) => (
+      <span
+        class="meteor"
+        style={`top: ${Math.random() * 100}%; left: ${Math.random() * 100}%; animation: meteor ${2 + Math.random() * 8}s linear ${Math.random() * 2}s infinite;`}
+      />
+    ))}
+  </div>
 
-        <!-- Sidebar -->
-        <section class="noscrollbar shrink-0 space-y-6 p-6 lg:sticky lg:top-0 lg:h-screen lg:w-[350px] lg:space-y-8 lg:overflow-y-auto lg:p-16 lg:pr-0 lg:pb-24 xl:w-[500px] xl:pr-16">
-          <Sidebar />
-          <NewsletterCTA />
-        </section>
+  <!-- FUN CURSOR -->
+  <div id="funCursor" class="fun-cursor hidden">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
 
-        <!-- Project Grid -->
-        <section class="flex-1 p-6 lg:p-16 lg:pl-0">
-          <div class="grid gap-4 sm:grid-cols-2">
-            {projects.map((project) => (
-              <ProjectCard
-                name={project.name}
-                revenue={project.revenue}
-                description={project.description}
-                url={project.url}
-                logo={project.logo}
-                locked={project.locked}
-              />
+  <main class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- SECTION 1: HERO -->
+    <section class="grid grid-cols-1 gap-4 md:grid-cols-[2fr_1fr] reveal" style="--stagger: 0;">
+      <!-- Left: Lets be weird + Newsletter + Social -->
+      <div class="bento-tile flex flex-col justify-between p-6 md:p-8">
+        <h1 class="font-display font-bold tracking-tighter text-left text-5xl leading-[1.05] md:text-6xl lg:text-7xl">
+          Lets' be weird.
+        </h1>
+        
+        <!-- Newsletter Subscribe (Own System) -->
+        <div class="mt-6 p-4 rounded-lg bg-neutral-100 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800">
+          <p class="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2">Subscribe to newsletter</p>
+          <form id="newsletterForm" class="flex gap-2">
+            <input type="email" id="newsletterEmail" placeholder="your@email.com" required class="flex-1 px-3 py-2 text-sm bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded focus:outline-none focus:border-cyan-400" />
+            <button type="submit" id="newsletterBtn" class="px-4 py-2 text-sm font-mono bg-cyan-500 hover:bg-cyan-400 text-white rounded transition-colors">→</button>
+          </form>
+          <p id="newsletterMsg" class="text-xs mt-2 hidden"></p>
+        </div>
+
+        <div class="mt-4 flex items-center gap-3">
+          <a href="https://x.com/ahmadarhankhan" target="_blank" rel="noopener noreferrer" class="icon-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+          </a>
+          <a href="https://github.com/arhan18" target="_blank" rel="noopener noreferrer" class="icon-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/arhan-ahmad-khan-539557312/" target="_blank" rel="noopener noreferrer" class="icon-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:email@arhanahmad.com" class="icon-button" title="email@arhanahmad.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+          <ThemeToggle />
+        </div>
+      </div>
+
+      <!-- Right: Name + Tagline + Avatar -->
+      <div class="bento-tile flex flex-col justify-between p-6 md:p-8">
+        <div>
+          <h2 class="text-3xl font-semibold md:text-3xl">Arhan Ahmad</h2>
+          <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">Building weird websites</p>
+        </div>
+        <div class="mt-4 flex items-center gap-3">
+          <button id="homeVisitBtn" class="visit-button-home" title="Mark your visit">
+            <span class="wave" aria-hidden="true">👋</span>
+            <b id="homeVisitCount">···</b>
+            <span class="hit-label">visitors</span>
+          </button>
+          <a href="/journal" class="text-xs text-neutral-500 dark:text-neutral-400 hover:text-cyan-400 transition-colors font-mono uppercase tracking-wider">Journal →</a>
+        </div>
+        <div class="avatar-disc mt-6 self-start">
+          <img src="/avatar.jpg" alt="Arhan Ahmad" class="h-full w-full object-cover" />
+        </div>
+        <!-- Hire Me Fiverr Button -->
+        <a href="https://www.fiverr.com/arhanahmad" target="_blank" rel="noopener noreferrer" class="hire-fiverr-btn mt-4">
+          <span class="fiverr-icon">⚡</span>
+          <span>Hire me on Fiverr</span>
+          <span class="fiverr-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PROJECTS (marquee) -->
+    <section class="mt-4 reveal" style="--stagger: 3;">
+      <div class="group/tile relative h-[304px] overflow-hidden">
+        <div class="absolute inset-x-0 top-0 z-20 px-5 pt-5 pb-3 flex items-center gap-2">
+          <a href="/projects" class="section-link">→</a>
+          <h2 class="text-2xl font-semibold tracking-tight text-shadow-bg">Projects</h2>
+          <span class="badge">{projects.length}</span>
+        </div>
+        <div class="absolute inset-0 top-14 overflow-hidden">
+          <div class="marquee-track flex gap-4 p-2 h-full items-start" style="--duration: 40s;">
+            {[...projects, ...projects, ...projects].map((proj, i) => (
+              <a href={proj.url} target="_blank" rel="noopener noreferrer" class="experience-card flex-shrink-0 cursor-pointer card-hover" style="width: 220px;">
+                <div class="flex items-center gap-2">
+                  <span class={proj.type === 'live' ? 'badge-live' : 'badge-building'}>{proj.type === 'live' ? 'Live' : 'Building'}</span>
+                </div>
+                <div class="mt-3">
+                  <p class="text-sm font-semibold">{proj.name}</p>
+                  <p class="mt-1 text-xs text-neutral-500 dark:text-neutral-400 line-clamp-2">{proj.description}</p>
+                </div>
+                <div class="mt-3">
+                  <span class="badge">{proj.language}</span>
+                </div>
+              </a>
             ))}
           </div>
-        </section>
-
+          <div class="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background/90 via-background/50 to-transparent z-10"></div>
+          <div class="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background/90 via-background/50 to-transparent z-10"></div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- SECTION 5: EXPERIENCE + STACK -->
+    <section class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-[1fr_2fr] reveal" style="--stagger: 4;">
+      <!-- Left: Experience -->
+      <div class="group/tile relative h-[304px] overflow-hidden">
+        <div class="absolute inset-x-0 top-0 z-20 px-5 pt-5 pb-3">
+          <h2 class="text-2xl font-semibold tracking-tight text-shadow-bg">Experience</h2>
+        </div>
+        <div class="absolute inset-0 top-14 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,#000_7%,#000_85%,transparent_100%)]">
+          <div class="marquee-v-track flex flex-col gap-3 p-2" style="--duration: 20s;">
+            {[...experiences, ...experiences, ...experiences].map(exp => (
+              <div class="experience-card card-hover">
+                <div class="flex items-center gap-2">
+                  <div class="company-monogram">{exp.company[0]}</div>
+                  <span class="text-xs font-semibold">{exp.company}</span>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm font-semibold">{exp.title}</p>
+                  <p class="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{exp.metric}</p>
+                </div>
+                <div class="mt-2 flex flex-wrap gap-1">
+                  {exp.badges.map(b => <span class="badge">{b}</span>)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Stack -->
+      <div class="group/tile relative h-[304px] overflow-hidden">
+        <div class="absolute inset-x-0 top-0 z-20 px-5 pt-5 pb-3">
+          <h2 class="text-2xl font-semibold tracking-tight text-shadow-bg">Stack</h2>
+        </div>
+        <div class="absolute inset-0 top-14 flex items-center justify-center p-5">
+          <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 w-full">
+            {stack.map((s, i) => (
+              <div class="skill-chip skill-chip-hover" style="--stagger-chip: {i};">
+                {s.slug && <img src={`https://cdn.simpleicons.org/${s.slug}`} alt={s.name} class="h-4 w-4" />}
+                <span>{s.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: BLOGS + FOCUS AREA -->
+    <section class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 reveal" style="--stagger: 5;">
+      <!-- Left: Blogs -->
+      <div class="group/tile relative h-[304px] overflow-hidden">
+        <div class="absolute inset-x-0 top-0 z-20 px-5 pt-5 pb-3 flex items-center gap-2">
+          <a href="/blog" class="section-link">→</a>
+          <h2 class="text-2xl font-semibold tracking-tight text-shadow-bg">Blogs</h2>
+        </div>
+        <div class="absolute inset-0 top-14 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,#000_7%,#000_85%,transparent_100%)]">
+          <div class="flex flex-col gap-3 p-2 h-full">
+            {blogs.map(blog => (
+              <div class="experience-card cursor-pointer card-hover">
+                <div class="flex items-center gap-2">
+                  <span class="badge">{blog.date}</span>
+                </div>
+                <div class="mt-2">
+                  <p class="text-sm font-semibold">{blog.title}</p>
+                  <p class="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{blog.excerpt}</p>
+                </div>
+              </div>
+            ))}
+            <div class="experience-card flex items-center justify-center">
+              <p class="text-xs text-neutral-400">More coming soon...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Focus Area -->
+      <div class="group/tile relative h-[304px] overflow-hidden">
+        <div class="absolute inset-x-0 top-0 z-20 px-5 pt-5 pb-3">
+          <h2 class="text-2xl font-semibold tracking-tight text-shadow-bg">Focus Area</h2>
+        </div>
+        <div class="absolute inset-0 top-14 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,#000_7%,#000_85%,transparent_100%)]">
+          <div class="flex flex-wrap gap-2 p-2">
+            {focusAreas.map(area => (
+              <span class="hero-pill">{area.name}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: VISIT COUNTER + NEWSLETTER -->
+    <section class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 reveal" style="--stagger: 6;">
+      <!-- Visit Counter -->
+      <div class="bento-tile p-6 md:p-8">
+        <h2 class="text-lg font-semibold mb-4">Visitors</h2>
+        <button id="homeVisitBtn2" class="visit-button-home-large" title="Mark your visit">
+          <span class="wave" aria-hidden="true">👋</span>
+          <b id="homeVisitCount2">···</b>
+          <span class="hit-label">unique visitors</span>
+        </button>
+        <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-3">Real per-device tracking. No fakes.</p>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="bento-tile p-6 md:p-8">
+        <h2 class="text-lg font-semibold mb-4">Newsletter</h2>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">Weekly insights on building and shipping products.</p>
+        <form id="newsletterForm2" class="flex gap-2">
+          <input type="email" id="newsletterEmail2" placeholder="your@email.com" required class="flex-1 px-3 py-2 text-sm bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 rounded focus:outline-none focus:border-cyan-400" />
+          <button type="submit" id="newsletterBtn2" class="px-4 py-2 text-sm font-mono bg-cyan-500 hover:bg-cyan-400 text-white rounded transition-colors">→</button>
+        </form>
+        <p id="newsletterMsg2" class="text-xs mt-2 hidden"></p>
+      </div>
+    </section>
+
+    <!-- LIVE PRODUCTS -->
+    <section class="mt-4 reveal">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <a href="https://toolboximage.com" target="_blank" rel="noopener noreferrer" class="group/tile bento-tile block p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-2xl">🧰</span>
+            <h3 class="text-xl font-semibold">ToolboxImage</h3>
+            <span class="text-xs font-mono text-green-400 bg-green-400/10 px-2 py-0.5 rounded">LIVE</span>
+          </div>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">AI-powered image toolbox. Resize, compress, convert — all in your browser.</p>
+          <span class="mt-4 inline-block text-xs font-mono text-cyan-400 group-hover:translate-x-1 transition-transform">Visit toolboximage.com →</span>
+        </a>
+        <a href="https://subtitly.pages.dev" target="_blank" rel="noopener noreferrer" class="group/tile bento-tile block p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-2xl">🎬</span>
+            <h3 class="text-xl font-semibold">Subtitly</h3>
+            <span class="text-xs font-mono text-green-400 bg-green-400/10 px-2 py-0.5 rounded">LIVE</span>
+          </div>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">Auto-generate subtitles for any video. AI-powered transcription.</p>
+          <span class="mt-4 inline-block text-xs font-mono text-cyan-400 group-hover:translate-x-1 transition-transform">Visit subtitly.pages.dev →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SELL YOUR SLOT -->
+    <section class="mt-4 reveal">
+      <div class="sell-slot-banner">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">Sell Your Slot</h2>
+            <p class="text-sm text-neutral-400 mt-1">Get your site listed here. Start at $1. Price increases as slots fill.</p>
+          </div>
+          <a href="/sell-slot" class="sell-slot-btn">
+            Buy Your Slot →
+          </a>
+        </div>
+        <div class="mt-4 flex items-center gap-4">
+          <span class="text-xs font-mono text-cyan-400">Only 8 slots remaining</span>
+          <span class="text-xs font-mono text-neutral-500">Starting at $1</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-border py-8 mt-8 reveal" style="--stagger: 7;">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy; {new Date().getFullYear()} Arhan Ahmad. <span class="text-xs ml-2">Press <kbd class="px-1 py-0.5 bg-neutral-200 dark:bg-neutral-800 rounded text-[10px]">C</kbd> for fun cursor</span>
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="mailto:email@arhanahmad.com" class="text-xs text-neutral-500 dark:text-neutral-400 hover:text-cyan-400 transition-colors font-mono">email@arhanahmad.com</a>
+          <a href="/journal" class="icon-button-sm" title="Journal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+          </a>
+          <a href="https://x.com/ahmadarhankhan" target="_blank" rel="noopener noreferrer" class="icon-button-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+          </a>
+          <a href="https://github.com/arhan18" target="_blank" rel="noopener noreferrer" class="icon-button-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/arhan-ahmad-khan-539557312/" target="_blank" rel="noopener noreferrer" class="icon-button-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
   </main>
 </BaseLayout>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+  /* Section link arrows */
+  .section-link {
+    color: rgb(156 163 175);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+    display: inline-flex;
+  }
+  .section-link:hover {
+    color: #06b6d4;
+    transform: translateX(3px);
+  }
+
+  /* Hire Me Fiverr Button — weird style */
+  .hire-fiverr-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 1px dashed #06b6d4;
+    color: #67e8f9;
+    font-family: var(--font-mono), monospace;
+    font-size: 12px;
+    text-decoration: none;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  }
+  .hire-fiverr-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgba(6, 182, 212, 0.05) 5px,
+      rgba(6, 182, 212, 0.05) 10px
+    );
+  }
+  .hire-fiverr-btn:hover {
+    transform: translateY(-2px) rotate(-1deg);
+    border-color: #a855f7;
+    color: #c084fc;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+  }
+  .fiverr-icon {
+    font-size: 16px;
+    animation: zap 2s ease-in-out infinite;
+  }
+  @keyframes zap {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+  .fiverr-arrow {
+    margin-left: auto;
+    transition: transform 0.2s;
+  }
+  .hire-fiverr-btn:hover .fiverr-arrow {
+    transform: translate(3px, -3px);
+  }
+
+  /* SELL SLOT BANNER */
+  .sell-slot-banner {
+    padding: 24px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1));
+    border: 1px solid rgba(6, 182, 212, 0.3);
+    border-radius: 0;
+    transition: all 0.3s ease;
+  }
+  .sell-slot-banner:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.1);
+  }
+  .sell-slot-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+    color: white;
+    font-family: var(--font-mono), monospace;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  .sell-slot-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+  }
+
+  /* STAT CARDS (datafa.st style) */
+  .stat-card {
+    padding: 16px;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0;
+    transition: all 0.2s ease;
+  }
+  .stat-card:hover {
+    transform: translateY(-2px);
+    border-color: rgb(6 182 212 / 0.3);
+  }
+
+  /* BADGES */
+  .badge-live {
+    font-family: var(--font-mono), monospace;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .badge-building {
+    font-family: var(--font-mono), monospace;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #06b6d4;
+    background: rgba(6, 182, 212, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  /* VISIT BUTTON LARGE */
+  .visit-button-large {
+    background: rgb(38 38 38); border: 1px solid rgb(64 64 64); color: white;
+    font-family: var(--font-mono), monospace; cursor: pointer; border-radius: 99px;
+    align-items: center; gap: 8px; padding: 10px 16px 10px 12px; font-size: 14px;
+    transition: border-color 0.25s, background 0.25s, transform 0.25s; display: inline-flex; position: relative;
+  }
+  .visit-button-large:hover { border-color: #06b6d4; transform: translateY(-1px); }
+  .visit-button-large b { letter-spacing: 0; font-weight: 700; }
+  .visit-button-large .hit-label { color: rgb(156 163 175); text-transform: uppercase; letter-spacing: 0.12em; font-size: 10px; }
+  .visit-button-large.counted { background: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.3); }
+  .visit-button-large.counted b { color: #67e8f9; }
+
+  /* MARQUEE ANIMATIONS */
+  .marquee-track {
+    animation: marquee var(--duration, 40s) linear infinite;
+    width: max-content;
+  }
+  .marquee-track.marquee-reverse {
+    animation-direction: reverse;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-33.333% - 16px * 3)); }
+  }
+  .marquee-v-track {
+    animation: marquee-v var(--duration, 20s) linear infinite;
+    width: 100%;
+  }
+  .marquee-v-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes marquee-v {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(calc(-33.333% - 12px * 3)); }
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s cubic-bezier(0, 0, 0.2, 1) calc(var(--stagger, 0) * 0.12s),
+      transform 0.7s cubic-bezier(0, 0, 0.2, 1) calc(var(--stagger, 0) * 0.12s);
+  }
+  .reveal.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* HOVER EFFECTS */
+  .card-hover {
+    transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+  .dark .card-hover:hover {
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.04);
+  }
+  .skill-chip-hover { transition: all 0.2s cubic-bezier(0, 0, 0.2, 1); }
+  .skill-chip-hover:hover { transform: translateY(-2px) scale(1.03); }
+  .icon-button {
+    transition: transform 0.2s cubic-bezier(0, 0, 0.2, 1), background-color 0.2s ease, color 0.2s ease;
+  }
+  .icon-button:hover { transform: translateY(-2px) scale(1.05); }
+  .icon-button:active { transform: scale(0.95); }
+  .icon-button-sm {
+    display: inline-flex; align-items: center; justify-content: center; white-space: nowrap;
+    border-radius: 0.375rem; font-size: 0.875rem; font-weight: 500; transition: all 0.15s ease;
+    border: 1px solid hsl(var(--input)); background-color: hsl(var(--background)); color: hsl(var(--foreground));
+    height: 36px; width: 36px;
+  }
+  .icon-button-sm:hover { transform: translateY(-1px) scale(1.05); background-color: hsl(var(--accent)); color: hsl(var(--accent-foreground)); }
+  .bento-tile { transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1); }
+  .bento-tile:hover { transform: translateY(-2px); }
+  .avatar-disc { transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1); }
+  .group:hover .avatar-disc { transform: translateY(-4px) scale(1.03); }
+  .badge { transition: all 0.15s ease; }
+  .experience-card:hover .badge { background-color: rgba(0, 0, 0, 0.05); }
+  .dark .experience-card:hover .badge { background-color: rgba(255, 255, 255, 0.08); }
+  .experience-card {
+    position: relative; transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+  .experience-card::after {
+    content: ''; position: absolute; inset: 0; border-radius: inherit; opacity: 0; transition: opacity 0.3s ease;
+    background: radial-gradient(350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.06), transparent 40%);
+    pointer-events: none;
+  }
+  .dark .experience-card::after {
+    background: radial-gradient(350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.04), transparent 40%);
+  }
+  .experience-card:hover::after { opacity: 1; }
+  .text-shadow-bg { text-shadow: 0 1px 2px hsl(var(--background)), 0 0 12px hsl(var(--background)); }
+
+  /* VISIT BUTTON */
+  .visit-button-home {
+    background: rgb(38 38 38); border: 1px solid rgb(64 64 64); color: white;
+    font-family: var(--font-mono), monospace; cursor: pointer; border-radius: 99px;
+    align-items: center; gap: 6px; padding: 6px 12px 6px 10px; font-size: 11px;
+    transition: border-color 0.25s, background 0.25s, transform 0.25s; display: flex; position: relative;
+  }
+  .visit-button-home:hover { border-color: #06b6d4; transform: translateY(-1px); }
+  .visit-button-home b { letter-spacing: 0; font-weight: 700; }
+  .visit-button-home .hit-label { color: rgb(156 163 175); text-transform: uppercase; letter-spacing: 0.12em; font-size: 9px; }
+  .visit-button-home.counted { background: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.3); }
+  .visit-button-home.counted b { color: #67e8f9; }
+  .wave { animation: wave 0.6s ease-in-out; display: inline-block; }
+  @keyframes wave { 0%, 100% { transform: rotate(0); } 30% { transform: rotate(20deg); } 60% { transform: rotate(-12deg); } }
+  .plus-one {
+    color: #06b6d4; pointer-events: none; font-size: 11px; font-style: normal; font-weight: 700;
+    animation: floatUp 1s forwards; position: absolute; top: -6px; right: 6px;
+  }
+  @keyframes floatUp { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-20px); } }
+
+  /* FUN CURSOR */
+  .fun-cursor { position: fixed; pointer-events: none; z-index: 9999; }
+  .fun-cursor .cursor-dot {
+    width: 8px; height: 8px; background: #06b6d4; border-radius: 50%;
+    position: absolute; top: -4px; left: -4px; box-shadow: 0 0 10px #06b6d4;
+  }
+  .fun-cursor .cursor-ring {
+    width: 32px; height: 32px; border: 2px solid rgba(6, 182, 212, 0.5); border-radius: 50%;
+    position: absolute; top: -16px; left: -16px; transition: transform 0.1s ease;
+  }
+  .fun-cursor.hovering .cursor-ring { transform: scale(1.5); border-color: #a855f7; }
+  .fun-cursor.hovering .cursor-dot { background: #a855f7; box-shadow: 0 0 15px #a855f7; }
+</style>
+
+<script>
+  // SCROLL REVEAL
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // MOUSE GLOW
+  document.querySelectorAll('.experience-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mouse-x', `${x}%`);
+      card.style.setProperty('--mouse-y', `${y}%`);
+    });
+  });
+
+  // VISIT COUNTER
+  const COUNTER_API = 'https://visit-counter.aqeelbrh65.workers.dev';
+  const DEVICE_KEY = 'arhan_device_id';
+  function getDeviceId() {
+    let id = localStorage.getItem(DEVICE_KEY);
+    if (!id) { id = crypto.randomUUID(); localStorage.setItem(DEVICE_KEY, id); }
+    return id;
+  }
+  async function updateHomeCounter() {
+    const btn = document.getElementById('homeVisitBtn');
+    const countEl = document.getElementById('homeVisitCount');
+    const btn2 = document.getElementById('homeVisitBtn2');
+    const countEl2 = document.getElementById('homeVisitCount2');
+    if (!btn || !countEl) return;
+    try {
+      const deviceId = getDeviceId();
+      const res = await fetch(`${COUNTER_API}/visit`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ deviceId }),
+      });
+      const data = await res.json();
+      countEl.textContent = data.count.toString();
+      btn.classList.add('counted');
+      if (countEl2) countEl2.textContent = data.count.toString();
+      if (btn2) btn2.classList.add('counted');
+      if (data.marked) {
+        const plus = document.createElement('span');
+        plus.className = 'plus-one';
+        plus.textContent = '+1';
+        btn.appendChild(plus);
+        setTimeout(() => plus.remove(), 1000);
+      }
+    } catch { countEl.textContent = '0'; }
+  }
+  updateHomeCounter();
+
+  // NEWSLETTER (Own System)
+  const NEWSLETTER_API = 'https://newsletter-subscriber.aqeelbrh65.workers.dev';
+  
+  function setupNewsletter(formId, emailId, msgId, btnId) {
+    const form = document.getElementById(formId);
+    const email = document.getElementById(emailId) as HTMLInputElement;
+    const msg = document.getElementById(msgId);
+    const btn = document.getElementById(btnId) as HTMLButtonElement;
+    
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const emailVal = email?.value;
+        if (!emailVal) return;
+        
+        btn.disabled = true;
+        btn.textContent = '...';
+        
+        try {
+          const res = await fetch(`${NEWSLETTER_API}/subscribe`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: emailVal }),
+          });
+          const data = await res.json();
+          
+          if (msg) {
+            msg.textContent = data.message || 'Thanks for subscribing!';
+            msg.className = 'text-xs mt-2 text-green-500';
+            msg.classList.remove('hidden');
+          }
+          email.value = '';
+        } catch {
+          if (msg) {
+            msg.textContent = 'Error subscribing. Try again.';
+            msg.className = 'text-xs mt-2 text-red-500';
+            msg.classList.remove('hidden');
+          }
+        } finally {
+          btn.disabled = false;
+          btn.textContent = '→';
+        }
+      });
+    }
+  }
+  
+  setupNewsletter('newsletterForm', 'newsletterEmail', 'newsletterMsg', 'newsletterBtn');
+  setupNewsletter('newsletterForm2', 'newsletterEmail2', 'newsletterMsg2', 'newsletterBtn2');
+
+  // FUN CURSOR (toggle with 'C' key)
+  const funCursor = document.getElementById('funCursor');
+  let cursorEnabled = localStorage.getItem('funCursor') === 'true';
+  if (cursorEnabled) funCursor?.classList.remove('hidden');
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'c' || e.key === 'C') {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      cursorEnabled = !cursorEnabled;
+      localStorage.setItem('funCursor', cursorEnabled.toString());
+      funCursor?.classList.toggle('hidden');
+    }
+  });
+  document.addEventListener('mousemove', (e) => {
+    if (!cursorEnabled || !funCursor) return;
+    funCursor.style.left = `${e.clientX}px`;
+    funCursor.style.top = `${e.clientY}px`;
+  });
+  document.querySelectorAll('a, button, .experience-card, .icon-button, .icon-button-sm').forEach(el => {
+    el.addEventListener('mouseenter', () => funCursor?.classList.add('hovering'));
+    el.addEventListener('mouseleave', () => funCursor?.classList.remove('hovering'));
+  });
+</script>

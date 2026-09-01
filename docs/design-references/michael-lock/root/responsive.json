@@ -1,0 +1,22 @@
+{
+  "1440px": {
+    "gridClasses": "grid w-full auto-rows-[17rem] grid-cols-3 gap-2 sm:auto-rows-[18rem] md:auto-rows-[19rem] lg:gap-4",
+    "gridColumns": "320px 320px 320px",
+    "bodyWidth": 1440
+  },
+  "1024px": {
+    "gridClasses": "grid w-full auto-rows-[17rem] grid-cols-3 gap-2 sm:auto-rows-[18rem] md:auto-rows-[19rem] lg:gap-4",
+    "gridColumns": "320px 320px 320px",
+    "bodyWidth": 1024
+  },
+  "768px": {
+    "gridClasses": "grid w-full auto-rows-[17rem] grid-cols-3 gap-2 sm:auto-rows-[18rem] md:auto-rows-[19rem] lg:gap-4",
+    "gridColumns": "245.328px 245.328px 245.328px",
+    "bodyWidth": 768
+  },
+  "390px": {
+    "gridClasses": "grid w-full auto-rows-[17rem] grid-cols-3 gap-2 sm:auto-rows-[18rem] md:auto-rows-[19rem] lg:gap-4",
+    "gridColumns": "119.328px 119.328px 119.328px",
+    "bodyWidth": 390
+  }
+}

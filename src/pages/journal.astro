@@ -1,0 +1,480 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+const entries = [
+  {
+    date: '2 Sep 2026',
+    title: 'Added sidebar ads and fixed OutbidCopy',
+    content: 'Added sidebar ads to homepage showing ToolboxImage and Subtitly. Fixed OutbidCopy pricing to $1 start, outbid by $1. Separated OutbidCopy and Sell Your Slot as two different things. Removed all fake numbers across the site. Added RichestStartup to building projects. Moved live products to bottom of projects page.',
+    link: null,
+    linkText: null,
+  },
+  {
+    date: '1 Sep 2026',
+    title: 'Portfolio site is live',
+    content: 'Launched arhanahmad.com with a retro grid design, meteor shower background, and bento grid layout. Inspired by michael-lock.com but with my own weird twist. The site has dark mode, animated marquees, and a mouse glow effect.',
+    link: null,
+    linkText: null,
+  },
+  {
+    date: '31 Aug 2026',
+    title: 'Built 9 experimental products',
+    content: 'Created NameAPlanet, BuyAMoon, StartupGraveyard, FlipAFate, ChaosGarden, TimeWasted, LaunchPad, MakeAbsurd, and WeirdPage. All are quirky web products that do one thing really well.',
+    link: null,
+    linkText: null,
+  },
+  {
+    date: '30 Aug 2026',
+    title: 'Started building in public',
+    content: 'Decided to share my journey on X and newsletter. No more hiding behind the scenes. Every win, every failure, every weird idea — documented.',
+    link: 'https://x.com/ahmadarhankhan',
+    linkText: 'Follow on X',
+  },
+  {
+    date: '28 Aug 2026',
+    title: 'The idea: weird websites',
+    content: 'What if I only built ridiculous, absurd, unnecessary websites? Not SaaS. Not tools. Just pure creative chaos on the internet. That became the mission.',
+    link: null,
+    linkText: null,
+  },
+];
+---
+
+<BaseLayout title="Journal — Arhan Ahmad" description="Dated notes from the road — launches, lessons, and experiments in building weird websites.">
+  <div class="retro-grid"></div>
+  <div class="meteor-shower">
+    {Array.from({ length: 15 }).map((_, i) => (
+      <span
+        class="meteor"
+        style={`top: ${Math.random() * 100}%; left: ${Math.random() * 100}%; animation: meteor ${2 + Math.random() * 8}s linear ${Math.random() * 2}s infinite;`}
+      />
+    ))}
+  </div>
+
+  <main class="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Nav -->
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <button id="visitBtn" class="visit-button" title="Mark your visit">
+          <span class="wave" aria-hidden="true">👋</span>
+          <b id="visitCount">···</b>
+          <span class="hit-label">here</span>
+          <span class="hit-hint">Mark your visit</span>
+        </button>
+        <a href="/" class="back-link">← Home</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="journal-hero mb-12">
+      <div class="eyebrow">
+        <i></i> Notes from the road
+      </div>
+      <h1 class="text-5xl md:text-6xl font-bold tracking-tighter mt-6 mb-4">
+        Journal<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="lede">
+        Launches, lessons, failures, and new obsessions — dated as they happen. The living part of the living record.
+      </p>
+    </header>
+
+    <!-- Entries -->
+    <section class="journal-entries">
+      {entries.map((entry, i) => (
+        <article class="journal-entry" id={entry.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')} style="--stagger: {i};">
+          <p class="entry-date">{entry.date}</p>
+          <div class="entry-content">
+            <div class="entry-heading">
+              <h2>
+                <a href={`#${entry.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>{entry.title}</a>
+              </h2>
+              <a class="entry-permalink" href={`#${entry.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} aria-label={`Permalink to ${entry.title}`}>
+                Permalink <span aria-hidden="true">#</span>
+              </a>
+            </div>
+            <p>{entry.content}</p>
+            {entry.link && (
+              <a class="project-link" href={entry.link} target="_blank" rel="noopener noreferrer">
+                {entry.linkText} ↗
+              </a>
+            )}
+          </div>
+        </article>
+      ))}
+
+      <p class="journal-foot">More entries as the journey continues.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8 mt-12">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">
+          ARHAN<span class="text-cyan-400">.</span>
+        </a>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          Building weird websites, one experiment at a time.
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="https://x.com/ahmadarhankhan" target="_blank" rel="noopener noreferrer" class="text-neutral-500 hover:text-cyan-400 transition-colors text-sm">X</a>
+          <a href="https://github.com/arhan18" target="_blank" rel="noopener noreferrer" class="text-neutral-500 hover:text-cyan-400 transition-colors text-sm">GitHub</a>
+          <span class="text-neutral-400 text-sm">© 2026</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+</BaseLayout>
+
+<style>
+  /* ═══════════════════════════════════════════════════════════
+     JOURNAL PAGE — Aryam-style with Arhan's colors
+     ═══════════════════════════════════════════════════════════ */
+
+  .eyebrow {
+    font-family: var(--font-mono), monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgb(156 163 175);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow i {
+    background: #06b6d4;
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 18px #06b6d4;
+    border-radius: 50%;
+    animation: blink 2.4s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { box-shadow: 0 0 18px #06b6d4; }
+    50% { box-shadow: 0 0 4px #06b6d4; }
+  }
+
+  .lede {
+    color: rgb(156 163 175);
+    font-size: 18px;
+    line-height: 1.65;
+    max-width: 650px;
+  }
+
+  .back-link {
+    font-family: var(--font-mono), monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgb(156 163 175);
+    font-size: 11px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .back-link:hover {
+    color: #67e8f9;
+  }
+
+  /* Visit button */
+  .visit-button {
+    background: rgb(38 38 38);
+    border: 1px solid rgb(64 64 64);
+    color: white;
+    font-family: var(--font-mono), monospace;
+    cursor: pointer;
+    border-radius: 99px;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px 7px 11px;
+    font-size: 12px;
+    transition: border-color 0.25s, background 0.25s, transform 0.25s;
+    display: flex;
+    position: relative;
+  }
+  .visit-button:hover {
+    border-color: #06b6d4;
+    transform: translateY(-1px);
+  }
+  .visit-button b {
+    letter-spacing: 0;
+    font-weight: 700;
+  }
+  .visit-button .hit-label {
+    color: rgb(156 163 175);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 9px;
+  }
+  .visit-button .hit-hint {
+    border-left: 1px solid rgb(64 64 64);
+    color: #67e8f9;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    margin-left: 3px;
+    padding-left: 10px;
+    font-size: 9px;
+  }
+  .visit-button.counted {
+    background: rgba(6, 182, 212, 0.1);
+    border-color: rgba(6, 182, 212, 0.3);
+  }
+  .visit-button.counted b {
+    color: #67e8f9;
+  }
+  .visit-button.counted .hit-hint {
+    color: rgb(156 163 175);
+  }
+  .wave {
+    animation: wave 0.6s ease-in-out;
+    display: inline-block;
+  }
+  @keyframes wave {
+    0%, 100% { transform: rotate(0); }
+    30% { transform: rotate(20deg); }
+    60% { transform: rotate(-12deg); }
+  }
+  .plus-one {
+    color: #06b6d4;
+    pointer-events: none;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    animation: floatUp 1s forwards;
+    position: absolute;
+    top: -6px;
+    right: 6px;
+  }
+  @keyframes floatUp {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+  }
+
+  /* Journal entries */
+  .journal-entries {
+    padding: 0;
+  }
+
+  .journal-entry {
+    border-bottom: 1px solid rgb(64 64 64);
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 28px;
+    padding: 38px 0;
+    scroll-margin-top: 92px;
+    transition: background 0.3s;
+  }
+  .journal-entry:first-child {
+    padding-top: 0;
+  }
+  .journal-entry:target {
+    background: linear-gradient(90deg, rgba(6, 182, 212, 0.08), transparent 75%);
+    box-shadow: -18px 0 rgba(6, 182, 212, 0.08);
+  }
+
+  .entry-date {
+    font-family: var(--font-mono), monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #06b6d4;
+    margin: 6px 0 0;
+    font-size: 11.5px;
+  }
+
+  .entry-heading {
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 18px;
+    margin: 0 0 12px;
+    display: flex;
+  }
+  .entry-heading h2 {
+    margin: 0;
+    letter-spacing: -0.03em;
+    font-size: clamp(22px, 2.6vw, 30px);
+    font-weight: 680;
+  }
+  .entry-heading h2 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .entry-heading h2 a:hover {
+    color: #67e8f9;
+  }
+
+  .entry-permalink {
+    color: rgb(119 114 112);
+    font-family: var(--font-mono), monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    flex: none;
+    font-size: 9.5px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .entry-permalink span {
+    color: #06b6d4;
+    font-size: 12px;
+  }
+  .entry-permalink:hover {
+    color: #67e8f9;
+  }
+
+  .entry-content p {
+    color: rgb(156 163 175);
+    max-width: 680px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .project-link {
+    color: #67e8f9;
+    font-family: var(--font-mono), monospace;
+    text-underline-offset: 5px;
+    margin-top: 14px;
+    font-size: 11px;
+    display: inline-block;
+    transition: color 0.2s, transform 0.2s;
+  }
+  .project-link:hover {
+    color: #06b6d4;
+    transform: translate(3px);
+  }
+
+  .journal-foot {
+    font-family: var(--font-mono), monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgb(119 114 112);
+    margin: 0;
+    padding: 40px 0 20px;
+    font-size: 11px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .journal-entry {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .entry-heading {
+      display: block;
+    }
+    .entry-permalink {
+      margin-top: 5px;
+      display: inline-block;
+    }
+    .visit-button .hit-hint {
+      display: none;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .visit-button {
+      gap: 4px;
+      padding-inline: 7px;
+    }
+    .visit-button .hit-hint {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // ═══════════════════════════════════════════════════════════
+  // VISIT COUNTER — real per-device tracking via Cloudflare KV
+  // ═══════════════════════════════════════════════════════════
+  const COUNTER_API = 'https://visit-counter.aqeelbrh65.workers.dev';
+  const DEVICE_KEY = 'arhan_device_id';
+
+  function getDeviceId() {
+    let id = localStorage.getItem(DEVICE_KEY);
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem(DEVICE_KEY, id);
+    }
+    return id;
+  }
+
+  async function fetchCount() {
+    try {
+      const res = await fetch(`${COUNTER_API}/count`);
+      const data = await res.json();
+      return data.count || 0;
+    } catch {
+      return 0;
+    }
+  }
+
+  async function markVisit() {
+    try {
+      const deviceId = getDeviceId();
+      const res = await fetch(`${COUNTER_API}/visit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ deviceId }),
+      });
+      const data = await res.json();
+      return data;
+    } catch {
+      return { count: 0, marked: false };
+    }
+  }
+
+  async function updateDisplay() {
+    const btn = document.getElementById('visitBtn');
+    const countEl = document.getElementById('visitCount');
+    const count = await fetchCount();
+    if (countEl) countEl.textContent = count.toString();
+    if (btn) {
+      const deviceId = getDeviceId();
+      const res = await fetch(`${COUNTER_API}/visit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ deviceId }),
+      });
+      const data = await res.json();
+      if (data.marked) {
+        btn.classList.add('counted');
+        const plus = document.createElement('span');
+        plus.className = 'plus-one';
+        plus.textContent = '+1';
+        btn.appendChild(plus);
+        setTimeout(() => plus.remove(), 1000);
+      } else {
+        btn.classList.add('counted');
+      }
+    }
+  }
+
+  updateDisplay();
+
+  // ═══════════════════════════════════════════════════════════
+  // SCROLL REVEAL
+  // ═══════════════════════════════════════════════════════════
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.journal-entry').forEach(el => {
+    (el as HTMLElement).style.opacity = '0';
+    (el as HTMLElement).style.transform = 'translateY(24px)';
+    (el as HTMLElement).style.transition = `opacity 0.7s cubic-bezier(0, 0, 0.2, 1) calc(var(--stagger, 0) * 0.12s), transform 0.7s cubic-bezier(0, 0, 0.2, 1) calc(var(--stagger, 0) * 0.12s)`;
+    observer.observe(el);
+  });
+
+  const style = document.createElement('style');
+  style.textContent = `.animate-in { opacity: 1 !important; transform: translateY(0) !important; }`;
+  document.head.appendChild(style);
+</script>

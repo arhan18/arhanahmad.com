@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ThemeToggle from '../../components/ThemeToggle.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout title={`${post.data.title} | Arhan Ahmad`} description={post.data.description}>
+  <main class="min-h-screen" style="background-color: var(--bg-primary);">
+    <article class="mx-auto max-w-3xl px-6 py-12">
+      <!-- Header -->
+      <div class="flex items-center justify-between">
+        <a href="/blog" class="text-sm font-medium" style="color: var(--text-secondary);">
+          ← Back to blog
+        </a>
+        <ThemeToggle />
+      </div>
+
+      <!-- Article Header -->
+      <header class="mt-12">
+        <time
+          class="text-xs"
+          style="color: var(--text-secondary); font-family: 'JetBrains Mono', monospace;"
+          datetime={post.data.date.toISOString()}
+        >
+          {post.data.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+        </time>
+        <h1 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl" style="color: var(--text-primary);">
+          {post.data.title}
+        </h1>
+        <p class="mt-4 text-lg" style="color: var(--text-secondary);">
+          {post.data.description}
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {post.data.tags.map((tag) => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      </header>
+
+      <!-- Article Content -->
+      <div class="prose mt-10" style="color: var(--text-primary);">
+        <Content />
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-12 pt-8" style="border-top: 1px solid var(--border);">
+        <a href="/blog" class="text-sm font-medium" style="color: var(--accent);">
+          ← More posts
+        </a>
+      </footer>
+    </article>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .prose {
+    line-height: 1.75;
+  }
+  .prose h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .prose h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose p {
+    margin-bottom: 1rem;
+  }
+  .prose a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .prose a:hover {
+    text-decoration: none;
+  }
+  .prose ul, .prose ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+  .prose code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+  }
+  .prose pre {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border);
+    overflow-x: auto;
+  }
+  .prose pre code {
+    padding: 0;
+    border: none;
+    background: none;
+  }
+  .prose blockquote {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent);
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+  .prose img {
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  .prose hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+  }
+</style>
