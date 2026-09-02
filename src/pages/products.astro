@@ -17,51 +17,65 @@ const liveProducts = [
     icon: '🎬',
     status: 'live',
   },
+  {
+    name: 'Sufi Khanqah',
+    url: 'https://sufi-khanqah.aqeelbrh65.workers.dev',
+    description: 'The living library of Sufism. Search original sources, trace lineages, explore knowledge graphs.',
+    icon: '📚',
+    status: 'live',
+  },
 ];
 
 const digitalProducts = [
   {
     name: 'Astro Portfolio Template',
-    description: 'My exact portfolio template. Copy and customize for your own use.',
-    price: '$9.99',
+    description: 'A clean, blazing-fast developer portfolio built with Astro + Tailwind v4. Zero JavaScript. Perfect Lighthouse scores.',
+    price: '$4.99',
+    priceValue: 4.99,
     type: 'template',
-    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+    productId: 'astro-portfolio-template',
+    url: '/astro-portfolio',
     featured: true,
   },
   {
     name: 'AI Workflow Guide',
     description: 'My complete AI coding workflow. How I build products from idea to launch.',
     price: 'Free',
+    priceValue: 0,
     type: 'guide',
-    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+    productId: 'ai-workflow-guide',
   },
   {
     name: 'Prompt Templates',
     description: '50+ prompts for vibe coding. Copy-paste prompts that actually work.',
     price: '$4.99',
+    priceValue: 4.99,
     type: 'template',
-    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+    productId: 'prompt-templates',
   },
   {
     name: 'Productivity PDF',
     description: 'How I ship 12 products solo. My exact process and timeline.',
     price: 'Free',
+    priceValue: 0,
     type: 'pdf',
-    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+    productId: 'productivity-pdf',
   },
   {
     name: 'Indie Hacker Toolkit',
     description: 'Tools and resources I use daily. Curated list of everything I recommend.',
     price: '$9.99',
+    priceValue: 9.99,
     type: 'toolkit',
-    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+    productId: 'indie-hacker-toolkit',
   },
   {
     name: 'X Growth Playbook',
     description: 'How to grow on X from 0. My exact strategy and content calendar.',
     price: '$4.99',
+    priceValue: 4.99,
     type: 'guide',
-    link: 'https://aqeelbrh.gumroad.com/l/astro-portfolio-template',
+    productId: 'x-growth-playbook',
   },
 ];
 
@@ -133,27 +147,47 @@ const weirdProjects = [
       </div>
     </section>
 
-    <!-- Digital Products (Gumroad) -->
+    <!-- Digital Products -->
     <section class="mb-12">
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-2xl font-semibold tracking-tight">Digital Products</h2>
-        <a href="https://aqeelbrh.gumroad.com/l/astro-portfolio-template" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-cyan-400 hover:text-cyan-300 transition-colors">
-          Gumroad Store ↗
-        </a>
+        <span class="text-xs font-mono text-neutral-500 dark:text-neutral-400">Instant download</span>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {digitalProducts.map(product => (
-          <a href={product.link} target="_blank" rel="noopener noreferrer" class={`group experience-card p-5 ${product.featured ? 'featured-product' : ''}`}>
+          <div class={`group experience-card p-5 ${product.featured ? 'featured-product' : ''}`}>
             <div class="flex items-center justify-between mb-3">
               <span class="text-xs font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400">{product.type}</span>
               <span class="text-sm font-bold text-cyan-400">{product.price}</span>
             </div>
             <h3 class="text-lg font-semibold mb-2 group-hover:text-cyan-400 transition-colors">{product.name}</h3>
-            <p class="text-sm text-neutral-500 dark:text-neutral-400">{product.description}</p>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">{product.description}</p>
             {product.featured && (
-              <span class="mt-3 inline-block text-xs font-mono text-purple-400 bg-purple-400/10 px-2 py-0.5 rounded">Featured</span>
+              <span class="mb-3 inline-block text-xs font-mono text-purple-400 bg-purple-400/10 px-2 py-0.5 rounded">Featured</span>
             )}
-          </a>
+            {product.url ? (
+              <a
+                href={product.url}
+                class="block w-full mt-3 bg-cyan-400 text-black font-mono text-sm font-semibold py-2.5 px-4 rounded hover:bg-cyan-300 transition-colors text-center"
+              >
+                View Details →
+              </a>
+            ) : product.priceValue > 0 ? (
+              <button
+                onclick={`openCheckout('${product.productId}', '${product.name}', ${product.priceValue})`}
+                class="w-full mt-3 bg-cyan-400 text-black font-mono text-sm font-semibold py-2.5 px-4 rounded hover:bg-cyan-300 transition-colors"
+              >
+                Buy Now →
+              </button>
+            ) : (
+              <button
+                onclick={`openFreeDownload('${product.productId}')`}
+                class="w-full mt-3 border border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 font-mono text-sm font-semibold py-2.5 px-4 rounded hover:border-cyan-400 hover:text-cyan-400 transition-colors"
+              >
+                Download Free →
+              </button>
+            )}
+          </div>
         ))}
       </div>
     </section>
@@ -192,11 +226,99 @@ const weirdProjects = [
     <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8">
       <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
         <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">ARHAN<span class="text-cyan-400">.</span></a>
-        <p class="text-sm text-neutral-500 dark:text-neutral-400">Building weird websites, one experiment at a time.</p>
+        <div class="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+          <a href="/privacy" class="hover:text-cyan-400 transition-colors">Privacy</a>
+          <a href="/terms" class="hover:text-cyan-400 transition-colors">Terms</a>
+          <a href="/refund" class="hover:text-cyan-400 transition-colors">Refunds</a>
+        </div>
       </div>
     </footer>
   </main>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeCheckout()"></div>
+    <div class="absolute inset-0 flex items-center justify-center p-4">
+      <div class="bg-neutral-900 border border-neutral-800 rounded-xl p-6 max-w-md w-full relative">
+        <button onclick="closeCheckout()" class="absolute top-4 right-4 text-neutral-500 hover:text-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        
+        <div id="checkout-step-1">
+          <h3 class="text-xl font-bold mb-2">Buy <span id="checkout-product-name"></span></h3>
+          <p class="text-neutral-500 text-sm mb-6">Enter your email to receive instant download.</p>
+          <input
+            type="email"
+            id="checkout-email"
+            placeholder="your@email.com"
+            class="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-cyan-400 mb-4"
+          />
+          <button
+            onclick="proceedToPayment()"
+            class="w-full bg-cyan-400 text-black font-semibold py-3 rounded-lg hover:bg-cyan-300 transition-colors"
+          >
+            Pay <span id="checkout-price"></span> →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
+
+<script is:inline>
+  let currentProductId = '';
+  let currentProductName = '';
+  let currentPrice = 0;
+
+  function openCheckout(productId, name, price) {
+    currentProductId = productId;
+    currentProductName = name;
+    currentPrice = price;
+    document.getElementById('checkout-product-name').textContent = name;
+    document.getElementById('checkout-price').textContent = `$${price}`;
+    document.getElementById('checkout-modal').classList.remove('hidden');
+    document.getElementById('checkout-email').focus();
+  }
+
+  function closeCheckout() {
+    document.getElementById('checkout-modal').classList.add('hidden');
+    document.getElementById('checkout-email').value = '';
+  }
+
+  async function proceedToPayment() {
+    const email = document.getElementById('checkout-email').value.trim();
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          productId: currentProductId,
+          email: email,
+        }),
+      });
+
+      const data = await response.json();
+      
+      if (data.checkoutUrl) {
+        window.location.href = data.checkoutUrl;
+      } else {
+        alert('Failed to create checkout. Please try again.');
+      }
+    } catch (err) {
+      console.error('Checkout error:', err);
+      alert('Something went wrong. Please try again.');
+    }
+  }
+
+  function openFreeDownload(productId) {
+    alert('Free download coming soon!');
+  }
+</script>
 
 <style>
   .back-link {

@@ -14,9 +14,15 @@ export const PRODUCTS = {
     brand: 'arhan-ahmad',
   },
   OUTBID_BACKLINK: {
-    id: 'prod_xxx',
+    id: 'pdt_0Nmik0Q254dOP7oaQyCqf',
     name: 'OutbidCopy Backlink',
     price: 1,
+    brand: 'arhan-ahmad',
+  },
+  ASTRO_PORTFOLIO_TEMPLATE: {
+    id: 'pdt_0Nmik0Q254dOP7oaQyCqf', // Will update with actual ID when KYC approved
+    name: 'Astro Portfolio Template',
+    price: 4.99,
     brand: 'arhan-ahmad',
   },
   // ToolboxImage brand

@@ -13,13 +13,17 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
+    "@libsql/client": "^0.17.4",
     "astro": "^7.2.10",
-    "playwright": "^1.62.1"
+    "dodopayments": "^2.49.0",
+    "playwright": "^1.62.1",
+    "resend": "^6.25.0"
   },
   "allowScripts": {
     "esbuild": true
   },
   "devDependencies": {
+    "@dodopayments/opencode-plugin": "^0.5.1",
     "@tailwindcss/vite": "^4.3.3",
     "daisyui": "^5.7.23",
     "tailwindcss": "^4.3.3"

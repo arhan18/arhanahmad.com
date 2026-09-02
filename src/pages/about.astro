@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+const markdownContent = `# About Arhan Ahmad
+
+Arhan Ahmad is a builder and indie hacker based in Lucknow, India. He creates small, weird, and profitable web products.
+
+## What I Do
+
+- Build web products using Astro, Tailwind CSS, and Cloudflare
+- Share the journey on X (Twitter) as @ahmadarhankhan
+- Write about building in public and indie hacking
+- Create tools that are useful, weird, or both
+
+## My Stack
+
+- **Frontend:** Astro 7, Tailwind CSS 4, JavaScript, TypeScript
+- **Backend:** Cloudflare Pages, Workers, D1, R2
+- **Payments:** DodoPayments (Merchant of Record, India-friendly)
+- **Database:** Turso (SQLite at the edge)
+- **Email:** Resend
+- **AI:** Building AI-powered tools and exploring agents
+
+## Products
+
+- **ToolboxImage** — AI-powered image toolbox (resize, compress, convert)
+- **Subtitly** — Auto-generate subtitles for any video
+- **Sufi Khanqah** — The living library of Sufism (search sources, trace lineages, knowledge graphs)
+- **NameAPlanet** — Name a planet after someone you love
+- **BuyAMoon** — Claim a fictional moon crater
+- **StartupGraveyard** — Tombstones for dead startups
+- **FlipAFate** — Let fate decide your decisions
+- **ChaosGarden** — Track bad habits, celebrate failures
+- **TimeWasted** — Calculate time wasted online
+- **LaunchPad** — Pre-launch waitlist pages
+- **MakeAbsurd** — AI landing pages for ridiculous products
+- **WeirdPage** — Portfolio for weird builders
+- **OutbidCopy** — Get backlinks by outbidding competitors
+
+## Contact
+
+- **Email:** email@arhanahmad.com
+- **X:** [@ahmadarhankhan](https://x.com/ahmadarhankhan)
+- **GitHub:** [arhan18](https://github.com/arhan18)
+- **LinkedIn:** [arhan-ahmad-khan](https://www.linkedin.com/in/arhan-ahmad-khan-539557312/)
+- **Fiverr:** [arhanahmad979](https://www.fiverr.com/arhanahmad979?public_mode=true)
+
+## Building in Public
+
+I document my journey on X and in my newsletter. Every product, every failure, every lesson — shared openly.
+
+Currently targeting $50 MRR in 4-6 weeks through a portfolio of small web products.
+`;
+
+const accept = Astro.request.headers.get('accept') || '';
+if (accept.includes('text/markdown')) {
+  return new Response(markdownContent, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/markdown; charset=utf-8',
+      'Vary': 'Accept',
+    },
+  });
+}
+---
+
+<BaseLayout title="About — Arhan Ahmad" description="Builder & indie hacker making weird web products. Based in Lucknow, India.">
+  <div class="retro-grid"></div>
+  
+  <main class="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12">
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="text-xs font-mono uppercase tracking-wider text-neutral-500 hover:text-cyan-400 transition-colors">← Home</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">About</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+        Arhan Ahmad<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg">
+        Builder & indie hacker making weird web products. Based in Lucknow, India.
+      </p>
+    </header>
+
+    <article class="prose prose-neutral dark:prose-invert max-w-none">
+      <h2>What I Do</h2>
+      <ul>
+        <li>Build web products using Astro, Tailwind CSS, and Cloudflare</li>
+        <li>Share the journey on X (Twitter) as @ahmadarhankhan</li>
+        <li>Write about building in public and indie hacking</li>
+        <li>Create tools that are useful, weird, or both</li>
+      </ul>
+
+      <h2>My Stack</h2>
+      <ul>
+        <li><strong>Frontend:</strong> Astro 7, Tailwind CSS 4, JavaScript, TypeScript</li>
+        <li><strong>Backend:</strong> Cloudflare Pages, Workers, D1, R2</li>
+        <li><strong>Payments:</strong> DodoPayments (Merchant of Record, India-friendly)</li>
+        <li><strong>Database:</strong> Turso (SQLite at the edge)</li>
+        <li><strong>Email:</strong> Resend</li>
+        <li><strong>AI:</strong> Building AI-powered tools and exploring agents</li>
+      </ul>
+
+      <h2>Products</h2>
+      <ul>
+        <li><strong>ToolboxImage</strong> — AI-powered image toolbox (resize, compress, convert)</li>
+        <li><strong>Subtitly</strong> — Auto-generate subtitles for any video</li>
+        <li><strong>NameAPlanet</strong> — Name a planet after someone you love</li>
+        <li><strong>BuyAMoon</strong> — Claim a fictional moon crater</li>
+        <li><strong>StartupGraveyard</strong> — Tombstones for dead startups</li>
+        <li><strong>FlipAFate</strong> — Let fate decide your decisions</li>
+        <li><strong>ChaosGarden</strong> — Track bad habits, celebrate failures</li>
+        <li><strong>TimeWasted</strong> — Calculate time wasted online</li>
+        <li><strong>LaunchPad</strong> — Pre-launch waitlist pages</li>
+        <li><strong>MakeAbsurd</strong> — AI landing pages for ridiculous products</li>
+        <li><strong>WeirdPage</strong> — Portfolio for weird builders</li>
+        <li><strong>OutbidCopy</strong> — Get backlinks by outbidding competitors</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:email@arhanahmad.com" class="text-cyan-400 hover:underline">email@arhanahmad.com</a></li>
+        <li><strong>X:</strong> <a href="https://x.com/ahmadarhankhan">@ahmadarhankhan</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/arhan18">arhan18</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arhan-ahmad-khan-539557312/">arhan-ahmad-khan</a></li>
+        <li><strong>Fiverr:</strong> <a href="https://www.fiverr.com/sellers/arhanahmad979">arhanahmad979</a></li>
+      </ul>
+
+      <h2>Building in Public</h2>
+      <p>
+        I document my journey on X and in my newsletter. Every product, every failure, every lesson — shared openly.
+      </p>
+      <p>
+        Currently targeting $50 MRR in 4-6 weeks through a portfolio of small web products.
+      </p>
+    </article>
+  </main>
+</BaseLayout>

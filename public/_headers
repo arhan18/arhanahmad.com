@@ -1,16 +1,14 @@
 # Cloudflare Pages custom headers
 
-/
+/*
   Vary: Accept, Accept-Encoding
 
 /llms.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
-  Vary: Accept, Accept-Encoding
 
 /index.md
   Content-Type: text/markdown; charset=utf-8
-  Vary: Accept, Accept-Encoding
   Cache-Control: public, max-age=3600
 
 /sitemap-index.xml

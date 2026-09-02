@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+const markdownContent = `# Privacy Policy
+
+**Last updated:** September 2, 2026
+
+## Overview
+
+Arhan Ahmad ("I", "me", "my") operates arhanahmad.com. This privacy policy explains how I collect, use, and protect your information.
+
+## Information I Collect
+
+### Newsletter Subscription
+- **Email address:** Collected when you subscribe to the newsletter
+- **Name:** Optional, if you provide it
+- **Purpose:** To send you updates about new products and content
+
+### Product Purchases
+- **Email address:** Collected during checkout via DodoPayments
+- **Payment information:** Processed by DodoPayments (I don't store credit card details)
+- **Purpose:** To deliver purchased products and provide support
+
+### Website Usage
+- **Analytics:** Basic page views and traffic patterns (via Cloudflare Analytics)
+- **Purpose:** To improve the website and understand what content is valuable
+
+## How I Use Your Information
+
+- **Newsletter:** To send occasional updates (no more than once per week)
+- **Products:** To deliver digital products and provide customer support
+- **Website:** To improve content and user experience
+
+## Data Sharing
+
+I do not sell, trade, or rent your personal information to third parties.
+
+### Service Providers
+I use the following services that may process your data:
+- **Cloudflare:** Website hosting and analytics
+- **DodoPayments:** Payment processing (Merchant of Record)
+- **Resend:** Email delivery
+- **Turso:** Database storage
+
+### Legal Requirements
+I may disclose your information if required by law or in good faith belief that such action is necessary to comply with legal process.
+
+## Data Security
+
+I implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.
+
+## Your Rights
+
+You have the right to:
+- **Access:** Request a copy of the data I hold about you
+- **Correction:** Request correction of inaccurate data
+- **Deletion:** Request deletion of your data
+- **Unsubscribe:** Unsubscribe from newsletters at any time
+
+## Cookies
+
+This website uses essential cookies for functionality (theme preference). No tracking cookies are used.
+
+## Children's Privacy
+
+This website is not intended for children under 13. I do not knowingly collect information from children.
+
+## Changes to This Policy
+
+I may update this privacy policy from time to time. Changes will be posted on this page with an updated revision date.
+
+## Contact
+
+For privacy-related inquiries, contact me at: **email@arhanahmad.com**
+`;
+
+const accept = Astro.request.headers.get('accept') || '';
+if (accept.includes('text/markdown')) {
+  return new Response(markdownContent, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/markdown; charset=utf-8',
+      'Vary': 'Accept',
+    },
+  });
+}
+---
+
+<BaseLayout title="Privacy Policy — Arhan Ahmad" description="Privacy policy for arhanahmad.com. How I collect, use, and protect your information.">
+  <div class="retro-grid"></div>
+  
+  <main class="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12">
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="text-xs font-mono uppercase tracking-wider text-neutral-500 hover:text-cyan-400 transition-colors">← Home</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Legal</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+        Privacy Policy<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg">
+        Last updated: September 2, 2026
+      </p>
+    </header>
+
+    <article class="prose prose-neutral dark:prose-invert max-w-none">
+      <h2>Overview</h2>
+      <p>
+        Arhan Ahmad ("I", "me", "my") operates arhanahmad.com. This privacy policy explains how I collect, use, and protect your information.
+      </p>
+
+      <h2>Information I Collect</h2>
+      
+      <h3>Newsletter Subscription</h3>
+      <ul>
+        <li><strong>Email address:</strong> Collected when you subscribe to the newsletter</li>
+        <li><strong>Name:</strong> Optional, if you provide it</li>
+        <li><strong>Purpose:</strong> To send you updates about new products and content</li>
+      </ul>
+
+      <h3>Product Purchases</h3>
+      <ul>
+        <li><strong>Email address:</strong> Collected during checkout via DodoPayments</li>
+        <li><strong>Payment information:</strong> Processed by DodoPayments (I don't store credit card details)</li>
+        <li><strong>Purpose:</strong> To deliver purchased products and provide support</li>
+      </ul>
+
+      <h3>Website Usage</h3>
+      <ul>
+        <li><strong>Analytics:</strong> Basic page views and traffic patterns (via Cloudflare Analytics)</li>
+        <li><strong>Purpose:</strong> To improve the website and understand what content is valuable</li>
+      </ul>
+
+      <h2>How I Use Your Information</h2>
+      <ul>
+        <li><strong>Newsletter:</strong> To send occasional updates (no more than once per week)</li>
+        <li><strong>Products:</strong> To deliver digital products and provide customer support</li>
+        <li><strong>Website:</strong> To improve content and user experience</li>
+      </ul>
+
+      <h2>Data Sharing</h2>
+      <p>I do not sell, trade, or rent your personal information to third parties.</p>
+
+      <h3>Service Providers</h3>
+      <p>I use the following services that may process your data:</p>
+      <ul>
+        <li><strong>Cloudflare:</strong> Website hosting and analytics</li>
+        <li><strong>DodoPayments:</strong> Payment processing (Merchant of Record)</li>
+        <li><strong>Resend:</strong> Email delivery</li>
+        <li><strong>Turso:</strong> Database storage</li>
+      </ul>
+
+      <h2>Data Security</h2>
+      <p>
+        I implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.
+      </p>
+
+      <h2>Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the data I hold about you</li>
+        <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+        <li><strong>Deletion:</strong> Request deletion of your data</li>
+        <li><strong>Unsubscribe:</strong> Unsubscribe from newsletters at any time</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>
+        For privacy-related inquiries, contact me at: <strong>email@arhanahmad.com</strong>
+      </p>
+    </article>
+  </main>
+</BaseLayout>

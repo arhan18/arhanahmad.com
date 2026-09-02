@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+const markdownContent = `# Contact Arhan Ahmad
+
+## Email
+
+The best way to reach me is via email: **email@arhanahmad.com**
+
+I typically respond within 24-48 hours.
+
+## Social
+
+- **X (Twitter):** [@ahmadarhankhan](https://x.com/ahmadarhankhan) — DMs open
+- **GitHub:** [arhan18](https://github.com/arhan18) — Issues and PRs welcome
+- **LinkedIn:** [arhan-ahmad-khan](https://www.linkedin.com/in/arhan-ahmad-khan-539557312/)
+
+## Fiverr
+
+For professional services, visit my Fiverr profile: [arhanahmad979](https://www.fiverr.com/arhanahmad979?public_mode=true)
+
+## Newsletter
+
+Subscribe to my newsletter at the bottom of the homepage for updates on new products and building in public.
+
+## Location
+
+Based in Lucknow, India (IST timezone, UTC+5:30).
+
+## Response Times
+
+- **Email:** 24-48 hours
+- **X DMs:** Usually within a few hours during business hours
+- **GitHub Issues:** 1-3 days
+`;
+
+const accept = Astro.request.headers.get('accept') || '';
+if (accept.includes('text/markdown')) {
+  return new Response(markdownContent, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/markdown; charset=utf-8',
+      'Vary': 'Accept',
+    },
+  });
+}
+---
+
+<BaseLayout title="Contact — Arhan Ahmad" description="Get in touch with Arhan Ahmad. Email, social media, and Fiverr.">
+  <div class="retro-grid"></div>
+  
+  <main class="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12">
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="text-xs font-mono uppercase tracking-wider text-neutral-500 hover:text-cyan-400 transition-colors">← Home</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Contact</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+        Get in Touch<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg">
+        The best way to reach me is via email.
+      </p>
+    </header>
+
+    <article class="prose prose-neutral dark:prose-invert max-w-none">
+      <h2>Email</h2>
+      <p>
+        <a href="mailto:email@arhanahmad.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 hover:bg-cyan-400/20 transition-colors font-mono text-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          email@arhanahmad.com
+        </a>
+      </p>
+      <p>I typically respond within 24-48 hours.</p>
+
+      <h2>Social</h2>
+      <ul>
+        <li><strong>X (Twitter):</strong> <a href="https://x.com/ahmadarhankhan">@ahmadarhankhan</a> — DMs open</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/arhan18">arhan18</a> — Issues and PRs welcome</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arhan-ahmad-khan-539557312/">arhan-ahmad-khan</a></li>
+      </ul>
+
+      <h2>Fiverr</h2>
+      <p>
+        For professional services, visit my Fiverr profile: <a href="https://www.fiverr.com/sellers/arhanahmad979">arhanahmad979</a>
+      </p>
+
+      <h2>Location</h2>
+      <p>Based in Lucknow, India (IST timezone, UTC+5:30).</p>
+
+      <h2>Response Times</h2>
+      <ul>
+        <li><strong>Email:</strong> 24-48 hours</li>
+        <li><strong>X DMs:</strong> Usually within a few hours during business hours</li>
+        <li><strong>GitHub Issues:</strong> 1-3 days</li>
+      </ul>
+    </article>
+  </main>
+</BaseLayout>

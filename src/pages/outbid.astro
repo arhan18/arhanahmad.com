@@ -1,17 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
-
-const slots = [
-  { position: 3, currentBid: 1 },
-  { position: 4, currentBid: 1 },
-  { position: 5, currentBid: 1 },
-  { position: 6, currentBid: 1 },
-  { position: 7, currentBid: 1 },
-  { position: 8, currentBid: 1 },
-  { position: 9, currentBid: 1 },
-  { position: 10, currentBid: 1 },
-];
 ---
 
 <BaseLayout title="OutbidCopy — Backlink Bidding System" description="Get backlinks by outbidding competitors. Start at $1.">
@@ -42,7 +31,7 @@ const slots = [
       <div class="mt-6 flex items-center gap-4">
         <span class="text-sm font-mono text-cyan-400">Starting at $1</span>
         <span class="text-sm font-mono text-neutral-500">|</span>
-        <span class="text-sm font-mono text-neutral-500">8 slots available</span>
+        <span id="slots-remaining" class="text-sm font-mono text-neutral-500">Loading...</span>
       </div>
     </header>
 
@@ -72,27 +61,9 @@ const slots = [
     <section class="mb-12">
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-2xl font-semibold tracking-tight">Available Ranks</h2>
-        <span class="text-sm font-mono text-cyan-400">{slots.length} slots remaining</span>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {slots.map(slot => (
-          <div class="bid-slot">
-            <div class="flex items-center justify-between mb-3">
-              <span class="position-badge">#{slot.position}</span>
-              <span class="text-lg font-bold text-cyan-400">${slot.currentBid}</span>
-            </div>
-            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
-              Starting bid
-            </p>
-            <button
-              class="bid-button"
-              data-slot-position={slot.position}
-              data-current-bid={slot.currentBid}
-            >
-              Claim Rank →
-            </button>
-          </div>
-        ))}
+      <div id="slots-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Slots loaded via JS -->
       </div>
     </section>
 
@@ -129,7 +100,11 @@ const slots = [
     <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8">
       <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
         <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">ARHAN<span class="text-cyan-400">.</span></a>
-        <p class="text-sm text-neutral-500 dark:text-neutral-400">{slots.length} slots available. Starting at $1.</p>
+        <div class="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+          <a href="/privacy" class="hover:text-cyan-400 transition-colors">Privacy</a>
+          <a href="/terms" class="hover:text-cyan-400 transition-colors">Terms</a>
+          <a href="/refund" class="hover:text-cyan-400 transition-colors">Refunds</a>
+        </div>
       </div>
     </footer>
   </main>
@@ -161,7 +136,7 @@ const slots = [
               type="url"
               id="website-url"
               placeholder="https://example.com"
-              class="w-full px-4 py-3 bg-neutral-900 dark:bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 focus:border-cyan-400 focus:outline-none transition-colors"
+              class="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 text-gray-900 dark:text-white placeholder-neutral-400 focus:border-cyan-400 focus:outline-none transition-colors"
               required
             />
             <p class="text-xs text-neutral-500 mt-1">This is where your backlink will point to</p>
@@ -173,7 +148,7 @@ const slots = [
               type="text"
               id="brand-name"
               placeholder="Your Brand Name"
-              class="w-full px-4 py-3 bg-neutral-900 dark:bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 focus:border-cyan-400 focus:outline-none transition-colors"
+              class="w-full px-4 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 text-gray-900 dark:text-white placeholder-neutral-400 focus:border-cyan-400 focus:outline-none transition-colors"
               required
             />
             <p class="text-xs text-neutral-500 mt-1">This name will appear publicly in the listing</p>
@@ -198,19 +173,19 @@ const slots = [
         </div>
 
         <div class="space-y-3 mb-6">
-          <div class="flex justify-between py-2 border-b border-neutral-800">
-            <span class="text-sm text-neutral-400">Rank</span>
+          <div class="flex justify-between py-2 border-b border-neutral-200 dark:border-neutral-800">
+            <span class="text-sm text-neutral-500 dark:text-neutral-400">Rank</span>
             <span class="text-sm font-mono font-bold text-cyan-400" id="verify-rank">#3</span>
           </div>
-          <div class="flex justify-between py-2 border-b border-neutral-800">
-            <span class="text-sm text-neutral-400">Website URL</span>
-            <span class="text-sm font-mono text-white truncate ml-4" id="verify-url">https://example.com</span>
+          <div class="flex justify-between py-2 border-b border-neutral-200 dark:border-neutral-800">
+            <span class="text-sm text-neutral-500 dark:text-neutral-400">Website URL</span>
+            <span class="text-sm font-mono text-gray-900 dark:text-white truncate ml-4" id="verify-url">https://example.com</span>
           </div>
-          <div class="flex justify-between py-2 border-b border-neutral-800">
-            <span class="text-sm text-neutral-400">Display Name</span>
-            <span class="text-sm text-white" id="verify-name">Brand Name</span>
+          <div class="flex justify-between py-2 border-b border-neutral-200 dark:border-neutral-800">
+            <span class="text-sm text-neutral-500 dark:text-neutral-400">Display Name</span>
+            <span class="text-sm text-gray-900 dark:text-white" id="verify-name">Brand Name</span>
           </div>
-          <div class="flex justify-between py-2 border-b border-neutral-800">
+          <div class="flex justify-between py-2 border-b border-neutral-200 dark:border-neutral-800">
             <span class="text-sm text-neutral-400">Amount</span>
             <span class="text-lg font-mono font-bold text-cyan-400" id="verify-amount">$1</span>
           </div>
@@ -240,24 +215,24 @@ const slots = [
         </div>
 
         <div class="refund-notice mb-6">
-          <h4 class="text-sm font-bold text-white mb-3">Refund Policy</h4>
-          <p class="text-sm text-neutral-300 leading-relaxed mb-3">
-            <strong class="text-white">Payments are final and non-refundable.</strong>
+          <h4 class="text-sm font-bold text-gray-900 dark:text-white mb-3">Refund Policy</h4>
+          <p class="text-sm text-gray-600 dark:text-neutral-300 leading-relaxed mb-3">
+            <strong class="text-gray-900 dark:text-white">Payments are final and non-refundable.</strong>
           </p>
-          <p class="text-sm text-neutral-400 leading-relaxed mb-3">
+          <p class="text-sm text-gray-500 dark:text-neutral-400 leading-relaxed mb-3">
             By completing this purchase, you understand that your payment is final and 
             cannot be refunded simply because another buyer later pays more and moves 
             ahead of you, or because your listing is taken down or loses its previous rank.
           </p>
-          <p class="text-sm text-neutral-400 leading-relaxed">
-            <strong class="text-neutral-300">Being ranked below another buyer, being outranked later, 
+          <p class="text-sm text-gray-500 dark:text-neutral-400 leading-relaxed">
+            <strong class="text-gray-600 dark:text-neutral-300">Being ranked below another buyer, being outranked later, 
             or having another buyer pay more are not grounds for a refund.</strong>
           </p>
         </div>
 
         <label class="refund-checkbox-label mb-6">
           <input type="checkbox" id="refund-checkbox" class="refund-checkbox" />
-          <span class="text-sm text-neutral-300">
+          <span class="text-sm text-gray-600 dark:text-neutral-300">
             I understand that this payment is final and non-refundable, and that being 
             outranked later or having another buyer pay more is not grounds for a refund.
           </span>
@@ -275,11 +250,26 @@ const slots = [
 </BaseLayout>
 
 <script>
-  // Load DodoPayments SDK
-  const script = document.createElement('script');
-  script.src = 'https://checkout.dodopayments.com/v1.js';
-  script.async = true;
-  document.head.appendChild(script);
+  // Load DodoPayments Checkout SDK
+  const dodoScript = document.createElement('script');
+  dodoScript.src = 'https://cdn.jsdelivr.net/npm/dodopayments-checkout@latest/dist/index.js';
+  dodoScript.async = true;
+  dodoScript.onload = () => {
+    // @ts-ignore
+    if (window.DodoPaymentsCheckout) {
+      // @ts-ignore
+      window.DodoPayments = window.DodoPaymentsCheckout.DodoPayments;
+      // @ts-ignore
+      window.DodoPayments.Initialize({
+        mode: 'live',
+        displayType: 'overlay',
+        onEvent: (event) => {
+          console.log('Checkout event:', event);
+        },
+      });
+    }
+  };
+  document.head.appendChild(dodoScript);
 
   // Modal state
   let currentPosition = 1;
@@ -302,20 +292,17 @@ const slots = [
     currentPosition = position;
     currentBid = bid;
 
-    // Populate modal data
     document.getElementById('modal-rank')!.textContent = `#${position}`;
     document.getElementById('modal-bid-amount')!.textContent = `$${bid}`;
     document.getElementById('verify-rank')!.textContent = `#${position}`;
     document.getElementById('verify-amount')!.textContent = `$${bid}`;
     document.getElementById('pay-amount')!.textContent = `$${bid}`;
 
-    // Reset form
     (document.getElementById('website-url') as HTMLInputElement).value = '';
     (document.getElementById('brand-name') as HTMLInputElement).value = '';
     (document.getElementById('refund-checkbox') as HTMLInputElement).checked = false;
     (document.getElementById('pay-now') as HTMLButtonElement).disabled = true;
 
-    // Reset to step 1
     showStep(0);
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
@@ -326,10 +313,52 @@ const slots = [
     document.body.style.overflow = '';
   }
 
-  // Slot buttons
-  document.addEventListener('astro:page-load', () => {
-    const slotButtons = document.querySelectorAll('[data-slot-position]');
-    slotButtons.forEach((btn) => {
+  async function fetchSlots() {
+    try {
+      const res = await fetch('/api/slots', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'getSlots' }),
+      });
+      const slots = await res.json();
+      renderSlots(slots);
+    } catch (e) {
+      console.error('Failed to fetch slots:', e);
+    }
+  }
+
+  function renderSlots(slots: any[]) {
+    const grid = document.getElementById('slots-grid')!;
+    const available = slots.filter(s => !s.occupant_name);
+    document.getElementById('slots-remaining')!.textContent = `${available.length} slots remaining`;
+
+    grid.innerHTML = slots.map(slot => `
+      <div class="bid-slot ${slot.occupant_name ? 'occupied' : ''}">
+        <div class="flex items-center justify-between mb-3">
+          <span class="position-badge">#${slot.position}</span>
+          <span class="text-lg font-bold text-cyan-400">$${slot.bid_amount}</span>
+        </div>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+          ${slot.occupant_name ? `Occupied by ${slot.occupant_name}` : 'Available'}
+        </p>
+        ${!slot.occupant_name ? `
+          <button
+            class="bid-button"
+            data-slot-position="${slot.position}"
+            data-current-bid="${slot.bid_amount}"
+          >
+            Claim Rank →
+          </button>
+        ` : `
+          <button class="bid-button occupied-btn" disabled>
+            Occupied
+          </button>
+        `}
+      </div>
+    `).join('');
+
+    // Re-attach event listeners
+    document.querySelectorAll('[data-slot-position]').forEach(btn => {
       btn.addEventListener('click', () => {
         const el = btn as HTMLElement;
         const position = parseInt(el.dataset.slotPosition!);
@@ -337,34 +366,26 @@ const slots = [
         openModal(position, bid);
       });
     });
+  }
 
-    // Close buttons
+  document.addEventListener('astro:page-load', () => {
+    fetchSlots();
+
     document.getElementById('close-modal-1')!.addEventListener('click', closeModal);
     document.getElementById('close-modal-2')!.addEventListener('click', closeModal);
     document.getElementById('close-modal-3')!.addEventListener('click', closeModal);
 
-    // Click outside to close
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
     });
 
-    // Step 1 → Step 2
     document.getElementById('step1-next')!.addEventListener('click', () => {
       const url = (document.getElementById('website-url') as HTMLInputElement).value.trim();
       const name = (document.getElementById('brand-name') as HTMLInputElement).value.trim();
 
-      if (!url) {
-        alert('Please enter your website URL.');
-        return;
-      }
-      if (!url.startsWith('http://') && !url.startsWith('https://')) {
-        alert('URL must start with http:// or https://');
-        return;
-      }
-      if (!name) {
-        alert('Please enter your brand name.');
-        return;
-      }
+      if (!url) { alert('Please enter your website URL.'); return; }
+      if (!url.startsWith('http://') && !url.startsWith('https://')) { alert('URL must start with http:// or https://'); return; }
+      if (!name) { alert('Please enter your brand name.'); return; }
 
       websiteUrl = url;
       brandName = name;
@@ -374,51 +395,65 @@ const slots = [
       showStep(1);
     });
 
-    // Step 2 → Step 1
-    document.getElementById('step2-back')!.addEventListener('click', () => {
-      showStep(0);
-    });
+    document.getElementById('step2-back')!.addEventListener('click', () => showStep(0));
+    document.getElementById('step2-next')!.addEventListener('click', () => showStep(2));
+    document.getElementById('step3-back')!.addEventListener('click', () => showStep(1));
 
-    // Step 2 → Step 3
-    document.getElementById('step2-next')!.addEventListener('click', () => {
-      showStep(2);
-    });
-
-    // Step 3 → Step 2
-    document.getElementById('step3-back')!.addEventListener('click', () => {
-      showStep(1);
-    });
-
-    // Checkbox toggle
     document.getElementById('refund-checkbox')!.addEventListener('change', (e) => {
       const checked = (e.target as HTMLInputElement).checked;
       (document.getElementById('pay-now') as HTMLButtonElement).disabled = !checked;
     });
 
-    // Pay Now
     document.getElementById('pay-now')!.addEventListener('click', async () => {
       // @ts-ignore
       const { DodoPayments } = window;
-      if (!DodoPayments) {
-        alert('Payment system loading... please try again.');
-        return;
+      if (!DodoPayments) { alert('Payment system loading... please try again.'); return; }
+
+      const payBtn = document.getElementById('pay-now') as HTMLButtonElement;
+      payBtn.disabled = true;
+      payBtn.textContent = 'Creating checkout...';
+
+      try {
+        // Create checkout session via API
+        const res = await fetch('/api/slots', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'createCheckoutSession',
+            productName: 'Buy Slot',
+            price: currentBid,
+            websiteUrl,
+            brandName,
+            rank: currentPosition,
+          }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok || !data.checkoutUrl) {
+          throw new Error(data.error || 'Failed to create checkout session');
+        }
+
+        // Save purchase data for success page
+        localStorage.setItem('outbid-purchase', JSON.stringify({
+          rank: currentPosition,
+          bid: currentBid,
+          url: websiteUrl,
+          name: brandName,
+          timestamp: Date.now(),
+        }));
+
+        // Open overlay checkout
+        DodoPayments.Checkout.open({
+          checkoutUrl: data.checkoutUrl,
+        });
+      } catch (err) {
+        console.error('Checkout error:', err);
+        alert('Failed to start checkout. Please try again.');
+      } finally {
+        payBtn.disabled = false;
+        payBtn.innerHTML = `Pay <span id="pay-amount">$${currentBid}</span> — Complete Purchase`;
       }
-
-      // Save purchase data to localStorage for success page
-      localStorage.setItem('outbid-purchase', JSON.stringify({
-        rank: currentPosition,
-        bid: currentBid,
-        url: websiteUrl,
-        name: brandName,
-        timestamp: Date.now(),
-      }));
-
-      // Open checkout
-      DodoPayments.Checkout.open({
-        productId: 'outbid-backlink',
-        brandId: 'arhan-ahmad',
-        redirectUrl: `${window.location.origin}/checkout/success`,
-      });
     });
   });
 </script>
@@ -437,123 +472,57 @@ const slots = [
     border-radius: 0;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
   }
-  .bid-slot:hover {
-    border-color: #06b6d4;
-    transform: translateY(-2px);
-  }
+  .bid-slot:hover { border-color: #06b6d4; transform: translateY(-2px); }
+  .bid-slot.occupied { border-color: rgba(34, 197, 94, 0.3); }
+  .bid-slot.occupied:hover { transform: none; }
 
   .position-badge {
-    font-family: var(--font-mono), monospace;
-    font-size: 12px;
-    font-weight: 700;
-    color: #06b6d4;
-    background: rgba(6, 182, 212, 0.1);
-    padding: 4px 8px;
-    border-radius: 4px;
+    font-family: var(--font-mono), monospace; font-size: 12px; font-weight: 700;
+    color: #06b6d4; background: rgba(6, 182, 212, 0.1); padding: 4px 8px; border-radius: 4px;
   }
 
   .bid-button {
-    display: block;
-    width: 100%;
-    padding: 10px 16px;
+    display: block; width: 100%; padding: 10px 16px;
     background: linear-gradient(135deg, #06b6d4, #8b5cf6);
-    color: white;
-    font-family: var(--font-mono), monospace;
-    font-size: 12px;
-    font-weight: 600;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    color: white; font-family: var(--font-mono), monospace; font-size: 12px; font-weight: 600;
+    text-align: center; border: none; cursor: pointer; transition: all 0.2s ease;
   }
-  .bid-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
-  }
+  .bid-button:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); }
+  .bid-button.occupied-btn { background: #374151; cursor: not-allowed; }
+  .bid-button.occupied-btn:hover { transform: none; box-shadow: none; }
 
   .bento-tile { transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1); }
   .bento-tile:hover { transform: translateY(-2px); }
 
-  /* Modal */
   .modal-overlay {
-    position: fixed;
-    inset: 0;
-    z-index: 50;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
+    position: fixed; inset: 0; z-index: 50;
+    background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(4px);
+    display: flex; align-items: center; justify-content: center; padding: 16px;
   }
-
   .modal-container {
-    width: 100%;
-    max-width: 480px;
-    background: hsl(0 0% 7%);
-    border: 1px solid hsl(0 0% 15%);
-    padding: 24px;
-    position: relative;
+    width: 100%; max-width: 480px; background: hsl(0 0% 7%);
+    border: 1px solid hsl(0 0% 15%); padding: 24px; position: relative;
   }
-
   .modal-close {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: 1px solid hsl(0 0% 20%);
-    color: rgb(163 163 163);
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.2s;
+    width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+    background: transparent; border: 1px solid hsl(0 0% 20%);
+    color: rgb(163 163 163); font-size: 20px; cursor: pointer; transition: all 0.2s;
   }
-  .modal-close:hover {
-    border-color: #06b6d4;
-    color: #06b6d4;
+  .modal-close:hover { border-color: #06b6d4; color: #06b6d4; }
+
+  .modal-step input[type="url"], .modal-step input[type="text"] {
+    font-family: var(--font-mono), monospace; font-size: 14px;
   }
 
-  .modal-step input[type="url"],
-  .modal-step input[type="text"] {
-    font-family: var(--font-mono), monospace;
-    font-size: 14px;
-  }
-
-  .refund-notice {
-    padding: 16px;
-    background: rgba(239, 68, 68, 0.05);
-    border: 1px solid rgba(239, 68, 68, 0.2);
-  }
-
+  .refund-notice { padding: 16px; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); }
   .refund-checkbox-label {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    cursor: pointer;
-    padding: 12px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid hsl(0 0% 15%);
-    transition: border-color 0.2s;
+    display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
+    padding: 12px; background: rgba(255, 255, 255, 0.03);
+    border: 1px solid hsl(0 0% 15%); transition: border-color 0.2s;
   }
-  .refund-checkbox-label:hover {
-    border-color: #06b6d4;
-  }
+  .refund-checkbox-label:hover { border-color: #06b6d4; }
+  .refund-checkbox { width: 18px; height: 18px; margin-top: 2px; accent-color: #06b6d4; flex-shrink: 0; cursor: pointer; }
 
-  .refund-checkbox {
-    width: 18px;
-    height: 18px;
-    margin-top: 2px;
-    accent-color: #06b6d4;
-    flex-shrink: 0;
-    cursor: pointer;
-  }
-
-  #pay-now:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  #pay-now:not(:disabled):hover {
-    opacity: 0.9;
-  }
+  #pay-now:disabled { opacity: 0.5; cursor: not-allowed; }
+  #pay-now:not(:disabled):hover { opacity: 0.9; }
 </style>

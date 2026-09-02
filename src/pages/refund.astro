@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+---
+
+<BaseLayout title="Refund & Cancellation Policy — Arhan Ahmad" description="Refund and cancellation policy for digital products purchased on arhanahmad.com.">
+  <div class="retro-grid"></div>
+  
+  <main class="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12">
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="text-xs font-mono uppercase tracking-wider text-neutral-500 hover:text-cyan-400 transition-colors">← Home</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Legal</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+        Refund & Cancellation<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg">
+        Last updated: September 2, 2026
+      </p>
+    </header>
+
+    <article class="prose prose-neutral dark:prose-invert max-w-none">
+      <h2>General Policy</h2>
+      <p>
+        Due to the digital nature of all products sold on arhanahmad.com, <strong>all sales are final</strong>. Once a digital product has been delivered, refunds cannot be issued.
+      </p>
+
+      <h2>Eligibility for Refund</h2>
+      <p>A refund may be considered in the following cases:</p>
+      <ul>
+        <li><strong>Product not delivered:</strong> If you completed payment but did not receive the download link or email within 24 hours</li>
+        <li><strong>Defective product:</strong> If the downloaded file is corrupted or cannot be opened, and I am unable to provide a working replacement within 48 hours</li>
+        <li><strong>Duplicate charge:</strong> If you were charged twice for the same product</li>
+      </ul>
+
+      <h2>Non-Refundable Situations</h2>
+      <p>Refunds will <strong>not</strong> be issued for:</p>
+      <ul>
+        <li>Change of mind after purchase</li>
+        <li>Products that have been downloaded successfully</li>
+        <li>Incompatibility with your specific tools or environment (product compatibility is listed on each product page)</li>
+        <li>Requests made more than 7 days after purchase</li>
+      </ul>
+
+      <h2>How to Request a Refund</h2>
+      <p>To request a refund, email <strong>email@arhanahmad.com</strong> with:</p>
+      <ul>
+        <li>Your order confirmation or receipt</li>
+        <li>The email address used for purchase</li>
+        <li>A brief description of the issue</li>
+      </ul>
+      <p>
+        Refund requests are typically reviewed within 3 business days. If approved, the refund will be processed through DodoPayments to your original payment method.
+      </p>
+
+      <h2>Cancellation</h2>
+      <p>
+        Since all products are delivered digitally immediately upon purchase, there is no cancellation period. If you have not yet downloaded the product, contact me within 24 hours and I may be able to assist.
+      </p>
+
+      <h2>Chargebacks</h2>
+      <p>
+        If you experience an issue with your purchase, please contact me directly before initiating a chargeback with your bank. I am committed to resolving issues quickly and fairly.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For refund requests or questions, contact me at: <strong>email@arhanahmad.com</strong>
+      </p>
+    </article>
+  </main>
+</BaseLayout>

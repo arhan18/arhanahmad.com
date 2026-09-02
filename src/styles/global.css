@@ -133,41 +133,27 @@ body {
 /* Hero Pills */
 .hero-pill {
   @apply inline-flex cursor-default items-center gap-1 rounded-full px-3 py-1.5 text-xs font-medium;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background-color: rgba(0, 0, 0, 0.03);
-  color: rgb(64, 64, 64);
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.dark .hero-pill {
-  border-color: rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.05);
-  color: rgb(163, 163, 163);
-}
 .hero-pill:hover {
-  border-color: rgba(0, 0, 0, 0.2);
-  background-color: rgba(0, 0, 0, 0.06);
-  color: rgb(10, 10, 10);
-}
-.dark .hero-pill:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgb(237, 237, 237);
+  border-color: hsl(var(--ring));
+  background-color: hsl(var(--accent));
+  color: hsl(var(--foreground));
 }
 
 /* CTA Primary */
 .cta-primary {
   @apply inline-flex items-center justify-center whitespace-nowrap text-base font-semibold transition-colors;
   border-radius: 0px;
-  background-color: rgb(23, 23, 23);
-  color: rgb(250, 250, 250);
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
   height: 48px;
   padding: 0 20px;
   gap: 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-.dark .cta-primary {
-  background-color: rgb(250, 250, 250);
-  color: rgb(23, 23, 23);
 }
 .cta-primary:hover { opacity: 0.9; }
 
@@ -208,15 +194,21 @@ body {
   @apply relative grid place-items-center overflow-hidden rounded-full;
   width: 112px;
   height: 112px;
-  background-color: rgb(255, 255, 255);
+  background-color: hsl(var(--background));
   box-shadow:
-    rgb(255, 255, 255) 0px 0px 0px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px inset,
+    hsl(var(--background)) 0px 0px 0px 0px inset,
+    hsl(var(--border)) 0px 0px 0px 1px inset,
     rgba(0, 0, 0, 0.08) 0px 1px 2px 0px,
-    rgba(0, 0, 0, 0.35) 0px 12px 28px -8px;
+    rgba(0, 0, 0, 0.15) 0px 12px 28px -8px;
   transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
-.dark .avatar-disc { background-color: rgb(38, 38, 38); }
+.dark .avatar-disc {
+  box-shadow:
+    hsl(var(--background)) 0px 0px 0px 0px inset,
+    hsl(var(--border)) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.08) 0px 1px 2px 0px,
+    rgba(0, 0, 0, 0.35) 0px 12px 28px -8px;
+}
 .group:hover .avatar-disc { transform: translateY(-4px) scale(1.03); }
 
 /* Bento Grid */
@@ -232,6 +224,8 @@ body {
 .bento-tile {
   @apply relative h-full overflow-hidden;
   transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1);
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
 }
 .bento-tile:hover { transform: translateY(-4px); }
 
@@ -240,7 +234,7 @@ body {
   @apply flex shrink-0 flex-col gap-2 border p-3;
   border-radius: 0px;
   border-color: hsl(var(--border));
-  background-color: hsl(var(--background));
+  background-color: hsl(var(--card));
 }
 .experience-card:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
@@ -249,53 +243,33 @@ body {
 /* Skill Chip */
 .skill-chip {
   @apply inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium;
-  border-color: rgba(0, 0, 0, 0.08);
-  background-color: rgba(0, 0, 0, 0.03);
-  color: rgb(82, 82, 82);
+  border-color: hsl(var(--border));
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.dark .skill-chip {
-  border-color: rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.05);
-  color: rgb(163, 163, 163);
-}
 .skill-chip:hover {
-  border-color: rgba(0, 0, 0, 0.2);
-  background-color: rgba(0, 0, 0, 0.06);
-  color: rgb(10, 10, 10);
-}
-.dark .skill-chip:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgb(237, 237, 237);
+  border-color: hsl(var(--ring));
+  background-color: hsl(var(--accent));
+  color: hsl(var(--foreground));
 }
 
 /* Company Monogram */
 .company-monogram {
   @apply flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-md text-[9px] font-semibold;
   letter-spacing: -0.025em;
-  background-color: rgba(0, 0, 0, 0.025);
-  color: rgb(64, 64, 64);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
-}
-.dark .company-monogram {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: rgb(163, 163, 163);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  box-shadow: inset 0 0 0 1px hsl(var(--border));
 }
 
 /* Badge */
 .badge {
   @apply inline-flex items-center whitespace-nowrap px-2 py-0.5 text-[10px] font-medium leading-none;
   border-radius: 9999px;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  background-color: rgba(0, 0, 0, 0.025);
-  color: rgb(64, 64, 64);
-}
-.dark .badge {
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: rgba(255, 255, 255, 0.06);
-  color: rgb(163, 163, 163);
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
 }
 
 /* Badge Build */
@@ -338,8 +312,11 @@ body {
   @apply pointer-events-none absolute;
   width: 150px;
   height: 2px;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6), transparent);
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.2), transparent);
   transform-origin: center center;
+}
+.dark .meteor {
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6), transparent);
 }
 
 /* Theme Toggle */

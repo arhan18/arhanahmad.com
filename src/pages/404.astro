@@ -1,25 +1,77 @@
 ---
+Astro.response.status = 404;
+Astro.response.headers.set('Content-Type', 'text/html; charset=utf-8');
+Astro.response.headers.set('Vary', 'Accept');
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const markdownBody = `# 404 — Page Not Found
+
+This path does not exist on arhanahmad.com.
+
+## Where to go next
+
+- [/](https://arhanahmad.com) — Homepage (Arhan Ahmad, Builder & Indie Hacker)
+- [/llms.txt](https://arhanahmad.com/llms.txt) — Site description for AI agents
+- [/sitemap-index.xml](https://arhanahmad.com/sitemap-index.xml) — Full site map (all indexed URLs)
+- [/about](https://arhanahmad.com/about) — About Arhan Ahmad
+- [/products](https://arhanahmad.com/products) — All products
+
+## Products
+
+- [NameAPlanet](https://arhanahmad.com/nameaplanet) — Name a planet after someone you love
+- [BuyAMoon](https://arhanahmad.com/buymoon) — Claim a fictional moon crater
+- [StartupGraveyard](https://arhanahmad.com/startupgraveyard) — Tombstones for dead startups
+- [FlipAFate](https://arhanahmad.com/flipafate) — Let fate decide
+- [ChaosGarden](https://arhanahmad.com/chaosgarden) — Track bad habits
+- [TimeWasted](https://arhanahmad.com/timewasted) — Calculate time wasted online
+- [LaunchPad](https://arhanahmad.com/launchpad) — Pre-launch waitlist & discovery
+- [MakeAbsurd](https://arhanahmad.com/makeabsurd) — AI landing pages for ridiculous products
+- [WeirdPage](https://arhanahmad.com/weirdpage) — Portfolio for weird builders
+
+## Contact
+
+- Email: email@arhanahmad.com
+- X: [@ahmadarhankhan](https://x.com/ahmadarhankhan)
+- GitHub: [arhan18](https://github.com/arhan18)
+`;
+
+const accept = Astro.request.headers.get('accept') || '';
+if (accept.includes('text/markdown')) {
+  return new Response(markdownBody, {
+    status: 404,
+    headers: {
+      'Content-Type': 'text/markdown; charset=utf-8',
+      'Vary': 'Accept',
+    },
+  });
+}
 ---
 
 <BaseLayout title="404 — Page Not Found | Arhan Ahmad" description="This page doesn't exist. Check the sitemap or visit the homepage.">
-  <main class="min-h-screen bg-base-200 flex items-center justify-center p-6">
-    <div class="max-w-lg text-center space-y-6">
-      <h1 class="text-6xl font-extrabold text-base-content/20">404</h1>
-      <p class="text-xl text-base-content/70">This page doesn't exist.</p>
+  <main class="min-h-screen flex items-center justify-center p-6" style="background:hsl(var(--background));color:hsl(var(--foreground));">
+    <div class="max-w-lg w-full space-y-6">
+      <div class="text-center">
+        <p class="text-8xl font-extrabold opacity-10 select-none">404</p>
+        <h1 class="text-2xl font-semibold mt-2">Page not found</h1>
+        <p class="mt-2 text-sm opacity-60">This path doesn't exist on arhanahmad.com.</p>
+      </div>
 
-      <div class="divider">or</div>
-
-      <div class="text-left bg-base-100 rounded-2xl p-6 shadow-sm space-y-3">
-        <p class="text-sm text-base-content/50 uppercase tracking-wide font-semibold">For agents & crawlers</p>
-        <ul class="text-sm text-base-content/70 space-y-1">
-          <li><a href="/sitemap-index.xml" class="link link-primary">/sitemap-index.xml</a> — all pages</li>
-          <li><a href="/llms.txt" class="link link-primary">/llms.txt</a> — site description</li>
-          <li><a href="/" class="link link-primary">/</a> — homepage</li>
+      <div class="rounded-xl border p-5 space-y-3" style="border-color:hsl(var(--border));background:hsl(var(--muted)/0.3);">
+        <p class="text-xs font-mono uppercase tracking-widest opacity-50">For agents &amp; crawlers</p>
+        <ul class="text-sm space-y-2 opacity-70">
+          <li><a href="/" class="hover:underline">/ — Homepage</a></li>
+          <li><a href="/llms.txt" class="hover:underline">/llms.txt — Site description &amp; agent instructions</a></li>
+          <li><a href="/sitemap-index.xml" class="hover:underline">/sitemap-index.xml — All indexed pages</a></li>
+          <li><a href="/about" class="hover:underline">/about — About</a></li>
+          <li><a href="/products" class="hover:underline">/products — Products</a></li>
         </ul>
       </div>
 
-      <a href="/" class="btn btn-primary">Go Home</a>
+      <div class="text-center">
+        <a href="/" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors" style="background:hsl(var(--primary));color:hsl(var(--primary-foreground));">
+          ← Go home
+        </a>
+      </div>
     </div>
   </main>
 </BaseLayout>

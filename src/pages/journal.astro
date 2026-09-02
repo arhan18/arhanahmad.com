@@ -432,14 +432,14 @@ const entries = [
     const countEl = document.getElementById('visitCount');
     const count = await fetchCount();
     if (countEl) countEl.textContent = count.toString();
+  }
+
+  async function handleVisit() {
+    const btn = document.getElementById('visitBtn');
+    const countEl = document.getElementById('visitCount');
+    const data = await markVisit();
+    if (countEl) countEl.textContent = data.count.toString();
     if (btn) {
-      const deviceId = getDeviceId();
-      const res = await fetch(`${COUNTER_API}/visit`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ deviceId }),
-      });
-      const data = await res.json();
       if (data.marked) {
         btn.classList.add('counted');
         const plus = document.createElement('span');
@@ -454,6 +454,7 @@ const entries = [
   }
 
   updateDisplay();
+  document.getElementById('visitBtn')?.addEventListener('click', handleVisit);
 
   // ═══════════════════════════════════════════════════════════
   // SCROLL REVEAL

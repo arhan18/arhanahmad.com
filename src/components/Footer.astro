@@ -4,6 +4,12 @@ const socials = [
   { name: 'GitHub', url: 'https://github.com/arhan18' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/arhan-ahmad-khan-539557312/' },
 ];
+
+const policies = [
+  { name: 'Privacy', url: '/privacy' },
+  { name: 'Terms', url: '/terms' },
+  { name: 'Refunds', url: '/refund' },
+];
 ---
 
 <footer class="section-spacing" style="border-top: 1px solid hsl(var(--border));">
@@ -17,18 +23,31 @@ const socials = [
       </p>
     </div>
 
-    <div class="flex gap-4">
-      {socials.map((social) => (
-        <a
-          href={social.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-sm transition-all hover:underline"
-          style="color: hsl(var(--muted-foreground));"
-        >
-          {social.name}
-        </a>
-      ))}
+    <div class="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+      <div class="flex gap-4">
+        {policies.map((policy) => (
+          <a
+            href={policy.url}
+            class="text-xs transition-all hover:underline"
+            style="color: hsl(var(--muted-foreground));"
+          >
+            {policy.name}
+          </a>
+        ))}
+      </div>
+      <div class="flex gap-4">
+        {socials.map((social) => (
+          <a
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm transition-all hover:underline"
+            style="color: hsl(var(--muted-foreground));"
+          >
+            {social.name}
+          </a>
+        ))}
+      </div>
     </div>
   </div>
 </footer>

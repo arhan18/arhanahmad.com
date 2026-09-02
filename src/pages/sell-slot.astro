@@ -113,10 +113,14 @@ const availableSlots = [
             <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
               Starting price
             </p>
-            <a href={`mailto:email@arhanahmad.com?subject=Buy Slot ${slot.position} for $1&body=I want to buy slot ${slot.position} on arhanahmad.com for $1.%0A%0AMy website URL: %0AMy site description: `} 
-               class="bid-button">
+            <button
+              class="bid-button"
+              data-dodo-checkout
+              data-product-id={`sell-slot-${slot.position}`}
+              data-slot-position={slot.position}
+            >
               Buy Now →
-            </a>
+            </button>
           </div>
         ))}
       </div>
@@ -134,7 +138,7 @@ const availableSlots = [
               <li>• First come, first served</li>
               <li>• Price increases as slots fill</li>
               <li>• Your backlink stays forever</li>
-              <li>• Payment via email</li>
+              <li>• Secure payment via DodoPayments</li>
             </ul>
           </div>
           <div>
@@ -156,9 +160,13 @@ const availableSlots = [
       <div class="sell-slot-banner text-center">
         <h2 class="text-3xl font-bold mb-4">Only 8 Slots Left</h2>
         <p class="text-neutral-400 mb-6">Get your site listed before they're gone.</p>
-        <a href="mailto:email@arhanahmad.com?subject=Buy a Slot&body=I want to buy a slot on arhanahmad.com.%0A%0AMy website URL: %0AMy site description: " class="sell-slot-btn">
+        <button
+          class="sell-slot-btn"
+          data-dodo-checkout
+          data-product-id="sell-slot-cta"
+        >
           Buy Your Slot Now →
-        </a>
+        </button>
       </div>
     </section>
 
@@ -166,11 +174,49 @@ const availableSlots = [
     <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8">
       <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
         <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">ARHAN<span class="text-cyan-400">.</span></a>
-        <p class="text-sm text-neutral-500 dark:text-neutral-400">Only 8 slots remaining. Starting at $1.</p>
+        <div class="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+          <a href="/privacy" class="hover:text-cyan-400 transition-colors">Privacy</a>
+          <a href="/terms" class="hover:text-cyan-400 transition-colors">Terms</a>
+          <a href="/refund" class="hover:text-cyan-400 transition-colors">Refunds</a>
+        </div>
       </div>
     </footer>
   </main>
 </BaseLayout>
+
+<script>
+  // Load DodoPayments SDK
+  const script = document.createElement('script');
+  script.src = 'https://checkout.dodopayments.com/v1.js';
+  script.async = true;
+  document.head.appendChild(script);
+
+  // Handle checkout buttons
+  document.addEventListener('astro:page-load', () => {
+    const checkoutButtons = document.querySelectorAll('[data-dodo-checkout]');
+    
+    checkoutButtons.forEach((button) => {
+      button.addEventListener('click', async () => {
+        const el = button as HTMLElement;
+        const productId = el.dataset.productId;
+        const slotPosition = el.dataset.slotPosition;
+        
+        // @ts-ignore
+        const { DodoPayments } = window;
+        if (!DodoPayments) {
+          alert('Payment system loading... please try again in a moment.');
+          return;
+        }
+
+        DodoPayments.Checkout.open({
+          productId: productId!,
+          brandId: 'arhan-ahmad',
+          redirectUrl: `${window.location.origin}/checkout/success`,
+        });
+      });
+    });
+  });
+</script>
 
 <style>
   .back-link {
@@ -220,6 +266,8 @@ const availableSlots = [
     transition: all 0.2s ease;
     width: 100%;
     text-align: center;
+    border: none;
+    cursor: pointer;
   }
   .bid-button:hover {
     transform: translateY(-1px);
@@ -241,6 +289,8 @@ const availableSlots = [
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
   }
   .sell-slot-btn:hover {
     transform: translateY(-2px);

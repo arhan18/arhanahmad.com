@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+---
+
+<BaseLayout title="Terms of Service — Arhan Ahmad" description="Terms of service for arhanahmad.com. Purchase agreements, licensing, and usage terms.">
+  <div class="retro-grid"></div>
+  
+  <main class="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12">
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="text-xs font-mono uppercase tracking-wider text-neutral-500 hover:text-cyan-400 transition-colors">← Home</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Legal</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+        Terms of Service<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg">
+        Last updated: September 2, 2026
+      </p>
+    </header>
+
+    <article class="prose prose-neutral dark:prose-invert max-w-none">
+      <h2>1. Overview</h2>
+      <p>
+        These Terms of Service ("Terms") govern your use of arhanahmad.com ("Website") operated by Arhan Ahmad ("I", "me", "my"). By purchasing a product or using this Website, you agree to be bound by these Terms.
+      </p>
+
+      <h2>2. Products</h2>
+      <p>
+        I sell digital products including templates, guides, toolkits, and other downloadable goods. All products are delivered digitally via email after payment confirmation.
+      </p>
+      <ul>
+        <li><strong>Delivery method:</strong> Instant digital download via email link after successful payment</li>
+        <li><strong>Format:</strong> Digital files (ZIP archives, PDFs, or similar)</li>
+        <li><strong>Access:</strong> Products are available for download immediately after purchase</li>
+      </ul>
+
+      <h2>3. Pricing and Payment</h2>
+      <ul>
+        <li>All prices are displayed in USD</li>
+        <li>Payment is processed securely by DodoPayments (Merchant of Record)</li>
+        <li>I do not store your credit card or payment information</li>
+        <li>Prices are subject to change without notice, but will not affect completed purchases</li>
+      </ul>
+
+      <h2>4. Licensing</h2>
+      <p>
+        Each product comes with a specific license. The license terms are displayed on the product page at the time of purchase. Unless otherwise stated:
+      </p>
+      <ul>
+        <li><strong>Personal use:</strong> You may use the product for personal projects</li>
+        <li><strong>Commercial use:</strong> You may use the product for commercial projects</li>
+        <li><strong>Restrictions:</strong> You may not resell, redistribute, or share the product with others</li>
+      </ul>
+
+      <h2>5. Refund Policy</h2>
+      <p>
+        Due to the digital nature of products, all sales are final. Refunds are handled in accordance with the <a href="/refund" class="text-cyan-400 hover:underline">Refund and Cancellation Policy</a>.
+      </p>
+
+      <h2>6. Intellectual Property</h2>
+      <p>
+        All content on this Website, including text, images, code, and design, is owned by Arhan Ahmad and protected by intellectual property laws. Product purchases grant you a license to use the product as specified — they do not transfer ownership of the underlying intellectual property.
+      </p>
+
+      <h2>7. User Conduct</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the products for any illegal purpose</li>
+        <li>Attempt to reverse-engineer or extract source code from products where not provided</li>
+        <li>Share purchased products with non-purchasers</li>
+        <li>Use automated systems to access or purchase products</li>
+      </ul>
+
+      <h2>8. Limitation of Liability</h2>
+      <p>
+        Products are provided "as is" without warranties of any kind. I am not liable for any damages arising from the use or inability to use purchased products. My total liability shall not exceed the purchase price of the product.
+      </p>
+
+      <h2>9. Privacy</h2>
+      <p>
+        Your use of this Website is also governed by the <a href="/privacy" class="text-cyan-400 hover:underline">Privacy Policy</a>, which explains how I collect and use your information.
+      </p>
+
+      <h2>10. Changes to These Terms</h2>
+      <p>
+        I reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated revision date. Continued use of the Website after changes constitutes acceptance of the new Terms.
+      </p>
+
+      <h2>11. Contact</h2>
+      <p>
+        For questions about these Terms, contact me at: <strong>email@arhanahmad.com</strong>
+      </p>
+    </article>
+  </main>
+</BaseLayout>
