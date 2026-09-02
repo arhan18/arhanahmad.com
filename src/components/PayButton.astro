@@ -1,0 +1,65 @@
+---
+interface Props {
+  productId: string;
+  productName: string;
+  price: number;
+  brand?: string;
+  class?: string;
+}
+
+const { productId, productName, price, brand = 'arhan-ahmad', class: className = '' } = Astro.props;
+---
+
+<button
+  data-dodo-checkout
+  data-product-id={productId}
+  data-product-name={productName}
+  data-price={price}
+  data-brand={brand}
+  class:list={[
+    'inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200',
+    'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700',
+    'shadow-lg hover:shadow-xl active:scale-95',
+    className,
+  ]}
+>
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
+  </svg>
+  Buy ${price} — {productName}
+</button>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const checkoutButtons = document.querySelectorAll('[data-dodo-checkout]');
+    
+    checkoutButtons.forEach((button) => {
+      button.addEventListener('click', async () => {
+        const el = button as HTMLElement;
+        const productId = el.dataset.productId;
+        const brand = el.dataset.brand;
+        
+        // @ts-ignore
+        const { DodoPayments } = window;
+        if (!DodoPayments) {
+          console.error('DodoPayments SDK not loaded');
+          return;
+        }
+
+        DodoPayments.Checkout.open({
+          productId: productId!,
+          brandId: brand,
+          redirectUrl: `${window.location.origin}/checkout/success`,
+        });
+      });
+    });
+  });
+</script>
+
+<script>
+  // Load DodoPayments SDK
+  const script = document.createElement('script');
+  script.src = 'https://checkout.dodopayments.com/v1.js';
+  script.async = true;
+  document.head.appendChild(script);
+</script>

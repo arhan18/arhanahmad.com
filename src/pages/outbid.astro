@@ -1,9 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
+
+const slots = [
+  { position: 3, currentBid: 1 },
+  { position: 4, currentBid: 1 },
+  { position: 5, currentBid: 1 },
+  { position: 6, currentBid: 1 },
+  { position: 7, currentBid: 1 },
+  { position: 8, currentBid: 1 },
+  { position: 9, currentBid: 1 },
+  { position: 10, currentBid: 1 },
+];
 ---
 
-<BaseLayout title="OutbidCopy — Backlink Bidding System" description="Get backlinks by outbidding competitors. Inspired by outbid.lol.">
+<BaseLayout title="OutbidCopy — Backlink Bidding System" description="Get backlinks by outbidding competitors. Start at $1.">
   <div class="retro-grid"></div>
 
   <main class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8">
@@ -26,49 +37,62 @@ import ThemeToggle from '../components/ThemeToggle.astro';
         OutbidCopy<span class="text-cyan-400">.</span>
       </h1>
       <p class="text-neutral-500 dark:text-neutral-400 text-lg max-w-2xl">
-        Get backlinks by outbidding competitors. Inspired by 
-        <a href="https://outbid.lol" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">outbid.lol</a>.
-        This is a product idea — not yet live.
+        Get backlinks by outbidding competitors. Start at $1, pay $1 more to rank higher.
       </p>
+      <div class="mt-6 flex items-center gap-4">
+        <span class="text-sm font-mono text-cyan-400">Starting at $1</span>
+        <span class="text-sm font-mono text-neutral-500">|</span>
+        <span class="text-sm font-mono text-neutral-500">8 slots available</span>
+      </div>
     </header>
 
-    <!-- Status -->
+    <!-- How It Works -->
     <section class="mb-12">
-      <div class="bento-tile p-6 md:p-8">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="text-xs font-mono text-cyan-400 bg-cyan-400/10 px-2 py-0.5 rounded">Building</span>
-          <h2 class="text-2xl font-semibold tracking-tight">Coming Soon</h2>
-        </div>
-        <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
-          OutbidCopy is a backlink bidding system where people bid against each other 
-          for backlinks. Start at $1, pay $1 more to rank higher.
-        </p>
-        <p class="text-sm text-neutral-500 dark:text-neutral-400">
-          This is different from <a href="/sell-slot" class="text-cyan-400 hover:underline">selling slots</a> on my portfolio 
-          (which is live now for $1).
-        </p>
-      </div>
-    </section>
-
-    <!-- How It Will Work -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold tracking-tight mb-6">How It Will Work</h2>
+      <h2 class="text-2xl font-semibold tracking-tight mb-6">How It Works</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="bento-tile p-6">
           <div class="text-3xl mb-4">1️⃣</div>
-          <h3 class="text-lg font-semibold mb-2">Choose a Slot</h3>
-          <p class="text-sm text-neutral-500 dark:text-neutral-400">Pick an available position on a website. Higher positions = more visibility.</p>
+          <h3 class="text-lg font-semibold mb-2">Claim a Rank</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">Pick an available position. Higher positions = more visibility.</p>
         </div>
         <div class="bento-tile p-6">
           <div class="text-3xl mb-4">2️⃣</div>
-          <h3 class="text-lg font-semibold mb-2">Place Your Bid</h3>
-          <p class="text-sm text-neutral-500 dark:text-neutral-400">Start at $1. To rank higher, pay $1 more than the current bidder.</p>
+          <h3 class="text-lg font-semibold mb-2">Enter Your Site</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">Provide your website URL and brand name. Review before paying.</p>
         </div>
         <div class="bento-tile p-6">
           <div class="text-3xl mb-4">3️⃣</div>
-          <h3 class="text-lg font-semibold mb-2">Win the Backlink</h3>
-          <p class="text-sm text-neutral-500 dark:text-neutral-400">Highest bidder wins. Backlink stays until someone outbids you.</p>
+          <h3 class="text-lg font-semibold mb-2">Outbid Competitors</h3>
+          <p class="text-sm text-neutral-500 dark:text-neutral-400">Highest bidder wins. Pay $1 more to rank higher than anyone.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Available Slots -->
+    <section class="mb-12">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-2xl font-semibold tracking-tight">Available Ranks</h2>
+        <span class="text-sm font-mono text-cyan-400">{slots.length} slots remaining</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {slots.map(slot => (
+          <div class="bid-slot">
+            <div class="flex items-center justify-between mb-3">
+              <span class="position-badge">#{slot.position}</span>
+              <span class="text-lg font-bold text-cyan-400">${slot.currentBid}</span>
+            </div>
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">
+              Starting bid
+            </p>
+            <button
+              class="bid-button"
+              data-slot-position={slot.position}
+              data-current-bid={slot.currentBid}
+            >
+              Claim Rank →
+            </button>
+          </div>
+        ))}
       </div>
     </section>
 
@@ -84,13 +108,13 @@ import ThemeToggle from '../components/ThemeToggle.astro';
               <li>• To rank higher, pay $1 more than current bidder</li>
               <li>• Winner pays their bid amount</li>
               <li>• Backlink is permanent until outbid</li>
-              <li>• Payment via Gumroad or direct</li>
+              <li>• Secure payment via DodoPayments</li>
             </ul>
           </div>
           <div>
             <h3 class="text-lg font-semibold mb-2">What You Get</h3>
             <ul class="space-y-2 text-sm text-neutral-500 dark:text-neutral-400">
-              <li>• Permanent backlink on website</li>
+              <li>• Backlink on arhanahmad.com</li>
               <li>• Your site name + description</li>
               <li>• Position in the backlinks section</li>
               <li>• DoFollow link for SEO</li>
@@ -105,11 +129,299 @@ import ThemeToggle from '../components/ThemeToggle.astro';
     <footer class="border-t border-neutral-200 dark:border-neutral-800 py-8">
       <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
         <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">ARHAN<span class="text-cyan-400">.</span></a>
-        <p class="text-sm text-neutral-500 dark:text-neutral-400">Building this product soon.</p>
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">{slots.length} slots available. Starting at $1.</p>
       </div>
     </footer>
   </main>
+
+  <!-- Purchase Modal -->
+  <div id="purchase-modal" class="modal-overlay" hidden>
+    <div class="modal-container">
+      <!-- Step 1: Enter Details -->
+      <div id="step-1" class="modal-step">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <p class="text-xs font-mono text-cyan-400 mb-1">Step 1 of 3</p>
+            <h3 class="text-xl font-bold">Enter Your Details</h3>
+          </div>
+          <button id="close-modal-1" class="modal-close">×</button>
+        </div>
+
+        <div class="mb-4 p-3 bg-cyan-400/5 border border-cyan-400/20">
+          <p class="text-sm text-neutral-400">
+            Claiming rank <span class="text-cyan-400 font-mono font-bold" id="modal-rank">#3</span>
+            for <span class="text-cyan-400 font-mono font-bold" id="modal-bid-amount">$1</span>
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <label for="website-url" class="block text-sm font-medium mb-2">Website URL</label>
+            <input
+              type="url"
+              id="website-url"
+              placeholder="https://example.com"
+              class="w-full px-4 py-3 bg-neutral-900 dark:bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 focus:border-cyan-400 focus:outline-none transition-colors"
+              required
+            />
+            <p class="text-xs text-neutral-500 mt-1">This is where your backlink will point to</p>
+          </div>
+
+          <div>
+            <label for="brand-name" class="block text-sm font-medium mb-2">Brand / Display Name</label>
+            <input
+              type="text"
+              id="brand-name"
+              placeholder="Your Brand Name"
+              class="w-full px-4 py-3 bg-neutral-900 dark:bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-500 focus:border-cyan-400 focus:outline-none transition-colors"
+              required
+            />
+            <p class="text-xs text-neutral-500 mt-1">This name will appear publicly in the listing</p>
+          </div>
+        </div>
+
+        <div class="mt-6 flex gap-3">
+          <button id="step1-next" class="flex-1 cta-primary justify-center">
+            Review Purchase →
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Verify Purchase -->
+      <div id="step-2" class="modal-step" hidden>
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <p class="text-xs font-mono text-cyan-400 mb-1">Step 2 of 3</p>
+            <h3 class="text-xl font-bold">Verify Your Purchase</h3>
+          </div>
+          <button id="close-modal-2" class="modal-close">×</button>
+        </div>
+
+        <div class="space-y-3 mb-6">
+          <div class="flex justify-between py-2 border-b border-neutral-800">
+            <span class="text-sm text-neutral-400">Rank</span>
+            <span class="text-sm font-mono font-bold text-cyan-400" id="verify-rank">#3</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-neutral-800">
+            <span class="text-sm text-neutral-400">Website URL</span>
+            <span class="text-sm font-mono text-white truncate ml-4" id="verify-url">https://example.com</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-neutral-800">
+            <span class="text-sm text-neutral-400">Display Name</span>
+            <span class="text-sm text-white" id="verify-name">Brand Name</span>
+          </div>
+          <div class="flex justify-between py-2 border-b border-neutral-800">
+            <span class="text-sm text-neutral-400">Amount</span>
+            <span class="text-lg font-mono font-bold text-cyan-400" id="verify-amount">$1</span>
+          </div>
+        </div>
+
+        <p class="text-xs text-neutral-500 mb-6">
+          Your backlink will appear on arhanahmad.com pointing to the URL above. 
+          The listing stays until someone outbids you.
+        </p>
+
+        <div class="flex gap-3">
+          <button id="step2-back" class="cta-secondary px-6">← Back</button>
+          <button id="step2-next" class="flex-1 cta-primary justify-center">
+            Continue to Payment →
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Non-Refundable Confirmation -->
+      <div id="step-3" class="modal-step" hidden>
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <p class="text-xs font-mono text-cyan-400 mb-1">Step 3 of 3</p>
+            <h3 class="text-xl font-bold">Confirm Payment</h3>
+          </div>
+          <button id="close-modal-3" class="modal-close">×</button>
+        </div>
+
+        <div class="refund-notice mb-6">
+          <h4 class="text-sm font-bold text-white mb-3">Refund Policy</h4>
+          <p class="text-sm text-neutral-300 leading-relaxed mb-3">
+            <strong class="text-white">Payments are final and non-refundable.</strong>
+          </p>
+          <p class="text-sm text-neutral-400 leading-relaxed mb-3">
+            By completing this purchase, you understand that your payment is final and 
+            cannot be refunded simply because another buyer later pays more and moves 
+            ahead of you, or because your listing is taken down or loses its previous rank.
+          </p>
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            <strong class="text-neutral-300">Being ranked below another buyer, being outranked later, 
+            or having another buyer pay more are not grounds for a refund.</strong>
+          </p>
+        </div>
+
+        <label class="refund-checkbox-label mb-6">
+          <input type="checkbox" id="refund-checkbox" class="refund-checkbox" />
+          <span class="text-sm text-neutral-300">
+            I understand that this payment is final and non-refundable, and that being 
+            outranked later or having another buyer pay more is not grounds for a refund.
+          </span>
+        </label>
+
+        <div class="flex gap-3">
+          <button id="step3-back" class="cta-secondary px-6">← Back</button>
+          <button id="pay-now" class="flex-1 cta-primary justify-center" disabled>
+            Pay <span id="pay-amount">$1</span> — Complete Purchase
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
+
+<script>
+  // Load DodoPayments SDK
+  const script = document.createElement('script');
+  script.src = 'https://checkout.dodopayments.com/v1.js';
+  script.async = true;
+  document.head.appendChild(script);
+
+  // Modal state
+  let currentPosition = 1;
+  let currentBid = 1;
+  let websiteUrl = '';
+  let brandName = '';
+
+  const modal = document.getElementById('purchase-modal')!;
+  const steps = [
+    document.getElementById('step-1')!,
+    document.getElementById('step-2')!,
+    document.getElementById('step-3')!,
+  ];
+
+  function showStep(n: number) {
+    steps.forEach((s, i) => { s.hidden = i !== n; });
+  }
+
+  function openModal(position: number, bid: number) {
+    currentPosition = position;
+    currentBid = bid;
+
+    // Populate modal data
+    document.getElementById('modal-rank')!.textContent = `#${position}`;
+    document.getElementById('modal-bid-amount')!.textContent = `$${bid}`;
+    document.getElementById('verify-rank')!.textContent = `#${position}`;
+    document.getElementById('verify-amount')!.textContent = `$${bid}`;
+    document.getElementById('pay-amount')!.textContent = `$${bid}`;
+
+    // Reset form
+    (document.getElementById('website-url') as HTMLInputElement).value = '';
+    (document.getElementById('brand-name') as HTMLInputElement).value = '';
+    (document.getElementById('refund-checkbox') as HTMLInputElement).checked = false;
+    (document.getElementById('pay-now') as HTMLButtonElement).disabled = true;
+
+    // Reset to step 1
+    showStep(0);
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  // Slot buttons
+  document.addEventListener('astro:page-load', () => {
+    const slotButtons = document.querySelectorAll('[data-slot-position]');
+    slotButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const el = btn as HTMLElement;
+        const position = parseInt(el.dataset.slotPosition!);
+        const bid = parseInt(el.dataset.currentBid!);
+        openModal(position, bid);
+      });
+    });
+
+    // Close buttons
+    document.getElementById('close-modal-1')!.addEventListener('click', closeModal);
+    document.getElementById('close-modal-2')!.addEventListener('click', closeModal);
+    document.getElementById('close-modal-3')!.addEventListener('click', closeModal);
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Step 1 → Step 2
+    document.getElementById('step1-next')!.addEventListener('click', () => {
+      const url = (document.getElementById('website-url') as HTMLInputElement).value.trim();
+      const name = (document.getElementById('brand-name') as HTMLInputElement).value.trim();
+
+      if (!url) {
+        alert('Please enter your website URL.');
+        return;
+      }
+      if (!url.startsWith('http://') && !url.startsWith('https://')) {
+        alert('URL must start with http:// or https://');
+        return;
+      }
+      if (!name) {
+        alert('Please enter your brand name.');
+        return;
+      }
+
+      websiteUrl = url;
+      brandName = name;
+
+      document.getElementById('verify-url')!.textContent = url;
+      document.getElementById('verify-name')!.textContent = name;
+      showStep(1);
+    });
+
+    // Step 2 → Step 1
+    document.getElementById('step2-back')!.addEventListener('click', () => {
+      showStep(0);
+    });
+
+    // Step 2 → Step 3
+    document.getElementById('step2-next')!.addEventListener('click', () => {
+      showStep(2);
+    });
+
+    // Step 3 → Step 2
+    document.getElementById('step3-back')!.addEventListener('click', () => {
+      showStep(1);
+    });
+
+    // Checkbox toggle
+    document.getElementById('refund-checkbox')!.addEventListener('change', (e) => {
+      const checked = (e.target as HTMLInputElement).checked;
+      (document.getElementById('pay-now') as HTMLButtonElement).disabled = !checked;
+    });
+
+    // Pay Now
+    document.getElementById('pay-now')!.addEventListener('click', async () => {
+      // @ts-ignore
+      const { DodoPayments } = window;
+      if (!DodoPayments) {
+        alert('Payment system loading... please try again.');
+        return;
+      }
+
+      // Save purchase data to localStorage for success page
+      localStorage.setItem('outbid-purchase', JSON.stringify({
+        rank: currentPosition,
+        bid: currentBid,
+        url: websiteUrl,
+        name: brandName,
+        timestamp: Date.now(),
+      }));
+
+      // Open checkout
+      DodoPayments.Checkout.open({
+        productId: 'outbid-backlink',
+        brandId: 'arhan-ahmad',
+        redirectUrl: `${window.location.origin}/checkout/success`,
+      });
+    });
+  });
+</script>
 
 <style>
   .back-link {
@@ -117,6 +429,131 @@ import ThemeToggle from '../components/ThemeToggle.astro';
     color: rgb(156 163 175); font-size: 11px; text-decoration: none; transition: color 0.2s;
   }
   .back-link:hover { color: #67e8f9; }
+
+  .bid-slot {
+    padding: 20px;
+    background: hsl(var(--card));
+    border: 1px dashed hsl(var(--border));
+    border-radius: 0;
+    transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+  }
+  .bid-slot:hover {
+    border-color: #06b6d4;
+    transform: translateY(-2px);
+  }
+
+  .position-badge {
+    font-family: var(--font-mono), monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #06b6d4;
+    background: rgba(6, 182, 212, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .bid-button {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+    color: white;
+    font-family: var(--font-mono), monospace;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .bid-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+  }
+
   .bento-tile { transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1); }
   .bento-tile:hover { transform: translateY(-2px); }
+
+  /* Modal */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .modal-container {
+    width: 100%;
+    max-width: 480px;
+    background: hsl(0 0% 7%);
+    border: 1px solid hsl(0 0% 15%);
+    padding: 24px;
+    position: relative;
+  }
+
+  .modal-close {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid hsl(0 0% 20%);
+    color: rgb(163 163 163);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .modal-close:hover {
+    border-color: #06b6d4;
+    color: #06b6d4;
+  }
+
+  .modal-step input[type="url"],
+  .modal-step input[type="text"] {
+    font-family: var(--font-mono), monospace;
+    font-size: 14px;
+  }
+
+  .refund-notice {
+    padding: 16px;
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+
+  .refund-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid hsl(0 0% 15%);
+    transition: border-color 0.2s;
+  }
+  .refund-checkbox-label:hover {
+    border-color: #06b6d4;
+  }
+
+  .refund-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #06b6d4;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  #pay-now:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  #pay-now:not(:disabled):hover {
+    opacity: 0.9;
+  }
 </style>

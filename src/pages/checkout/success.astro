@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Payment Successful — Arhan Ahmad" description="Your payment was successful.">
+  <main class="min-h-screen flex items-center justify-center bg-gray-950 px-4">
+    <!-- OutbidCopy Purchase Success -->
+    <div id="outbid-success" class="max-w-md w-full text-center space-y-6" hidden>
+      <div class="w-20 h-20 mx-auto bg-cyan-400/20 rounded-full flex items-center justify-center">
+        <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h1 class="text-3xl font-bold text-white">Your Rank Is Live!</h1>
+      <div class="text-left space-y-3 bg-gray-900 border border-gray-800 p-4">
+        <div class="flex justify-between py-2 border-b border-gray-800">
+          <span class="text-sm text-gray-400">Rank</span>
+          <span id="success-rank" class="text-sm font-mono font-bold text-cyan-400">#3</span>
+        </div>
+        <div class="flex justify-between py-2 border-b border-gray-800">
+          <span class="text-sm text-gray-400">Website</span>
+          <span id="success-url" class="text-sm font-mono text-white truncate ml-4">https://example.com</span>
+        </div>
+        <div class="flex justify-between py-2 border-b border-gray-800">
+          <span class="text-sm text-gray-400">Display Name</span>
+          <span id="success-name" class="text-sm text-white">Brand Name</span>
+        </div>
+        <div class="flex justify-between py-2">
+          <span class="text-sm text-gray-400">Amount Paid</span>
+          <span id="success-amount" class="text-lg font-mono font-bold text-cyan-400">$1</span>
+        </div>
+      </div>
+      <p class="text-sm text-gray-500">
+        Your backlink is now active on arhanahmad.com. It will stay until someone outbids you.
+      </p>
+      <a
+        href="/outbid"
+        class="inline-block px-6 py-3 bg-cyan-500 text-black font-mono text-sm font-bold hover:bg-cyan-400 transition"
+      >
+        View OutbidCopy →
+      </a>
+    </div>
+
+    <!-- Generic Success (fallback) -->
+    <div id="generic-success" class="max-w-md w-full text-center space-y-6">
+      <div class="w-20 h-20 mx-auto bg-green-500/20 rounded-full flex items-center justify-center">
+        <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h1 class="text-3xl font-bold text-white">Payment Successful!</h1>
+      <p class="text-gray-400">
+        Thank you for your purchase. You'll receive a confirmation email shortly.
+      </p>
+      <a
+        href="/"
+        class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+      >
+        Back to Home
+      </a>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      const data = localStorage.getItem('outbid-purchase');
+      if (data) {
+        try {
+          const purchase = JSON.parse(data);
+          // Only use recent data (within 1 hour)
+          if (Date.now() - purchase.timestamp < 3600000) {
+            document.getElementById('outbid-success')!.hidden = false;
+            document.getElementById('generic-success')!.hidden = true;
+            document.getElementById('success-rank')!.textContent = `#${purchase.rank}`;
+            document.getElementById('success-url')!.textContent = purchase.url;
+            document.getElementById('success-name')!.textContent = purchase.name;
+            document.getElementById('success-amount')!.textContent = `$${purchase.bid}`;
+          }
+        } catch (e) {}
+        localStorage.removeItem('outbid-purchase');
+      }
+    });
+  </script>
+</BaseLayout>
