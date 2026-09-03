@@ -214,11 +214,15 @@ body {
 /* Bento Grid */
 .bento-grid {
   @apply grid w-full gap-2 lg:gap-4;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 17rem;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 16rem;
 }
-@media (min-width: 640px) { .bento-grid { grid-auto-rows: 18rem; } }
-@media (min-width: 768px) { .bento-grid { grid-auto-rows: 19rem; } }
+@media (min-width: 640px) {
+  .bento-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 17rem; }
+}
+@media (min-width: 768px) {
+  .bento-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 19rem; }
+}
 
 /* Bento Tile */
 .bento-tile {

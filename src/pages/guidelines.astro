@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+---
+
+<BaseLayout title="Platform Guidelines — Arhan Ahmad" description="Rules, content policies, and moderation guidelines for arhanahmad.com.">
+  <div class="retro-grid"></div>
+  
+  <main class="relative z-10 mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12">
+    <nav class="flex items-center justify-between py-6 mb-8">
+      <a href="/" class="text-lg font-bold tracking-tight text-neutral-900 dark:text-white hover:text-cyan-400 transition-colors">
+        ARHAN<span class="text-cyan-400">.</span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="/" class="text-xs font-mono uppercase tracking-wider text-neutral-500 hover:text-cyan-400 transition-colors">← Home</a>
+        <ThemeToggle />
+      </div>
+    </nav>
+
+    <header class="mb-12">
+      <p class="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-4">Legal</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">
+        Platform Guidelines<span class="text-cyan-400">.</span>
+      </h1>
+      <p class="text-neutral-500 dark:text-neutral-400 text-lg">
+        Last updated: September 3, 2026
+      </p>
+    </header>
+
+    <article class="prose prose-neutral dark:prose-invert max-w-none">
+      <h2>1. About This Platform</h2>
+      <p>
+        arhanahmad.com is a personal portfolio and digital product storefront operated by a single individual (Arhan Ahmad). The platform sells digital products (templates, guides, toolkits) and advertising slots. All content is created and published solely by the site owner.
+      </p>
+      <p>There are no user-generated content features, no user accounts, and no community or social interaction components.</p>
+
+      <h2>2. Permitted Activities</h2>
+      <ul>
+        <li>Purchasing digital products (templates, guides, toolkits)</li>
+        <li>Subscribing to the email newsletter</li>
+        <li>Purchasing advertising slots displayed on the homepage</li>
+        <li>Bidding for ad slot placement via the OutbidCopy system</li>
+      </ul>
+
+      <h2>3. Prohibited Activities</h2>
+      <ul>
+        <li>Reselling, redistributing, or sharing purchased digital products with non-purchasers</li>
+        <li>Purchasing slots or products using fraudulent payment methods or stolen payment credentials</li>
+        <li>Submitting false, misleading, or impersonating information during checkout</li>
+        <li>Using automated bots or scripts to manipulate the slot bidding process</li>
+        <li>Attempting to disrupt, overload, or circumvent any part of the website's functionality</li>
+      </ul>
+
+      <h2>4. Content Standards</h2>
+      <p>
+        All content on this website is created by the site owner. The site does not host, publish, or display user-generated content. All product descriptions, pricing, and policies are maintained by the site owner and are reviewed for accuracy before publication.
+      </p>
+
+      <h2>5. Moderation Process</h2>
+      <p>
+        Since all content is published by the site owner, there is no user content to moderate. The OutbidCopy bidding system includes a manual review step — all slot purchases are verified by the owner before the slot is activated on the site. Suspicious or fraudulent transactions are identified through DodoPayments' built-in fraud detection and the owner's manual review of each purchase.
+      </p>
+
+      <h2>6. Fraud and Abuse Prevention</h2>
+      <ul>
+        <li><strong>Payment security:</strong> All payment processing is handled by DodoPayments (Merchant of Record), which provides built-in fraud detection, chargeback handling, and identity verification</li>
+        <li><strong>Manual verification:</strong> All ad slot activations require manual approval by the site owner after payment confirmation</li>
+        <li><strong>Transparent pricing:</strong> The site displays clear pricing on all product and slot pages</li>
+        <li><strong>Refund policy:</strong> A published <a href="/refund" class="text-cyan-400 hover:underline">Refund and Cancellation Policy</a> is linked in the footer of every page, with a non-refundable payment notice and checkbox acknowledgment on the slot purchase page</li>
+        <li><strong>Contact route:</strong> A monitored support email (<strong>email@arhanahmad.com</strong>) is publicly available for customer disputes and inquiries</li>
+      </ul>
+
+      <h2>7. Customer Support</h2>
+      <p>
+        For any questions, disputes, or reports of suspicious activity, customers can contact the site owner at <strong>email@arhanahmad.com</strong>. All inquiries are reviewed and responded to within a reasonable timeframe.
+      </p>
+
+      <h2>8. Changes to These Guidelines</h2>
+      <p>
+        These guidelines may be updated from time to time. Changes will be posted on this page with an updated revision date.
+      </p>
+    </article>
+  </main>
+</BaseLayout>
