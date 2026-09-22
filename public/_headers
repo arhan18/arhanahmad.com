@@ -4,7 +4,11 @@
   Vary: Accept, Accept-Encoding
 
 /llms.txt
-  Content-Type: text/plain; charset=utf-8
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/agent-instructions.md
+  Content-Type: text/markdown; charset=utf-8
   Cache-Control: public, max-age=3600
 
 /index.md
