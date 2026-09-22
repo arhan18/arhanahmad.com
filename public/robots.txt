@@ -1,8 +1,11 @@
 User-agent: *
 Allow: /
 
-# AI search crawlers (allow for AI visibility)
+# AI and agent crawlers
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: OAI-SearchBot
@@ -11,13 +14,19 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: PerplexityBot
-Allow: /
-
 User-agent: Google-Extended
 Allow: /
 
-# Block training-only crawlers (optional)
+User-agent: DeepSeekBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ora-agent
+Allow: /
+
+# Block training-only crawlers
 User-agent: CCBot
 Disallow: /
 
