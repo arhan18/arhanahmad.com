@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title,
-  description = "Builder & indie hacker making weird web products.",
+  description = "Arhan Ahmad Khan is a developer and indie hacker building small, useful web products.",
   image = "/og-default.png",
   canonical
 } = Astro.props;
@@ -23,6 +23,7 @@ const canonicalUrl = canonical || url;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="author" content="Arhan Ahmad Khan" />
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->
@@ -31,7 +32,7 @@ const canonicalUrl = canonical || url;
     <meta property="og:type" content="website" />
     <meta property="og:url" content={url} />
     <meta property="og:image" content={image} />
-    <meta property="og:site_name" content="Arhan Ahmad" />
+    <meta property="og:site_name" content="Arhan Ahmad Khan" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -85,11 +86,11 @@ const canonicalUrl = canonical || url;
         {
           "@type": "Person",
           "@id": "https://arhanahmad.com/#person",
-          "name": "Arhan Ahmad",
+          "name": "Arhan Ahmad Khan",
           "url": "https://arhanahmad.com",
           "image": "https://arhanahmad.com/avatar.jpg",
           "jobTitle": "Builder & Indie Hacker",
-          "description": "Builder & indie hacker making weird web products.",
+          "description": "Developer and indie hacker building small, useful web products.",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Lucknow",
@@ -114,8 +115,9 @@ const canonicalUrl = canonical || url;
           "@type": "WebSite",
           "@id": "https://arhanahmad.com/#website",
           "url": "https://arhanahmad.com",
-          "name": "Arhan Ahmad",
-          "description": "Builder & indie hacker making weird web products.",
+          "name": "Arhan Ahmad Khan",
+          "alternateName": "Arhan Ahmad",
+          "description": "Developer and indie hacker building small, useful web products.",
           "publisher": {
             "@id": "https://arhanahmad.com/#person"
           }
