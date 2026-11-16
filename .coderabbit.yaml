@@ -1,0 +1,71 @@
+# CodeRabbit review config for this repo.
+# Rules mirror the repo AGENTS.md so bot review matches agent review.
+language: en-US
+reviews:
+  profile: chill
+  high_level_summary: true
+  high_level_summary_instructions: |
+    One line stating the intent of the change, then a short bullet list of the
+    areas that changed and any behavior a reviewer must verify.
+    No marketing language, no restating the diff.
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!**/node_modules/**"
+    - "!**/dist/**"
+    - "!**/build/**"
+    - "!**/.next/**"
+    - "!**/coverage/**"
+    - "!**/*.lock"
+    - "!**/*.min.*"
+    - "!**/*.map"
+  path_instructions:
+    - path: "**/*.{ts,tsx,js,jsx,mjs,cjs}"
+      instructions: |
+        - Prefer native web platform APIs over new dependencies: <dialog>, popover,
+          details/summary, anchor positioning, container queries, view transitions,
+          scroll-driven animations, popover API. Flag a new library that a platform
+          feature already covers.
+        - Flag heavy polyfills or bundles where a small custom fallback (<50 LOC)
+          or feature detection would do.
+        - Accessibility is required, not optional: semantic HTML, keyboard
+          operability, focus management, visible focus states, form labels,
+          announced errors, prefers-reduced-motion handling, and sufficient contrast.
+        - Responsive behavior must be explicit. Name what stacks, scrolls, or
+          collapses at each breakpoint instead of shrinking a desktop layout.
+        - Never trust client input. Validation, authorization, and sanitization
+          belong on the server. Flag secrets, API keys, or tokens reaching client code.
+        - No fabricated product content: no placeholder metrics, testimonials,
+          user counts, or fake integrations.
+        - Keep the diff minimal and the change coherent with the existing code.
+          Flag unrelated refactors mixed into a feature change.
+    - path: "**/*.{css,scss,astro}"
+      instructions: |
+        - Use modern CSS: container queries, :has, oklch, logical properties,
+          text-wrap: balance, and @starting-style where they apply.
+        - Animate transform and opacity only. Flag animation of width, height, top,
+          or left, and any layout-triggering animation.
+        - Respect prefers-reduced-motion. Provide a reduced or static variant.
+        - Dark mode must use color-scheme and tokens, not duplicated color literals.
+  tools:
+    gitleaks:
+      enabled: true
+    eslint:
+      enabled: true
+    markdownlint:
+      enabled: true
+    shellcheck:
+      enabled: true
+    actionlint:
+      enabled: true
+    zizmor:
+      enabled: true
+    htmlhint:
+      enabled: true
+    stylelint:
+      enabled: true
+    opengrep:
+      enabled: true
+    checkov:
+      enabled: true
